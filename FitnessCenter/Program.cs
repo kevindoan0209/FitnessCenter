@@ -8,6 +8,7 @@ namespace FitnessCenter
 {
     static class Program
     {
+        //KevinDoan
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
