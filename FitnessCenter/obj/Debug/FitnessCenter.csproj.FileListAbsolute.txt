@@ -178,7 +178,6 @@ C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\bin\Debug\es\DevExpr
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\bin\Debug\ja\DevExpress.Office.v16.1.Core.resources.dll
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\bin\Debug\ru\DevExpress.Office.v16.1.Core.resources.dll
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.csprojResolveAssemblyReference.cache
-C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.Account.resources
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.DashBoard.resources
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.Properties.Resources.resources
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.csproj.GenerateResource.Cache
@@ -187,4 +186,6 @@ C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\bin\Debug\BussinessL
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\bin\Debug\DataAccessLayer.dll
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\bin\Debug\BussinessLogicLayer.pdb
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\bin\Debug\DataAccessLayer.pdb
-C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.Home.resources
+C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.Login.resources
+C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.ChangePassword.resources
+C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.Intro.resources
