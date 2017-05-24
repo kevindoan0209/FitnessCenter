@@ -1,0 +1,7 @@
+C:\Users\Admin\Documents\GitHub\FitnessCenter\BussinessLogicLayer\bin\Debug\BussinessLogicLayer.dll
+C:\Users\Admin\Documents\GitHub\FitnessCenter\BussinessLogicLayer\bin\Debug\BussinessLogicLayer.pdb
+C:\Users\Admin\Documents\GitHub\FitnessCenter\BussinessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Admin\Documents\GitHub\FitnessCenter\BussinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Admin\Documents\GitHub\FitnessCenter\BussinessLogicLayer\obj\Debug\BussinessLogicLayer.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\FitnessCenter\BussinessLogicLayer\obj\Debug\BussinessLogicLayer.dll
+C:\Users\Admin\Documents\GitHub\FitnessCenter\BussinessLogicLayer\obj\Debug\BussinessLogicLayer.pdb

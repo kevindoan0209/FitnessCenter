@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FitnessCenter" Class="DataFitnessCenterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-M75UEQH\SQLEXPRESS;Initial Catalog=FitnessCenter;Integrated Security=True;Encrypt=False;TrustServerCertificate=True" SettingsObjectName="DataAccessLayer.Properties.Settings" SettingsPropertyName="FitnessCenterConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Account" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="Account_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Account_Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Account_UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Account_Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Account_Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Account_Image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Account_Type_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Account_PurchaseInvoice" Member="PurchaseInvoices" ThisKey="Account_ID" OtherKey="Account_ID" Type="PurchaseInvoice" />
+      <Association Name="Account_SaleInvoice" Member="SaleInvoices" ThisKey="Account_ID" OtherKey="Account_ID" Type="SaleInvoice" />
+      <Association Name="Account_Type_Account" Member="Account_Type" ThisKey="Account_Type_ID" OtherKey="Account_Type_ID" Type="Account_Type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Account_Type" Member="Account_Types">
+    <Type Name="Account_Type">
+      <Column Name="Account_Type_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Account_Type_Authority" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Account_Type_Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Account_Type_Account" Member="Accounts" ThisKey="Account_Type_ID" OtherKey="Account_Type_ID" Type="Account" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="Customer_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Customer_Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Customer_Image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Customer_Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Customer_Age" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Customer_Sex" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Customer_Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Customer_Phone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Customer_Job" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Customer_City" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Customer_Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Membership_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Customer_StartDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Customer_EndDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Customer_Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Customer_SaleInvoice" Member="SaleInvoices" ThisKey="Customer_ID" OtherKey="Customer_ID" Type="SaleInvoice" />
+      <Association Name="Membership_Customer" Member="Membership" ThisKey="Membership_ID" OtherKey="Membership_ID" Type="Membership" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Items" Member="Items">
+    <Type Name="Item">
+      <Column Name="Items_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Items_Name" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Items_Images" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Items_Details" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Items_Price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Items_Company" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Items_Status" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Items_Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Item_PurchaseDetail" Member="PurchaseDetails" ThisKey="Items_ID" OtherKey="Items_ID" Type="PurchaseDetail" />
+      <Association Name="Item_SaleDetail" Member="SaleDetails" ThisKey="Items_ID" OtherKey="Items_ID" Type="SaleDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Membership" Member="Memberships">
+    <Type Name="Membership">
+      <Column Name="Membership_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Membership_Name" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Membership_Price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Membership_Note" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="Membership_Customer" Member="Customers" ThisKey="Membership_ID" OtherKey="Membership_ID" Type="Customer" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PurchaseDetail" Member="PurchaseDetails">
+    <Type Name="PurchaseDetail">
+      <Column Name="PurchaseInvoice_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Items_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Quanity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Item_PurchaseDetail" Member="Item" ThisKey="Items_ID" OtherKey="Items_ID" Type="Item" IsForeignKey="true" />
+      <Association Name="PurchaseInvoice_PurchaseDetail" Member="PurchaseInvoice" ThisKey="PurchaseInvoice_ID" OtherKey="PurchaseInvoice_ID" Type="PurchaseInvoice" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PurchaseInvoice" Member="PurchaseInvoices">
+    <Type Name="PurchaseInvoice">
+      <Column Name="PurchaseInvoice_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PurchaseInvoice_Date" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PurchaseInvoice_Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Supplier_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Account_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PurchaseInvoice_PurchaseDetail" Member="PurchaseDetails" ThisKey="PurchaseInvoice_ID" OtherKey="PurchaseInvoice_ID" Type="PurchaseDetail" />
+      <Association Name="Account_PurchaseInvoice" Member="Account" ThisKey="Account_ID" OtherKey="Account_ID" Type="Account" IsForeignKey="true" />
+      <Association Name="Supplier_PurchaseInvoice" Member="Supplier" ThisKey="Supplier_ID" OtherKey="Supplier_ID" Type="Supplier" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SaleDetail" Member="SaleDetails">
+    <Type Name="SaleDetail">
+      <Column Name="SaleInvoice_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Items_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Item_SaleDetail" Member="Item" ThisKey="Items_ID" OtherKey="Items_ID" Type="Item" IsForeignKey="true" />
+      <Association Name="SaleInvoice_SaleDetail" Member="SaleInvoice" ThisKey="SaleInvoice_ID" OtherKey="SaleInvoice_ID" Type="SaleInvoice" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SaleInvoice" Member="SaleInvoices">
+    <Type Name="SaleInvoice">
+      <Column Name="SaleInvoice_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SaleInvoice_Date" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SaleInvoice_Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Account_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Customer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="SaleInvoice_SaleDetail" Member="SaleDetails" ThisKey="SaleInvoice_ID" OtherKey="SaleInvoice_ID" Type="SaleDetail" />
+      <Association Name="Account_SaleInvoice" Member="Account" ThisKey="Account_ID" OtherKey="Account_ID" Type="Account" IsForeignKey="true" />
+      <Association Name="Customer_SaleInvoice" Member="Customer" ThisKey="Customer_ID" OtherKey="Customer_ID" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Supplier" Member="Suppliers">
+    <Type Name="Supplier">
+      <Column Name="Supplier_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Supplier_Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Supplier_Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Supplier_Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Supplier_Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Supplier_Fax" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Supplier_Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Supplier_PurchaseInvoice" Member="PurchaseInvoices" ThisKey="Supplier_ID" OtherKey="Supplier_ID" Type="PurchaseInvoice" />
+    </Type>
+  </Table>
+</Database>

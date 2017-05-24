@@ -1,0 +1,6 @@
+C:\Users\Admin\Documents\GitHub\FitnessCenter\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\Admin\Documents\GitHub\FitnessCenter\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Admin\Documents\GitHub\FitnessCenter\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Admin\Documents\GitHub\FitnessCenter\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\FitnessCenter\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Admin\Documents\GitHub\FitnessCenter\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

@@ -33,34 +33,21 @@ namespace FitnessCenter
             return null;
         }
 
-        private void btnAccount_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
-            Form frm = this.IsExits(typeof(Account));
+            Form frm = this.IsExits(typeof(Home));
             if (frm != null)
             {
                 frm.Activate();
             }
             else
             {
-                Account account = new Account();
-                account.MdiParent = this;
-                account.Show();
+                Home home = new Home();
+                home.MdiParent = this;
+                home.Show();
             }
         }
 
-        private void btnReminder_Click(object sender, EventArgs e)
-        {
-            Form frm = this.IsExits(typeof(Reminder));
-            if (frm != null)
-            {
-                frm.Activate();
-            }
-            else
-            {
-                Reminder reminder = new Reminder();
-                reminder.MdiParent = this;
-                reminder.Show();
-            }
-        }
+      
     }
 }
