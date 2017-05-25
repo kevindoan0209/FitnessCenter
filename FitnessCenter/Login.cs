@@ -21,11 +21,8 @@ namespace FitnessCenter
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            DialogResult dlr = XtraMessageBox.Show("Bạn có thật sự muốn thoát ?", "Clinience", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            Message message = new Message();
+            message.ShowDialog();
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)

@@ -186,7 +186,7 @@
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 7;
+            this.bunifuElipse1.ElipseRadius = 8;
             this.bunifuElipse1.TargetControl = this;
             // 
             // cbxHienMatKhai
@@ -339,6 +339,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "ChangePassword";
+            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.ChangePassword_Load);
             this.panel1.ResumeLayout(false);

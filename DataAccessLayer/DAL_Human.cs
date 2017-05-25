@@ -119,5 +119,14 @@ namespace DataAccessLayer
             data.Fill(dt);
             return dt;
         }
+
+        public int UpdateAccountStatus(int id, string status)
+        {
+            const String sqlCommand = "Update Account set Account_Status = @Status where Account_ID = @Id";
+            SqlCommand command = new SqlCommand(sqlCommand, connect());
+            command.Parameters.AddWithValue("@Id", id);
+            command.Parameters.AddWithValue("@Status", status);
+            return command.ExecuteNonQuery();
+        }     
     }
 }

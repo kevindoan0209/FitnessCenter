@@ -51,5 +51,14 @@ namespace BussinessLogicLayer
             return _human.Select_CheckUserNameSoftware(username);
         }
 
+        public static int UpdateAccountStatus(int id, string status)
+        {
+            return _human.UpdateAccountStatus(id, status);
+        }
+
+        public static int GetLastIdAccount()
+        {
+            return _human.GetLastIdAccount();
+        }
     }
 }

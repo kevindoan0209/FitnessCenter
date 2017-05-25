@@ -74,7 +74,6 @@
             this.txtTenDangNhap.Size = new System.Drawing.Size(262, 20);
             this.txtTenDangNhap.TabIndex = 0;
             this.txtTenDangNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenDangNhap_KeyPress);
-         
             // 
             // panel2
             // 
@@ -100,7 +99,6 @@
             this.txtMatKhau.Size = new System.Drawing.Size(262, 20);
             this.txtMatKhau.TabIndex = 3;
             this.txtMatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMatKhau_KeyPress);
-          
             // 
             // btnDangNhap
             // 
@@ -228,6 +226,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "Login";
+            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).EndInit();

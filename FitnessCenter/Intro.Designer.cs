@@ -121,6 +121,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox8);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Intro";
             this.Text = "Giới thiệu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

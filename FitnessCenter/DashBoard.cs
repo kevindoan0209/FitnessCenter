@@ -23,11 +23,9 @@ namespace FitnessCenter
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            DialogResult dlr = XtraMessageBox.Show("Bạn có thật sự muốn thoát ?", "Clinience", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            Message message = new Message();
+            message.ShowDialog();
+            
         }
         private Form IsExits(Type type)
         {
@@ -92,15 +90,23 @@ namespace FitnessCenter
 
         private void btnMember_Click(object sender, EventArgs e)
         {
-
+            Form frm = this.IsExits(typeof(MemberManagement));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                MemberManagement member = new MemberManagement();
+                member.MdiParent = this;
+                member.Show();
+            }
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            if (XtraMessageBox.Show("Bạn có muốn đăng xuất ?", "Clinience", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            {
-                Application.Restart();
-            }
+            MessageLogOut message = new MessageLogOut();
+            message.ShowDialog();
         }
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
@@ -108,6 +114,51 @@ namespace FitnessCenter
             ChangePassword cp = new ChangePassword();
             cp.Id = (int)Id;
             cp.ShowDialog();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Message message = new Message();
+            message.ShowDialog();
+        }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            Form frm = this.IsExits(typeof(AccountManagement));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                AccountManagement account = new AccountManagement();
+                account.MdiParent = this;
+                account.Show();
+            }
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            MessageNotice message = new MessageNotice();
+            message.ShowDialog();
+        }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.ShowDialog();
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            MessageNotice message = new MessageNotice();
+            message.ShowDialog();
+        }
+
+        private void btnCaiDat_Click(object sender, EventArgs e)
+        {
+            MessageNotice message = new MessageNotice();
+            message.ShowDialog();
         }
     }
 }

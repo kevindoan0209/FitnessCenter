@@ -32,7 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCaiDat = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnHoaDon = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btnDoiMatKhau = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txtChao = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btnHangHoa = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnThoat = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDangXuat = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAbout = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -47,8 +52,6 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.txtChao = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnDoiMatKhau = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.peLogo)).BeginInit();
@@ -69,9 +72,12 @@
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.Controls.Add(this.btnCaiDat);
+            this.panelControl1.Controls.Add(this.btnHoaDon);
+            this.panelControl1.Controls.Add(this.bunifuCustomLabel2);
             this.panelControl1.Controls.Add(this.btnDoiMatKhau);
             this.panelControl1.Controls.Add(this.txtChao);
-            this.panelControl1.Controls.Add(this.bunifuFlatButton1);
+            this.panelControl1.Controls.Add(this.btnHangHoa);
             this.panelControl1.Controls.Add(this.btnThoat);
             this.panelControl1.Controls.Add(this.btnDangXuat);
             this.panelControl1.Controls.Add(this.btnAbout);
@@ -86,45 +92,179 @@
             this.panelControl1.Size = new System.Drawing.Size(244, 577);
             this.panelControl1.TabIndex = 0;
             // 
-            // bunifuFlatButton1
+            // btnCaiDat
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "        Quản lí hàng hóa";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 18;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 40D;
-            this.bunifuFlatButton1.IsTab = true;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 238);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(244, 38);
-            this.bunifuFlatButton1.TabIndex = 10;
-            this.bunifuFlatButton1.Text = "        Quản lí hàng hóa";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaiDat.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnCaiDat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCaiDat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCaiDat.BorderRadius = 0;
+            this.btnCaiDat.ButtonText = "          Thiết lập bảng giá";
+            this.btnCaiDat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCaiDat.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCaiDat.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaiDat.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCaiDat.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCaiDat.Iconimage")));
+            this.btnCaiDat.Iconimage_right = null;
+            this.btnCaiDat.Iconimage_right_Selected = null;
+            this.btnCaiDat.Iconimage_Selected = null;
+            this.btnCaiDat.IconMarginLeft = 20;
+            this.btnCaiDat.IconMarginRight = 0;
+            this.btnCaiDat.IconRightVisible = true;
+            this.btnCaiDat.IconRightZoom = 0D;
+            this.btnCaiDat.IconVisible = true;
+            this.btnCaiDat.IconZoom = 40D;
+            this.btnCaiDat.IsTab = true;
+            this.btnCaiDat.Location = new System.Drawing.Point(0, 362);
+            this.btnCaiDat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCaiDat.Name = "btnCaiDat";
+            this.btnCaiDat.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCaiDat.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCaiDat.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnCaiDat.selected = false;
+            this.btnCaiDat.Size = new System.Drawing.Size(244, 38);
+            this.btnCaiDat.TabIndex = 15;
+            this.btnCaiDat.Text = "          Thiết lập bảng giá";
+            this.btnCaiDat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCaiDat.Textcolor = System.Drawing.Color.Silver;
+            this.btnCaiDat.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaiDat.Click += new System.EventHandler(this.btnCaiDat_Click);
+            // 
+            // btnHoaDon
+            // 
+            this.btnHoaDon.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnHoaDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHoaDon.BorderRadius = 0;
+            this.btnHoaDon.ButtonText = "          Quản lí hóa đơn";
+            this.btnHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHoaDon.DisabledColor = System.Drawing.Color.Gray;
+            this.btnHoaDon.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoaDon.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnHoaDon.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnHoaDon.Iconimage")));
+            this.btnHoaDon.Iconimage_right = null;
+            this.btnHoaDon.Iconimage_right_Selected = null;
+            this.btnHoaDon.Iconimage_Selected = null;
+            this.btnHoaDon.IconMarginLeft = 20;
+            this.btnHoaDon.IconMarginRight = 0;
+            this.btnHoaDon.IconRightVisible = true;
+            this.btnHoaDon.IconRightZoom = 0D;
+            this.btnHoaDon.IconVisible = true;
+            this.btnHoaDon.IconZoom = 40D;
+            this.btnHoaDon.IsTab = true;
+            this.btnHoaDon.Location = new System.Drawing.Point(0, 280);
+            this.btnHoaDon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnHoaDon.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnHoaDon.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnHoaDon.selected = false;
+            this.btnHoaDon.Size = new System.Drawing.Size(244, 38);
+            this.btnHoaDon.TabIndex = 14;
+            this.btnHoaDon.Text = "          Quản lí hóa đơn";
+            this.btnHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHoaDon.Textcolor = System.Drawing.Color.Silver;
+            this.btnHoaDon.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(7, 511);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(175, 32);
+            this.bunifuCustomLabel2.TabIndex = 13;
+            this.bunifuCustomLabel2.Text = "Phiên bản thử nghiệm v1.0.0 \r\n\r\n";
+            // 
+            // btnDoiMatKhau
+            // 
+            this.btnDoiMatKhau.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDoiMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDoiMatKhau.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDoiMatKhau.BorderRadius = 0;
+            this.btnDoiMatKhau.ButtonText = "";
+            this.btnDoiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDoiMatKhau.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDoiMatKhau.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiMatKhau.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDoiMatKhau.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDoiMatKhau.Iconimage")));
+            this.btnDoiMatKhau.Iconimage_right = null;
+            this.btnDoiMatKhau.Iconimage_right_Selected = null;
+            this.btnDoiMatKhau.Iconimage_Selected = null;
+            this.btnDoiMatKhau.IconMarginLeft = 4;
+            this.btnDoiMatKhau.IconMarginRight = 0;
+            this.btnDoiMatKhau.IconRightVisible = true;
+            this.btnDoiMatKhau.IconRightZoom = 0D;
+            this.btnDoiMatKhau.IconVisible = true;
+            this.btnDoiMatKhau.IconZoom = 50D;
+            this.btnDoiMatKhau.IsTab = true;
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(206, 6);
+            this.btnDoiMatKhau.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
+            this.btnDoiMatKhau.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDoiMatKhau.OnHovercolor = System.Drawing.Color.Empty;
+            this.btnDoiMatKhau.OnHoverTextColor = System.Drawing.Color.Empty;
+            this.btnDoiMatKhau.selected = false;
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(31, 27);
+            this.btnDoiMatKhau.TabIndex = 12;
+            this.btnDoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoiMatKhau.Textcolor = System.Drawing.Color.Silver;
+            this.btnDoiMatKhau.TextFont = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
+            // 
+            // txtChao
+            // 
+            this.txtChao.AutoSize = true;
+            this.txtChao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(188)))), ((int)(((byte)(234)))));
+            this.txtChao.Location = new System.Drawing.Point(28, 87);
+            this.txtChao.Name = "txtChao";
+            this.txtChao.Size = new System.Drawing.Size(0, 16);
+            this.txtChao.TabIndex = 11;
+            // 
+            // btnHangHoa
+            // 
+            this.btnHangHoa.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnHangHoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnHangHoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHangHoa.BorderRadius = 0;
+            this.btnHangHoa.ButtonText = "        Quản lí hàng hóa";
+            this.btnHangHoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHangHoa.DisabledColor = System.Drawing.Color.Gray;
+            this.btnHangHoa.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHangHoa.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnHangHoa.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnHangHoa.Iconimage")));
+            this.btnHangHoa.Iconimage_right = null;
+            this.btnHangHoa.Iconimage_right_Selected = null;
+            this.btnHangHoa.Iconimage_Selected = null;
+            this.btnHangHoa.IconMarginLeft = 18;
+            this.btnHangHoa.IconMarginRight = 0;
+            this.btnHangHoa.IconRightVisible = true;
+            this.btnHangHoa.IconRightZoom = 0D;
+            this.btnHangHoa.IconVisible = true;
+            this.btnHangHoa.IconZoom = 40D;
+            this.btnHangHoa.IsTab = true;
+            this.btnHangHoa.Location = new System.Drawing.Point(0, 238);
+            this.btnHangHoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHangHoa.Name = "btnHangHoa";
+            this.btnHangHoa.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnHangHoa.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnHangHoa.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnHangHoa.selected = false;
+            this.btnHangHoa.Size = new System.Drawing.Size(244, 38);
+            this.btnHangHoa.TabIndex = 10;
+            this.btnHangHoa.Text = "        Quản lí hàng hóa";
+            this.btnHangHoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHangHoa.Textcolor = System.Drawing.Color.Silver;
+            this.btnHangHoa.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHangHoa.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // btnThoat
             // 
-            this.btnThoat.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnThoat.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnThoat.BorderRadius = 0;
@@ -149,7 +289,7 @@
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnThoat.OnHovercolor = System.Drawing.Color.Empty;
-            this.btnThoat.OnHoverTextColor = System.Drawing.Color.Empty;
+            this.btnThoat.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.btnThoat.selected = false;
             this.btnThoat.Size = new System.Drawing.Size(117, 25);
             this.btnThoat.TabIndex = 9;
@@ -157,10 +297,12 @@
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThoat.Textcolor = System.Drawing.Color.Silver;
             this.btnThoat.TextFont = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnDangXuat
             // 
-            this.btnDangXuat.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnDangXuat.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDangXuat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnDangXuat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDangXuat.BorderRadius = 0;
@@ -185,7 +327,7 @@
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnDangXuat.OnHovercolor = System.Drawing.Color.Empty;
-            this.btnDangXuat.OnHoverTextColor = System.Drawing.Color.Empty;
+            this.btnDangXuat.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.btnDangXuat.selected = false;
             this.btnDangXuat.Size = new System.Drawing.Size(103, 25);
             this.btnDangXuat.TabIndex = 8;
@@ -217,7 +359,7 @@
             this.btnAbout.IconVisible = true;
             this.btnAbout.IconZoom = 40D;
             this.btnAbout.IsTab = true;
-            this.btnAbout.Location = new System.Drawing.Point(0, 322);
+            this.btnAbout.Location = new System.Drawing.Point(0, 404);
             this.btnAbout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -230,6 +372,7 @@
             this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAbout.Textcolor = System.Drawing.Color.Silver;
             this.btnAbout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // btnStatictis
             // 
@@ -253,7 +396,7 @@
             this.btnStatictis.IconVisible = true;
             this.btnStatictis.IconZoom = 40D;
             this.btnStatictis.IsTab = true;
-            this.btnStatictis.Location = new System.Drawing.Point(0, 280);
+            this.btnStatictis.Location = new System.Drawing.Point(0, 320);
             this.btnStatictis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStatictis.Name = "btnStatictis";
             this.btnStatictis.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -273,7 +416,7 @@
             this.btnMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnMember.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMember.BorderRadius = 0;
-            this.btnMember.ButtonText = "        Quản lí thành viên";
+            this.btnMember.ButtonText = "        Quản lí hội viên";
             this.btnMember.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMember.DisabledColor = System.Drawing.Color.Gray;
             this.btnMember.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -298,7 +441,7 @@
             this.btnMember.selected = false;
             this.btnMember.Size = new System.Drawing.Size(244, 38);
             this.btnMember.TabIndex = 5;
-            this.btnMember.Text = "        Quản lí thành viên";
+            this.btnMember.Text = "        Quản lí hội viên";
             this.btnMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMember.Textcolor = System.Drawing.Color.Silver;
             this.btnMember.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -339,11 +482,12 @@
             this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccount.Textcolor = System.Drawing.Color.Silver;
             this.btnAccount.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // btnHome
             // 
             this.btnHome.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHome.BorderRadius = 0;
             this.btnHome.ButtonText = "        Trang chủ";
@@ -452,52 +596,6 @@
             this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageHeader;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // txtChao
-            // 
-            this.txtChao.AutoSize = true;
-            this.txtChao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(188)))), ((int)(((byte)(234)))));
-            this.txtChao.Location = new System.Drawing.Point(28, 87);
-            this.txtChao.Name = "txtChao";
-            this.txtChao.Size = new System.Drawing.Size(0, 16);
-            this.txtChao.TabIndex = 11;
-            // 
-            // btnDoiMatKhau
-            // 
-            this.btnDoiMatKhau.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.btnDoiMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnDoiMatKhau.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDoiMatKhau.BorderRadius = 0;
-            this.btnDoiMatKhau.ButtonText = "";
-            this.btnDoiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDoiMatKhau.DisabledColor = System.Drawing.Color.Gray;
-            this.btnDoiMatKhau.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoiMatKhau.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnDoiMatKhau.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDoiMatKhau.Iconimage")));
-            this.btnDoiMatKhau.Iconimage_right = null;
-            this.btnDoiMatKhau.Iconimage_right_Selected = null;
-            this.btnDoiMatKhau.Iconimage_Selected = null;
-            this.btnDoiMatKhau.IconMarginLeft = 4;
-            this.btnDoiMatKhau.IconMarginRight = 0;
-            this.btnDoiMatKhau.IconRightVisible = true;
-            this.btnDoiMatKhau.IconRightZoom = 0D;
-            this.btnDoiMatKhau.IconVisible = true;
-            this.btnDoiMatKhau.IconZoom = 50D;
-            this.btnDoiMatKhau.IsTab = true;
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(206, 6);
-            this.btnDoiMatKhau.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
-            this.btnDoiMatKhau.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnDoiMatKhau.OnHovercolor = System.Drawing.Color.Empty;
-            this.btnDoiMatKhau.OnHoverTextColor = System.Drawing.Color.Empty;
-            this.btnDoiMatKhau.selected = false;
-            this.btnDoiMatKhau.Size = new System.Drawing.Size(31, 27);
-            this.btnDoiMatKhau.TabIndex = 12;
-            this.btnDoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoiMatKhau.Textcolor = System.Drawing.Color.Silver;
-            this.btnDoiMatKhau.TextFont = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
-            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -510,6 +608,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "DashBoard";
+            this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.DashBoard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -544,9 +643,12 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnDangXuat;
         private Bunifu.Framework.UI.BunifuFlatButton btnThoat;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnHangHoa;
         private Bunifu.Framework.UI.BunifuCustomLabel txtChao;
         private Bunifu.Framework.UI.BunifuFlatButton btnDoiMatKhau;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnHoaDon;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCaiDat;
     }
 }
 
