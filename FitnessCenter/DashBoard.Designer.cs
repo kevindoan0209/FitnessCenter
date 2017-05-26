@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            BunifuAnimatorNS.Animation animation33 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
+            BunifuAnimatorNS.Animation animation34 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.SideMenu = new DevExpress.XtraEditors.PanelControl();
             this.btnCaiDat = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnHoaDon = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtPhienBan = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnDoiMatKhau = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtChao = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnHangHoa = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -52,14 +54,20 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
+            this.PanelAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.btnMenu = new System.Windows.Forms.PictureBox();
+            this.LogoAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.btnDangXuatBar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnThoatBar = new Bunifu.Framework.UI.BunifuFlatButton();
+            ((System.ComponentModel.ISupportInitialize)(this.SideMenu)).BeginInit();
+            this.SideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.peLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.header)).BeginInit();
             this.header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -67,30 +75,35 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // panelControl1
+            // SideMenu
             // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.Controls.Add(this.btnCaiDat);
-            this.panelControl1.Controls.Add(this.btnHoaDon);
-            this.panelControl1.Controls.Add(this.bunifuCustomLabel2);
-            this.panelControl1.Controls.Add(this.btnDoiMatKhau);
-            this.panelControl1.Controls.Add(this.txtChao);
-            this.panelControl1.Controls.Add(this.btnHangHoa);
-            this.panelControl1.Controls.Add(this.btnThoat);
-            this.panelControl1.Controls.Add(this.btnDangXuat);
-            this.panelControl1.Controls.Add(this.btnAbout);
-            this.panelControl1.Controls.Add(this.btnStatictis);
-            this.panelControl1.Controls.Add(this.btnMember);
-            this.panelControl1.Controls.Add(this.btnAccount);
-            this.panelControl1.Controls.Add(this.btnHome);
-            this.panelControl1.Controls.Add(this.peLogo);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl1.Location = new System.Drawing.Point(0, 40);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(244, 577);
-            this.panelControl1.TabIndex = 0;
+            this.SideMenu.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.SideMenu.Appearance.Options.UseBackColor = true;
+            this.SideMenu.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.SideMenu.Controls.Add(this.btnThoatBar);
+            this.SideMenu.Controls.Add(this.btnDangXuatBar);
+            this.SideMenu.Controls.Add(this.btnMenu);
+            this.SideMenu.Controls.Add(this.btnCaiDat);
+            this.SideMenu.Controls.Add(this.btnHoaDon);
+            this.SideMenu.Controls.Add(this.txtPhienBan);
+            this.SideMenu.Controls.Add(this.btnDoiMatKhau);
+            this.SideMenu.Controls.Add(this.txtChao);
+            this.SideMenu.Controls.Add(this.btnHangHoa);
+            this.SideMenu.Controls.Add(this.btnThoat);
+            this.SideMenu.Controls.Add(this.btnDangXuat);
+            this.SideMenu.Controls.Add(this.btnAbout);
+            this.SideMenu.Controls.Add(this.btnStatictis);
+            this.SideMenu.Controls.Add(this.btnMember);
+            this.SideMenu.Controls.Add(this.btnAccount);
+            this.SideMenu.Controls.Add(this.btnHome);
+            this.SideMenu.Controls.Add(this.peLogo);
+            this.LogoAnimator.SetDecoration(this.SideMenu, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.SideMenu, BunifuAnimatorNS.DecorationType.None);
+            this.SideMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SideMenu.Location = new System.Drawing.Point(0, 40);
+            this.SideMenu.Name = "SideMenu";
+            this.SideMenu.Size = new System.Drawing.Size(244, 577);
+            this.SideMenu.TabIndex = 0;
             // 
             // btnCaiDat
             // 
@@ -98,10 +111,12 @@
             this.btnCaiDat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnCaiDat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCaiDat.BorderRadius = 0;
-            this.btnCaiDat.ButtonText = "          Thiết lập bảng giá";
+            this.btnCaiDat.ButtonText = "        Thiết lập ";
             this.btnCaiDat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.btnCaiDat, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnCaiDat, BunifuAnimatorNS.DecorationType.None);
             this.btnCaiDat.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCaiDat.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaiDat.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaiDat.Iconcolor = System.Drawing.Color.Transparent;
             this.btnCaiDat.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCaiDat.Iconimage")));
             this.btnCaiDat.Iconimage_right = null;
@@ -114,19 +129,19 @@
             this.btnCaiDat.IconVisible = true;
             this.btnCaiDat.IconZoom = 40D;
             this.btnCaiDat.IsTab = true;
-            this.btnCaiDat.Location = new System.Drawing.Point(0, 362);
+            this.btnCaiDat.Location = new System.Drawing.Point(0, 360);
             this.btnCaiDat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCaiDat.Name = "btnCaiDat";
             this.btnCaiDat.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnCaiDat.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnCaiDat.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.btnCaiDat.selected = false;
-            this.btnCaiDat.Size = new System.Drawing.Size(244, 38);
+            this.btnCaiDat.Size = new System.Drawing.Size(244, 40);
             this.btnCaiDat.TabIndex = 15;
-            this.btnCaiDat.Text = "          Thiết lập bảng giá";
+            this.btnCaiDat.Text = "        Thiết lập ";
             this.btnCaiDat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCaiDat.Textcolor = System.Drawing.Color.Silver;
-            this.btnCaiDat.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaiDat.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaiDat.Click += new System.EventHandler(this.btnCaiDat_Click);
             // 
             // btnHoaDon
@@ -135,8 +150,10 @@
             this.btnHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnHoaDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHoaDon.BorderRadius = 0;
-            this.btnHoaDon.ButtonText = "          Quản lí hóa đơn";
+            this.btnHoaDon.ButtonText = "        Quản lí hóa đơn";
             this.btnHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.btnHoaDon, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnHoaDon, BunifuAnimatorNS.DecorationType.None);
             this.btnHoaDon.DisabledColor = System.Drawing.Color.Gray;
             this.btnHoaDon.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHoaDon.Iconcolor = System.Drawing.Color.Transparent;
@@ -160,23 +177,25 @@
             this.btnHoaDon.selected = false;
             this.btnHoaDon.Size = new System.Drawing.Size(244, 38);
             this.btnHoaDon.TabIndex = 14;
-            this.btnHoaDon.Text = "          Quản lí hóa đơn";
+            this.btnHoaDon.Text = "        Quản lí hóa đơn";
             this.btnHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHoaDon.Textcolor = System.Drawing.Color.Silver;
-            this.btnHoaDon.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoaDon.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
-            // bunifuCustomLabel2
+            // txtPhienBan
             // 
-            this.bunifuCustomLabel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(7, 511);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(175, 32);
-            this.bunifuCustomLabel2.TabIndex = 13;
-            this.bunifuCustomLabel2.Text = "Phiên bản thử nghiệm v1.0.0 \r\n\r\n";
+            this.txtPhienBan.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtPhienBan.AutoSize = true;
+            this.PanelAnimator.SetDecoration(this.txtPhienBan, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.txtPhienBan, BunifuAnimatorNS.DecorationType.None);
+            this.txtPhienBan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhienBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtPhienBan.Location = new System.Drawing.Point(7, 511);
+            this.txtPhienBan.Name = "txtPhienBan";
+            this.txtPhienBan.Size = new System.Drawing.Size(176, 32);
+            this.txtPhienBan.TabIndex = 13;
+            this.txtPhienBan.Text = "Phiên bản thử nghiệm v1.0.0 \r\n\r\n";
             // 
             // btnDoiMatKhau
             // 
@@ -186,6 +205,8 @@
             this.btnDoiMatKhau.BorderRadius = 0;
             this.btnDoiMatKhau.ButtonText = "";
             this.btnDoiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.btnDoiMatKhau, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnDoiMatKhau, BunifuAnimatorNS.DecorationType.None);
             this.btnDoiMatKhau.DisabledColor = System.Drawing.Color.Gray;
             this.btnDoiMatKhau.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoiMatKhau.Iconcolor = System.Drawing.Color.Transparent;
@@ -200,7 +221,7 @@
             this.btnDoiMatKhau.IconVisible = true;
             this.btnDoiMatKhau.IconZoom = 50D;
             this.btnDoiMatKhau.IsTab = true;
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(206, 6);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(189, 506);
             this.btnDoiMatKhau.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -217,6 +238,8 @@
             // txtChao
             // 
             this.txtChao.AutoSize = true;
+            this.PanelAnimator.SetDecoration(this.txtChao, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.txtChao, BunifuAnimatorNS.DecorationType.None);
             this.txtChao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(188)))), ((int)(((byte)(234)))));
             this.txtChao.Location = new System.Drawing.Point(28, 87);
@@ -232,6 +255,8 @@
             this.btnHangHoa.BorderRadius = 0;
             this.btnHangHoa.ButtonText = "        Quản lí hàng hóa";
             this.btnHangHoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.btnHangHoa, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnHangHoa, BunifuAnimatorNS.DecorationType.None);
             this.btnHangHoa.DisabledColor = System.Drawing.Color.Gray;
             this.btnHangHoa.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHangHoa.Iconcolor = System.Drawing.Color.Transparent;
@@ -270,6 +295,8 @@
             this.btnThoat.BorderRadius = 0;
             this.btnThoat.ButtonText = "Thoát";
             this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.btnThoat, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnThoat, BunifuAnimatorNS.DecorationType.None);
             this.btnThoat.DisabledColor = System.Drawing.Color.Gray;
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Iconcolor = System.Drawing.Color.Transparent;
@@ -308,6 +335,8 @@
             this.btnDangXuat.BorderRadius = 0;
             this.btnDangXuat.ButtonText = " Đăng xuất";
             this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.btnDangXuat, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnDangXuat, BunifuAnimatorNS.DecorationType.None);
             this.btnDangXuat.DisabledColor = System.Drawing.Color.Gray;
             this.btnDangXuat.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.Iconcolor = System.Drawing.Color.Transparent;
@@ -343,10 +372,12 @@
             this.btnAbout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnAbout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAbout.BorderRadius = 0;
-            this.btnAbout.ButtonText = "          Giới thiệu";
+            this.btnAbout.ButtonText = "        Giới thiệu";
             this.btnAbout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.btnAbout, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnAbout, BunifuAnimatorNS.DecorationType.None);
             this.btnAbout.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAbout.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbout.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbout.Iconcolor = System.Drawing.Color.Transparent;
             this.btnAbout.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAbout.Iconimage")));
             this.btnAbout.Iconimage_right = null;
@@ -359,19 +390,19 @@
             this.btnAbout.IconVisible = true;
             this.btnAbout.IconZoom = 40D;
             this.btnAbout.IsTab = true;
-            this.btnAbout.Location = new System.Drawing.Point(0, 404);
+            this.btnAbout.Location = new System.Drawing.Point(0, 402);
             this.btnAbout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnAbout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnAbout.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.btnAbout.selected = false;
-            this.btnAbout.Size = new System.Drawing.Size(244, 38);
+            this.btnAbout.Size = new System.Drawing.Size(244, 40);
             this.btnAbout.TabIndex = 7;
-            this.btnAbout.Text = "          Giới thiệu";
+            this.btnAbout.Text = "        Giới thiệu";
             this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAbout.Textcolor = System.Drawing.Color.Silver;
-            this.btnAbout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbout.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // btnStatictis
@@ -382,6 +413,8 @@
             this.btnStatictis.BorderRadius = 0;
             this.btnStatictis.ButtonText = "        Thống kê";
             this.btnStatictis.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.btnStatictis, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnStatictis, BunifuAnimatorNS.DecorationType.None);
             this.btnStatictis.DisabledColor = System.Drawing.Color.Gray;
             this.btnStatictis.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatictis.Iconcolor = System.Drawing.Color.Transparent;
@@ -418,6 +451,8 @@
             this.btnMember.BorderRadius = 0;
             this.btnMember.ButtonText = "        Quản lí hội viên";
             this.btnMember.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.btnMember, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnMember, BunifuAnimatorNS.DecorationType.None);
             this.btnMember.DisabledColor = System.Drawing.Color.Gray;
             this.btnMember.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMember.Iconcolor = System.Drawing.Color.Transparent;
@@ -455,6 +490,8 @@
             this.btnAccount.BorderRadius = 0;
             this.btnAccount.ButtonText = "        Quản lí tài khoản";
             this.btnAccount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.btnAccount, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnAccount, BunifuAnimatorNS.DecorationType.None);
             this.btnAccount.DisabledColor = System.Drawing.Color.Gray;
             this.btnAccount.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccount.Iconcolor = System.Drawing.Color.Transparent;
@@ -487,11 +524,13 @@
             // btnHome
             // 
             this.btnHome.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHome.BorderRadius = 0;
             this.btnHome.ButtonText = "        Trang chủ";
             this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.btnHome, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnHome, BunifuAnimatorNS.DecorationType.None);
             this.btnHome.DisabledColor = System.Drawing.Color.Gray;
             this.btnHome.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Iconcolor = System.Drawing.Color.Transparent;
@@ -523,6 +562,8 @@
             // 
             // peLogo
             // 
+            this.PanelAnimator.SetDecoration(this.peLogo, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.peLogo, BunifuAnimatorNS.DecorationType.None);
             this.peLogo.Image = ((System.Drawing.Image)(resources.GetObject("peLogo.Image")));
             this.peLogo.Location = new System.Drawing.Point(21, 17);
             this.peLogo.Name = "peLogo";
@@ -539,6 +580,8 @@
             this.header.Controls.Add(this.pictureBox6);
             this.header.Controls.Add(this.btnClose);
             this.header.Controls.Add(this.bunifuCustomLabel1);
+            this.LogoAnimator.SetDecoration(this.header, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.header, BunifuAnimatorNS.DecorationType.None);
             this.header.Dock = System.Windows.Forms.DockStyle.Top;
             this.header.Location = new System.Drawing.Point(0, 0);
             this.header.Name = "header";
@@ -547,6 +590,8 @@
             // 
             // pictureBox6
             // 
+            this.PanelAnimator.SetDecoration(this.pictureBox6, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.pictureBox6, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(11, 7);
             this.pictureBox6.Name = "pictureBox6";
@@ -559,6 +604,8 @@
             // 
             this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.LogoAnimator.SetDecoration(this.btnClose, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnClose, BunifuAnimatorNS.DecorationType.None);
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageActive = null;
             this.btnClose.Location = new System.Drawing.Point(1021, 10);
@@ -574,6 +621,8 @@
             // 
             this.bunifuCustomLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuCustomLabel1.AutoSize = true;
+            this.PanelAnimator.SetDecoration(this.bunifuCustomLabel1, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.bunifuCustomLabel1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(255)))));
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(430, 9);
@@ -591,10 +640,148 @@
             // 
             // xtraTabbedMdiManager1
             // 
+            this.xtraTabbedMdiManager1.AppearancePage.HeaderActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.xtraTabbedMdiManager1.AppearancePage.HeaderActive.Options.UseBackColor = true;
+            this.xtraTabbedMdiManager1.AppearancePage.HeaderHotTracked.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.xtraTabbedMdiManager1.AppearancePage.HeaderHotTracked.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.xtraTabbedMdiManager1.AppearancePage.HeaderHotTracked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.xtraTabbedMdiManager1.AppearancePage.HeaderHotTracked.Options.UseBackColor = true;
+            this.xtraTabbedMdiManager1.AppearancePage.HeaderHotTracked.Options.UseBorderColor = true;
             this.xtraTabbedMdiManager1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.xtraTabbedMdiManager1.BorderStylePage = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageHeader;
             this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // PanelAnimator
+            // 
+            this.PanelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
+            this.PanelAnimator.Cursor = null;
+            animation33.AnimateOnlyDifferences = true;
+            animation33.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation33.BlindCoeff")));
+            animation33.LeafCoeff = 0F;
+            animation33.MaxTime = 1F;
+            animation33.MinTime = 0F;
+            animation33.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation33.MosaicCoeff")));
+            animation33.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation33.MosaicShift")));
+            animation33.MosaicSize = 1;
+            animation33.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation33.RotateCoeff = 0F;
+            animation33.RotateLimit = 0F;
+            animation33.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation33.ScaleCoeff")));
+            animation33.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation33.SlideCoeff")));
+            animation33.TimeCoeff = 2F;
+            animation33.TransparencyCoeff = 0F;
+            this.PanelAnimator.DefaultAnimation = animation33;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PanelAnimator.SetDecoration(this.btnMenu, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.btnMenu, BunifuAnimatorNS.DecorationType.None);
+            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
+            this.btnMenu.Location = new System.Drawing.Point(212, 7);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(23, 26);
+            this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMenu.TabIndex = 5;
+            this.btnMenu.TabStop = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // LogoAnimator
+            // 
+            this.LogoAnimator.AnimationType = BunifuAnimatorNS.AnimationType.ScaleAndRotate;
+            this.LogoAnimator.Cursor = null;
+            animation34.AnimateOnlyDifferences = true;
+            animation34.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation34.BlindCoeff")));
+            animation34.LeafCoeff = 0F;
+            animation34.MaxTime = 1F;
+            animation34.MinTime = 0F;
+            animation34.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation34.MosaicCoeff")));
+            animation34.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation34.MosaicShift")));
+            animation34.MosaicSize = 0;
+            animation34.Padding = new System.Windows.Forms.Padding(30);
+            animation34.RotateCoeff = 0.5F;
+            animation34.RotateLimit = 0.2F;
+            animation34.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation34.ScaleCoeff")));
+            animation34.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation34.SlideCoeff")));
+            animation34.TimeCoeff = 0F;
+            animation34.TransparencyCoeff = 0F;
+            this.LogoAnimator.DefaultAnimation = animation34;
+            // 
+            // btnDangXuatBar
+            // 
+            this.btnDangXuatBar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnDangXuatBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDangXuatBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDangXuatBar.BorderRadius = 0;
+            this.btnDangXuatBar.ButtonText = "";
+            this.btnDangXuatBar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.btnDangXuatBar, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnDangXuatBar, BunifuAnimatorNS.DecorationType.None);
+            this.btnDangXuatBar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDangXuatBar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuatBar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDangXuatBar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDangXuatBar.Iconimage")));
+            this.btnDangXuatBar.Iconimage_right = null;
+            this.btnDangXuatBar.Iconimage_right_Selected = null;
+            this.btnDangXuatBar.Iconimage_Selected = null;
+            this.btnDangXuatBar.IconMarginLeft = 18;
+            this.btnDangXuatBar.IconMarginRight = 0;
+            this.btnDangXuatBar.IconRightVisible = true;
+            this.btnDangXuatBar.IconRightZoom = 0D;
+            this.btnDangXuatBar.IconVisible = true;
+            this.btnDangXuatBar.IconZoom = 45D;
+            this.btnDangXuatBar.IsTab = true;
+            this.btnDangXuatBar.Location = new System.Drawing.Point(0, 444);
+            this.btnDangXuatBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDangXuatBar.Name = "btnDangXuatBar";
+            this.btnDangXuatBar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDangXuatBar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDangXuatBar.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnDangXuatBar.selected = false;
+            this.btnDangXuatBar.Size = new System.Drawing.Size(244, 38);
+            this.btnDangXuatBar.TabIndex = 16;
+            this.btnDangXuatBar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuatBar.Textcolor = System.Drawing.Color.Silver;
+            this.btnDangXuatBar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuatBar.Visible = false;
+            // 
+            // btnThoatBar
+            // 
+            this.btnThoatBar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnThoatBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnThoatBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoatBar.BorderRadius = 0;
+            this.btnThoatBar.ButtonText = "";
+            this.btnThoatBar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.btnThoatBar, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnThoatBar, BunifuAnimatorNS.DecorationType.None);
+            this.btnThoatBar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnThoatBar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoatBar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnThoatBar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnThoatBar.Iconimage")));
+            this.btnThoatBar.Iconimage_right = null;
+            this.btnThoatBar.Iconimage_right_Selected = null;
+            this.btnThoatBar.Iconimage_Selected = null;
+            this.btnThoatBar.IconMarginLeft = 22;
+            this.btnThoatBar.IconMarginRight = 0;
+            this.btnThoatBar.IconRightVisible = true;
+            this.btnThoatBar.IconRightZoom = 0D;
+            this.btnThoatBar.IconVisible = true;
+            this.btnThoatBar.IconZoom = 40D;
+            this.btnThoatBar.IsTab = true;
+            this.btnThoatBar.Location = new System.Drawing.Point(0, 484);
+            this.btnThoatBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoatBar.Name = "btnThoatBar";
+            this.btnThoatBar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnThoatBar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnThoatBar.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnThoatBar.selected = false;
+            this.btnThoatBar.Size = new System.Drawing.Size(244, 38);
+            this.btnThoatBar.TabIndex = 17;
+            this.btnThoatBar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoatBar.Textcolor = System.Drawing.Color.Silver;
+            this.btnThoatBar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoatBar.Visible = false;
             // 
             // DashBoard
             // 
@@ -602,8 +789,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1051, 617);
-            this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.SideMenu);
             this.Controls.Add(this.header);
+            this.PanelAnimator.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -611,9 +800,9 @@
             this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.DashBoard_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SideMenu)).EndInit();
+            this.SideMenu.ResumeLayout(false);
+            this.SideMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.peLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.header)).EndInit();
             this.header.ResumeLayout(false);
@@ -621,6 +810,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -628,7 +818,7 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.PanelControl SideMenu;
         private Bunifu.Framework.UI.BunifuFlatButton btnHome;
         private System.Windows.Forms.PictureBox peLogo;
         private DevExpress.XtraEditors.PanelControl header;
@@ -646,9 +836,14 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnHangHoa;
         private Bunifu.Framework.UI.BunifuCustomLabel txtChao;
         private Bunifu.Framework.UI.BunifuFlatButton btnDoiMatKhau;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private Bunifu.Framework.UI.BunifuCustomLabel txtPhienBan;
         private Bunifu.Framework.UI.BunifuFlatButton btnHoaDon;
         private Bunifu.Framework.UI.BunifuFlatButton btnCaiDat;
+        private System.Windows.Forms.PictureBox btnMenu;
+        private BunifuAnimatorNS.BunifuTransition PanelAnimator;
+        private BunifuAnimatorNS.BunifuTransition LogoAnimator;
+        private Bunifu.Framework.UI.BunifuFlatButton btnThoatBar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDangXuatBar;
     }
 }
 

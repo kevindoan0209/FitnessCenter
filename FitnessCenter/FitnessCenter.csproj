@@ -37,21 +37,43 @@
       <HintPath>E:\Program\Setup Program\DEVELOPER\Setup Dev\Visual Studio 2015\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.BonusSkins.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.DataAccess.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Extensions, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Wizard, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v16.1.Extensions, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,28 +85,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountDetail.cs">
+    <Compile Include="Control\MemberDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AccountDetail.Designer.cs">
+    <Compile Include="Control\MemberDetail.Designer.cs">
+      <DependentUpon>MemberDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\AccountDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\AccountDetail.Designer.cs">
       <DependentUpon>AccountDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberManagement.cs">
+    <Compile Include="Control\MemberManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MemberManagement.Designer.cs">
+    <Compile Include="Control\MemberManagement.Designer.cs">
       <DependentUpon>MemberManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="AccountManagement.cs">
+    <Compile Include="Control\AccountManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AccountManagement.Designer.cs">
+    <Compile Include="Control\AccountManagement.Designer.cs">
       <DependentUpon>AccountManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="About.cs">
+    <Compile Include="Control\About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="About.Designer.cs">
+    <Compile Include="Control\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
     <Compile Include="DashBoard.cs">
@@ -111,36 +139,39 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MessageNotice.cs">
+    <Compile Include="Message\MessageNotice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MessageNotice.Designer.cs">
+    <Compile Include="Message\MessageNotice.Designer.cs">
       <DependentUpon>MessageNotice.cs</DependentUpon>
     </Compile>
-    <Compile Include="Message.cs">
+    <Compile Include="Message\Message.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Message.Designer.cs">
+    <Compile Include="Message\Message.Designer.cs">
       <DependentUpon>Message.cs</DependentUpon>
     </Compile>
-    <Compile Include="MessageLogOut.cs">
+    <Compile Include="Message\MessageLogOut.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MessageLogOut.Designer.cs">
+    <Compile Include="Message\MessageLogOut.Designer.cs">
       <DependentUpon>MessageLogOut.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AccountDetail.resx">
+    <EmbeddedResource Include="Control\MemberDetail.resx">
+      <DependentUpon>MemberDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\AccountDetail.resx">
       <DependentUpon>AccountDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberManagement.resx">
+    <EmbeddedResource Include="Control\MemberManagement.resx">
       <DependentUpon>MemberManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AccountManagement.resx">
+    <EmbeddedResource Include="Control\AccountManagement.resx">
       <DependentUpon>AccountManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="About.resx">
+    <EmbeddedResource Include="Control\About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
@@ -155,13 +186,13 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MessageNotice.resx">
+    <EmbeddedResource Include="Message\MessageNotice.resx">
       <DependentUpon>MessageNotice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Message.resx">
+    <EmbeddedResource Include="Message\Message.resx">
       <DependentUpon>Message.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MessageLogOut.resx">
+    <EmbeddedResource Include="Message\MessageLogOut.resx">
       <DependentUpon>MessageLogOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />

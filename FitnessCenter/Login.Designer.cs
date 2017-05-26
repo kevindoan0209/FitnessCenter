@@ -42,6 +42,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.cbxHienMatKhai = new DevExpress.XtraEditors.CheckEdit();
             this.lbTrangThai = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtPhienBan = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).BeginInit();
             this.panel2.SuspendLayout();
@@ -109,6 +110,7 @@
             this.btnDangNhap.ButtonText = "              Đăng nhập";
             this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangNhap.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDangNhap.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.Iconcolor = System.Drawing.Color.Transparent;
             this.btnDangNhap.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.Iconimage")));
             this.btnDangNhap.Iconimage_right = null;
@@ -132,7 +134,7 @@
             this.btnDangNhap.Text = "              Đăng nhập";
             this.btnDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangNhap.Textcolor = System.Drawing.Color.White;
-            this.btnDangNhap.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.TextFont = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // btnClose
@@ -163,22 +165,22 @@
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(63, 150);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(105, 16);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(103, 16);
             this.bunifuCustomLabel1.TabIndex = 6;
             this.bunifuCustomLabel1.Text = "Tên đăng nhập :";
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.bunifuCustomLabel2.Location = new System.Drawing.Point(63, 229);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(68, 16);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(69, 16);
             this.bunifuCustomLabel2.TabIndex = 7;
             this.bunifuCustomLabel2.Text = "Mật khẩu :";
             // 
@@ -207,12 +209,25 @@
             this.lbTrangThai.Size = new System.Drawing.Size(0, 16);
             this.lbTrangThai.TabIndex = 9;
             // 
+            // txtPhienBan
+            // 
+            this.txtPhienBan.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtPhienBan.AutoSize = true;
+            this.txtPhienBan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhienBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtPhienBan.Location = new System.Drawing.Point(240, 389);
+            this.txtPhienBan.Name = "txtPhienBan";
+            this.txtPhienBan.Size = new System.Drawing.Size(176, 32);
+            this.txtPhienBan.TabIndex = 14;
+            this.txtPhienBan.Text = "Phiên bản thử nghiệm v1.0.0 \r\n\r\n";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(416, 412);
+            this.Controls.Add(this.txtPhienBan);
             this.Controls.Add(this.lbTrangThai);
             this.Controls.Add(this.cbxHienMatKhai);
             this.Controls.Add(this.bunifuCustomLabel2);
@@ -254,5 +269,6 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private DevExpress.XtraEditors.CheckEdit cbxHienMatKhai;
         private Bunifu.Framework.UI.BunifuCustomLabel lbTrangThai;
+        private Bunifu.Framework.UI.BunifuCustomLabel txtPhienBan;
     }
 }

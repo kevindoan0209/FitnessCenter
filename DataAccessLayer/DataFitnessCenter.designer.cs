@@ -39,12 +39,18 @@ namespace DataAccessLayer
     partial void InsertCustomer(Customer instance);
     partial void UpdateCustomer(Customer instance);
     partial void DeleteCustomer(Customer instance);
+    partial void InsertFitnessCenter(FitnessCenter instance);
+    partial void UpdateFitnessCenter(FitnessCenter instance);
+    partial void DeleteFitnessCenter(FitnessCenter instance);
     partial void InsertItem(Item instance);
     partial void UpdateItem(Item instance);
     partial void DeleteItem(Item instance);
     partial void InsertMembership(Membership instance);
     partial void UpdateMembership(Membership instance);
     partial void DeleteMembership(Membership instance);
+    partial void InsertPayment(Payment instance);
+    partial void UpdatePayment(Payment instance);
+    partial void DeletePayment(Payment instance);
     partial void InsertPurchaseDetail(PurchaseDetail instance);
     partial void UpdatePurchaseDetail(PurchaseDetail instance);
     partial void DeletePurchaseDetail(PurchaseDetail instance);
@@ -116,6 +122,14 @@ namespace DataAccessLayer
 			}
 		}
 		
+		public System.Data.Linq.Table<FitnessCenter> FitnessCenters
+		{
+			get
+			{
+				return this.GetTable<FitnessCenter>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Item> Items
 		{
 			get
@@ -129,6 +143,14 @@ namespace DataAccessLayer
 			get
 			{
 				return this.GetTable<Membership>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Payment> Payments
+		{
+			get
+			{
+				return this.GetTable<Payment>();
 			}
 		}
 		
@@ -626,8 +648,6 @@ namespace DataAccessLayer
 		
 		private System.Data.Linq.Binary _Customer_Image;
 		
-		private string _Customer_Status;
-		
 		private System.Nullable<System.DateTime> _Customer_Age;
 		
 		private string _Customer_Sex;
@@ -638,8 +658,6 @@ namespace DataAccessLayer
 		
 		private string _Customer_Job;
 		
-		private string _Customer_City;
-		
 		private string _Customer_Address;
 		
 		private int _Membership_ID;
@@ -649,6 +667,8 @@ namespace DataAccessLayer
 		private System.DateTime _Customer_EndDate;
 		
 		private string _Customer_Note;
+		
+		private EntitySet<Payment> _Payments;
 		
 		private EntitySet<SaleInvoice> _SaleInvoices;
 		
@@ -664,8 +684,6 @@ namespace DataAccessLayer
     partial void OnCustomer_NameChanged();
     partial void OnCustomer_ImageChanging(System.Data.Linq.Binary value);
     partial void OnCustomer_ImageChanged();
-    partial void OnCustomer_StatusChanging(string value);
-    partial void OnCustomer_StatusChanged();
     partial void OnCustomer_AgeChanging(System.Nullable<System.DateTime> value);
     partial void OnCustomer_AgeChanged();
     partial void OnCustomer_SexChanging(string value);
@@ -676,8 +694,6 @@ namespace DataAccessLayer
     partial void OnCustomer_PhoneChanged();
     partial void OnCustomer_JobChanging(string value);
     partial void OnCustomer_JobChanged();
-    partial void OnCustomer_CityChanging(string value);
-    partial void OnCustomer_CityChanged();
     partial void OnCustomer_AddressChanging(string value);
     partial void OnCustomer_AddressChanged();
     partial void OnMembership_IDChanging(int value);
@@ -692,6 +708,7 @@ namespace DataAccessLayer
 		
 		public Customer()
 		{
+			this._Payments = new EntitySet<Payment>(new Action<Payment>(this.attach_Payments), new Action<Payment>(this.detach_Payments));
 			this._SaleInvoices = new EntitySet<SaleInvoice>(new Action<SaleInvoice>(this.attach_SaleInvoices), new Action<SaleInvoice>(this.detach_SaleInvoices));
 			this._Membership = default(EntityRef<Membership>);
 			OnCreated();
@@ -753,26 +770,6 @@ namespace DataAccessLayer
 					this._Customer_Image = value;
 					this.SendPropertyChanged("Customer_Image");
 					this.OnCustomer_ImageChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Customer_Status", DbType="NVarChar(50)")]
-		public string Customer_Status
-		{
-			get
-			{
-				return this._Customer_Status;
-			}
-			set
-			{
-				if ((this._Customer_Status != value))
-				{
-					this.OnCustomer_StatusChanging(value);
-					this.SendPropertyChanging();
-					this._Customer_Status = value;
-					this.SendPropertyChanged("Customer_Status");
-					this.OnCustomer_StatusChanged();
 				}
 			}
 		}
@@ -873,26 +870,6 @@ namespace DataAccessLayer
 					this._Customer_Job = value;
 					this.SendPropertyChanged("Customer_Job");
 					this.OnCustomer_JobChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Customer_City", DbType="NVarChar(500)")]
-		public string Customer_City
-		{
-			get
-			{
-				return this._Customer_City;
-			}
-			set
-			{
-				if ((this._Customer_City != value))
-				{
-					this.OnCustomer_CityChanging(value);
-					this.SendPropertyChanging();
-					this._Customer_City = value;
-					this.SendPropertyChanged("Customer_City");
-					this.OnCustomer_CityChanged();
 				}
 			}
 		}
@@ -1001,6 +978,19 @@ namespace DataAccessLayer
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Customer_Payment", Storage="_Payments", ThisKey="Customer_ID", OtherKey="Customer_ID")]
+		public EntitySet<Payment> Payments
+		{
+			get
+			{
+				return this._Payments;
+			}
+			set
+			{
+				this._Payments.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Customer_SaleInvoice", Storage="_SaleInvoices", ThisKey="Customer_ID", OtherKey="Customer_ID")]
 		public EntitySet<SaleInvoice> SaleInvoices
 		{
@@ -1068,6 +1058,18 @@ namespace DataAccessLayer
 			}
 		}
 		
+		private void attach_Payments(Payment entity)
+		{
+			this.SendPropertyChanging();
+			entity.Customer = this;
+		}
+		
+		private void detach_Payments(Payment entity)
+		{
+			this.SendPropertyChanging();
+			entity.Customer = null;
+		}
+		
 		private void attach_SaleInvoices(SaleInvoice entity)
 		{
 			this.SendPropertyChanging();
@@ -1078,6 +1080,212 @@ namespace DataAccessLayer
 		{
 			this.SendPropertyChanging();
 			entity.Customer = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.FitnessCenter")]
+	public partial class FitnessCenter : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _FitnessCenter_ID;
+		
+		private string _FitnessCenter_Name;
+		
+		private string _FitnessCenter_Tel;
+		
+		private string _FitnessCenter_Email;
+		
+		private string _FitnessCenter_Facebook;
+		
+		private string _FitnessCenter_Address;
+		
+		private string _FitnessCenter_Link;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnFitnessCenter_IDChanging(int value);
+    partial void OnFitnessCenter_IDChanged();
+    partial void OnFitnessCenter_NameChanging(string value);
+    partial void OnFitnessCenter_NameChanged();
+    partial void OnFitnessCenter_TelChanging(string value);
+    partial void OnFitnessCenter_TelChanged();
+    partial void OnFitnessCenter_EmailChanging(string value);
+    partial void OnFitnessCenter_EmailChanged();
+    partial void OnFitnessCenter_FacebookChanging(string value);
+    partial void OnFitnessCenter_FacebookChanged();
+    partial void OnFitnessCenter_AddressChanging(string value);
+    partial void OnFitnessCenter_AddressChanged();
+    partial void OnFitnessCenter_LinkChanging(string value);
+    partial void OnFitnessCenter_LinkChanged();
+    #endregion
+		
+		public FitnessCenter()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FitnessCenter_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int FitnessCenter_ID
+		{
+			get
+			{
+				return this._FitnessCenter_ID;
+			}
+			set
+			{
+				if ((this._FitnessCenter_ID != value))
+				{
+					this.OnFitnessCenter_IDChanging(value);
+					this.SendPropertyChanging();
+					this._FitnessCenter_ID = value;
+					this.SendPropertyChanged("FitnessCenter_ID");
+					this.OnFitnessCenter_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FitnessCenter_Name", DbType="NVarChar(500) NOT NULL", CanBeNull=false)]
+		public string FitnessCenter_Name
+		{
+			get
+			{
+				return this._FitnessCenter_Name;
+			}
+			set
+			{
+				if ((this._FitnessCenter_Name != value))
+				{
+					this.OnFitnessCenter_NameChanging(value);
+					this.SendPropertyChanging();
+					this._FitnessCenter_Name = value;
+					this.SendPropertyChanged("FitnessCenter_Name");
+					this.OnFitnessCenter_NameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FitnessCenter_Tel", DbType="NVarChar(50)")]
+		public string FitnessCenter_Tel
+		{
+			get
+			{
+				return this._FitnessCenter_Tel;
+			}
+			set
+			{
+				if ((this._FitnessCenter_Tel != value))
+				{
+					this.OnFitnessCenter_TelChanging(value);
+					this.SendPropertyChanging();
+					this._FitnessCenter_Tel = value;
+					this.SendPropertyChanged("FitnessCenter_Tel");
+					this.OnFitnessCenter_TelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FitnessCenter_Email", DbType="NVarChar(500)")]
+		public string FitnessCenter_Email
+		{
+			get
+			{
+				return this._FitnessCenter_Email;
+			}
+			set
+			{
+				if ((this._FitnessCenter_Email != value))
+				{
+					this.OnFitnessCenter_EmailChanging(value);
+					this.SendPropertyChanging();
+					this._FitnessCenter_Email = value;
+					this.SendPropertyChanged("FitnessCenter_Email");
+					this.OnFitnessCenter_EmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FitnessCenter_Facebook", DbType="NVarChar(500)")]
+		public string FitnessCenter_Facebook
+		{
+			get
+			{
+				return this._FitnessCenter_Facebook;
+			}
+			set
+			{
+				if ((this._FitnessCenter_Facebook != value))
+				{
+					this.OnFitnessCenter_FacebookChanging(value);
+					this.SendPropertyChanging();
+					this._FitnessCenter_Facebook = value;
+					this.SendPropertyChanged("FitnessCenter_Facebook");
+					this.OnFitnessCenter_FacebookChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FitnessCenter_Address", DbType="NVarChar(500)")]
+		public string FitnessCenter_Address
+		{
+			get
+			{
+				return this._FitnessCenter_Address;
+			}
+			set
+			{
+				if ((this._FitnessCenter_Address != value))
+				{
+					this.OnFitnessCenter_AddressChanging(value);
+					this.SendPropertyChanging();
+					this._FitnessCenter_Address = value;
+					this.SendPropertyChanged("FitnessCenter_Address");
+					this.OnFitnessCenter_AddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FitnessCenter_Link", DbType="NVarChar(500)")]
+		public string FitnessCenter_Link
+		{
+			get
+			{
+				return this._FitnessCenter_Link;
+			}
+			set
+			{
+				if ((this._FitnessCenter_Link != value))
+				{
+					this.OnFitnessCenter_LinkChanging(value);
+					this.SendPropertyChanging();
+					this._FitnessCenter_Link = value;
+					this.SendPropertyChanged("FitnessCenter_Link");
+					this.OnFitnessCenter_LinkChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	
@@ -1526,6 +1734,229 @@ namespace DataAccessLayer
 		{
 			this.SendPropertyChanging();
 			entity.Membership = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Payment")]
+	public partial class Payment : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Payment_ID;
+		
+		private int _Customer_ID;
+		
+		private System.DateTime _StartDate;
+		
+		private System.DateTime _EndDate;
+		
+		private int _TotalAmount;
+		
+		private System.Nullable<int> _Payment_Note;
+		
+		private EntityRef<Customer> _Customer;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPayment_IDChanging(int value);
+    partial void OnPayment_IDChanged();
+    partial void OnCustomer_IDChanging(int value);
+    partial void OnCustomer_IDChanged();
+    partial void OnStartDateChanging(System.DateTime value);
+    partial void OnStartDateChanged();
+    partial void OnEndDateChanging(System.DateTime value);
+    partial void OnEndDateChanged();
+    partial void OnTotalAmountChanging(int value);
+    partial void OnTotalAmountChanged();
+    partial void OnPayment_NoteChanging(System.Nullable<int> value);
+    partial void OnPayment_NoteChanged();
+    #endregion
+		
+		public Payment()
+		{
+			this._Customer = default(EntityRef<Customer>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Payment_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Payment_ID
+		{
+			get
+			{
+				return this._Payment_ID;
+			}
+			set
+			{
+				if ((this._Payment_ID != value))
+				{
+					this.OnPayment_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Payment_ID = value;
+					this.SendPropertyChanged("Payment_ID");
+					this.OnPayment_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Customer_ID", DbType="Int NOT NULL")]
+		public int Customer_ID
+		{
+			get
+			{
+				return this._Customer_ID;
+			}
+			set
+			{
+				if ((this._Customer_ID != value))
+				{
+					if (this._Customer.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnCustomer_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Customer_ID = value;
+					this.SendPropertyChanged("Customer_ID");
+					this.OnCustomer_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartDate", DbType="SmallDateTime NOT NULL")]
+		public System.DateTime StartDate
+		{
+			get
+			{
+				return this._StartDate;
+			}
+			set
+			{
+				if ((this._StartDate != value))
+				{
+					this.OnStartDateChanging(value);
+					this.SendPropertyChanging();
+					this._StartDate = value;
+					this.SendPropertyChanged("StartDate");
+					this.OnStartDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndDate", DbType="SmallDateTime NOT NULL")]
+		public System.DateTime EndDate
+		{
+			get
+			{
+				return this._EndDate;
+			}
+			set
+			{
+				if ((this._EndDate != value))
+				{
+					this.OnEndDateChanging(value);
+					this.SendPropertyChanging();
+					this._EndDate = value;
+					this.SendPropertyChanged("EndDate");
+					this.OnEndDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalAmount", DbType="Int NOT NULL")]
+		public int TotalAmount
+		{
+			get
+			{
+				return this._TotalAmount;
+			}
+			set
+			{
+				if ((this._TotalAmount != value))
+				{
+					this.OnTotalAmountChanging(value);
+					this.SendPropertyChanging();
+					this._TotalAmount = value;
+					this.SendPropertyChanged("TotalAmount");
+					this.OnTotalAmountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Payment_Note", DbType="Int")]
+		public System.Nullable<int> Payment_Note
+		{
+			get
+			{
+				return this._Payment_Note;
+			}
+			set
+			{
+				if ((this._Payment_Note != value))
+				{
+					this.OnPayment_NoteChanging(value);
+					this.SendPropertyChanging();
+					this._Payment_Note = value;
+					this.SendPropertyChanged("Payment_Note");
+					this.OnPayment_NoteChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Customer_Payment", Storage="_Customer", ThisKey="Customer_ID", OtherKey="Customer_ID", IsForeignKey=true)]
+		public Customer Customer
+		{
+			get
+			{
+				return this._Customer.Entity;
+			}
+			set
+			{
+				Customer previousValue = this._Customer.Entity;
+				if (((previousValue != value) 
+							|| (this._Customer.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Customer.Entity = null;
+						previousValue.Payments.Remove(this);
+					}
+					this._Customer.Entity = value;
+					if ((value != null))
+					{
+						value.Payments.Add(this);
+						this._Customer_ID = value.Customer_ID;
+					}
+					else
+					{
+						this._Customer_ID = default(int);
+					}
+					this.SendPropertyChanged("Customer");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	

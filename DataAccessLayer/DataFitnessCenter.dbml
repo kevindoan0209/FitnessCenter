@@ -27,20 +27,30 @@
       <Column Name="Customer_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Customer_Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="Customer_Image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="Customer_Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Customer_Age" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="Customer_Sex" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Customer_Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="Customer_Phone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="Customer_Job" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="Customer_City" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Column Name="Customer_Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Column Name="Membership_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Customer_StartDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
       <Column Name="Customer_EndDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
       <Column Name="Customer_Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Customer_Payment" Member="Payments" ThisKey="Customer_ID" OtherKey="Customer_ID" Type="Payment" />
       <Association Name="Customer_SaleInvoice" Member="SaleInvoices" ThisKey="Customer_ID" OtherKey="Customer_ID" Type="SaleInvoice" />
       <Association Name="Membership_Customer" Member="Membership" ThisKey="Membership_ID" OtherKey="Membership_ID" Type="Membership" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FitnessCenter" Member="FitnessCenters">
+    <Type Name="FitnessCenter">
+      <Column Name="FitnessCenter_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FitnessCenter_Name" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="FitnessCenter_Tel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FitnessCenter_Email" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="FitnessCenter_Facebook" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="FitnessCenter_Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="FitnessCenter_Link" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Items" Member="Items">
@@ -64,6 +74,17 @@
       <Column Name="Membership_Price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Membership_Note" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
       <Association Name="Membership_Customer" Member="Customers" ThisKey="Membership_ID" OtherKey="Membership_ID" Type="Customer" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Payment" Member="Payments">
+    <Type Name="Payment">
+      <Column Name="Payment_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Customer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TotalAmount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Payment_Note" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Customer_Payment" Member="Customer" ThisKey="Customer_ID" OtherKey="Customer_ID" Type="Customer" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.PurchaseDetail" Member="PurchaseDetails">

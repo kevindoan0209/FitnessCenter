@@ -160,5 +160,39 @@ namespace FitnessCenter
             MessageNotice message = new MessageNotice();
             message.ShowDialog();
         }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            if (SideMenu.Width == 55)
+            {
+                peLogo.Visible = true;
+                txtPhienBan.Visible = true;
+                btnDangXuat.Visible = true;
+                btnThoat.Visible = true;
+                txtChao.Visible = true;
+                btnThoatBar.Visible = false;
+                btnDangXuatBar.Visible = false;
+                SideMenu.Visible = false;
+                SideMenu.Width = 244;
+                PanelAnimator.ShowSync(SideMenu);
+               // LogoAnimator.ShowSync(peLogo);
+            }
+            else
+            {
+                peLogo.Visible = false;
+                txtPhienBan.Visible = false;
+                btnDangXuat.Visible = false;
+                btnThoat.Visible = false;
+                txtChao.Visible = false;
+                btnThoatBar.Visible = true;
+                btnDangXuatBar.Visible = true;
+              //  LogoAnimator.Hide(peLogo);
+                SideMenu.Visible = false;
+                SideMenu.Width = 55;
+                PanelAnimator.ShowSync(SideMenu);
+               // LogoAnimator.ShowSync(peLogo);
+               
+            }
+        }
     }
 }
