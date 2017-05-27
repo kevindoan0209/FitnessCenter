@@ -109,6 +109,15 @@ namespace DataAccessLayer
             return temp;
         }
 
+        public int GetLastIdCustomer()
+        {
+            const String sqlCommand = "SELECT IDENT_CURRENT('Customer') as LastID";
+            SqlCommand command = new SqlCommand(sqlCommand, connect());
+            int temp = int.Parse(command.ExecuteScalar().ToString());
+            return temp;
+        }
+        
+
         public DataTable Select_CheckUserNameSoftware(string username)
         {
             const String sqlCommand = "Select * from Account where Account_UserName = @Username and Account_Type_ID <= 3";
@@ -127,6 +136,81 @@ namespace DataAccessLayer
             command.Parameters.AddWithValue("@Id", id);
             command.Parameters.AddWithValue("@Status", status);
             return command.ExecuteNonQuery();
-        }     
+        }
+
+        public int InsertCustomerNoImage(string name, DateTime age, string sex, string email, string phone, string job, string address,int memberId, string note, DateTime startDate, DateTime endDate)
+        {
+            const String sqlCommand = "Insert into Customer (Customer_Name,Customer_Age,Customer_Sex,Customer_Email,Customer_Phone,Customer_Job,Customer_Address,Membership_ID,Customer_Note,Customer_StartDate,Customer_EndDate) Values(@Name, @Age, @Sex, @Email, @Phone, @Job, @Address, @MemberId, @Note, @StartDate, @EndDate)";
+            SqlCommand command = new SqlCommand(sqlCommand, connect());
+            command.Parameters.AddWithValue("@Name", name);
+            command.Parameters.AddWithValue("@Age", age);
+            command.Parameters.AddWithValue("@Sex", sex);
+            command.Parameters.AddWithValue("@Email", email);
+            command.Parameters.AddWithValue("@Phone", phone);
+            command.Parameters.AddWithValue("@Job", job);
+            command.Parameters.AddWithValue("@Address", address);
+            command.Parameters.AddWithValue("@MemberId", memberId);
+            command.Parameters.AddWithValue("@Note", note);
+            command.Parameters.AddWithValue("@StartDate", startDate);
+            command.Parameters.AddWithValue("@EndDate", endDate);
+            return command.ExecuteNonQuery();
+        }
+
+        public int InsertCustomerImage(string name, DateTime age, string sex, string email, string phone, string job, string address, int memberId, string note, DateTime startDate, DateTime endDate,string image)
+        {
+            const String sqlCommand = "Insert into Customer (Customer_Name,Customer_Age,Customer_Sex,Customer_Email,Customer_Phone,Customer_Job,Customer_Address,Membership_ID,Customer_Note,Customer_StartDate,Customer_EndDate,Customer_Image) Values(@Name, @Age, @Sex, @Email, @Phone, @Job, @Address, @MemberId, @Note, @StartDate, @EndDate,@Image)";
+            SqlCommand command = new SqlCommand(sqlCommand, connect());
+            command.Parameters.AddWithValue("@Name", name);
+            command.Parameters.AddWithValue("@Age", age);
+            command.Parameters.AddWithValue("@Sex", sex);
+            command.Parameters.AddWithValue("@Email", email);
+            command.Parameters.AddWithValue("@Phone", phone);
+            command.Parameters.AddWithValue("@Job", job);
+            command.Parameters.AddWithValue("@Address", address);
+            command.Parameters.AddWithValue("@MemberId", memberId);
+            command.Parameters.AddWithValue("@Note", note);
+            command.Parameters.AddWithValue("@StartDate", startDate);
+            command.Parameters.AddWithValue("@EndDate", endDate);
+            command.Parameters.AddWithValue("@Image", convertImagetoByte(image));
+            return command.ExecuteNonQuery();
+        }
+
+        public int UpdateCustomerNoImage(int id,string name, DateTime age, string sex, string email, string phone, string job, string address, int memberId, string note, DateTime startDate, DateTime endDate)
+        {
+            const String sqlCommand = "Update Customer set Customer_Name = @Name,Customer_Age = @Age,Customer_Sex = @Sex, Customer_Email = @Email,Customer_Phone = @Phone,Customer_Job = @Job,Customer_Address = @Address,Membership_ID = @MemberId,Customer_Note = @Note, Customer_StartDate = @StartDate, Customer_EndDate = @EndDate Where Customer_ID = @Id";
+            SqlCommand command = new SqlCommand(sqlCommand, connect());
+            command.Parameters.AddWithValue("@Id", id);
+            command.Parameters.AddWithValue("@Name", name);
+            command.Parameters.AddWithValue("@Age", age);
+            command.Parameters.AddWithValue("@Sex", sex);
+            command.Parameters.AddWithValue("@Email", email);
+            command.Parameters.AddWithValue("@Phone", phone);
+            command.Parameters.AddWithValue("@Job", job);
+            command.Parameters.AddWithValue("@Address", address);
+            command.Parameters.AddWithValue("@MemberId", memberId);
+            command.Parameters.AddWithValue("@Note", note);
+            command.Parameters.AddWithValue("@StartDate", startDate);
+            command.Parameters.AddWithValue("@EndDate", endDate);
+            return command.ExecuteNonQuery();
+        }
+        public int UpdateCustomerImage(int id, string name, DateTime age, string sex, string email, string phone, string job, string address, int memberId, string note, DateTime startDate, DateTime endDate,string image)
+        {
+            const String sqlCommand = "Update Customer set Customer_Name = @Name,Customer_Age = @Age,Customer_Sex = @Sex, Customer_Email = @Email,Customer_Phone = @Phone,Customer_Job = @Job,Customer_Address = @Address,Membership_ID = @MemberId,Customer_Note = @Note, Customer_StartDate = @StartDate, Customer_EndDate = @EndDate,Customer_Image = @Image Where Customer_ID = @Id";
+            SqlCommand command = new SqlCommand(sqlCommand, connect());
+            command.Parameters.AddWithValue("@Id", id);
+            command.Parameters.AddWithValue("@Name", name);
+            command.Parameters.AddWithValue("@Age", age);
+            command.Parameters.AddWithValue("@Sex", sex);
+            command.Parameters.AddWithValue("@Email", email);
+            command.Parameters.AddWithValue("@Phone", phone);
+            command.Parameters.AddWithValue("@Job", job);
+            command.Parameters.AddWithValue("@Address", address);
+            command.Parameters.AddWithValue("@MemberId", memberId);
+            command.Parameters.AddWithValue("@Note", note);
+            command.Parameters.AddWithValue("@StartDate", startDate);
+            command.Parameters.AddWithValue("@EndDate", endDate);
+            command.Parameters.AddWithValue("@Image", convertImagetoByte(image));
+            return command.ExecuteNonQuery();
+        }
     }
 }

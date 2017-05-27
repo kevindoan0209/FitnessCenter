@@ -60,5 +60,30 @@ namespace BussinessLogicLayer
         {
             return _human.GetLastIdAccount();
         }
+        public static int GetLastIdCustomer()
+        {
+            return _human.GetLastIdCustomer();
+        }
+
+        public static int InsertCustomerImage(string name, DateTime age, string sex, string email, string phone, string job, string address, int memberId, string note, DateTime startDate, DateTime endDate, string image)
+        {
+            return _human.InsertCustomerImage(name, age, sex, email, phone, job, address, memberId, note, startDate, endDate, image);
+        }
+        public static int InsertCustomerNoImage(string name, DateTime age, string sex, string email, string phone, string job, string address, int memberId, string note, DateTime startDate, DateTime endDate)
+        {
+            return _human.InsertCustomerNoImage(name, age, sex, email, phone, job, address, memberId, note, startDate, endDate);
+        }
+
+        public static int UpdateCustomerImage(int id, string name, DateTime age, string sex, string email, string phone, string job, string address, int memberId, string note, DateTime startDate, DateTime endDate, string image)
+        {
+            return _human.UpdateCustomerImage(id, name, age, sex, email, phone, job, address, memberId, note, startDate, endDate, image);
+        }
+        public static int UpdateCustomerNoImage(int id, string name, DateTime age, string sex, string email, string phone, string job, string address, int memberId, string note, DateTime startDate, DateTime endDate)
+        {
+            return _human.UpdateCustomerNoImage(id, name, age, sex, email, phone, job, address, memberId, note, startDate, endDate);
+        }
+
+
+
     }
 }

@@ -289,3 +289,4 @@ C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\bin\Debug\de\DevExpr
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\bin\Debug\es\DevExpress.XtraVerticalGrid.v16.1.resources.dll
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\bin\Debug\ja\DevExpress.XtraVerticalGrid.v16.1.resources.dll
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\bin\Debug\ru\DevExpress.XtraVerticalGrid.v16.1.resources.dll
+C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.ExpireMember.resources

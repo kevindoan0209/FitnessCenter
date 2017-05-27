@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation33 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
-            BunifuAnimatorNS.Animation animation34 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.SideMenu = new DevExpress.XtraEditors.PanelControl();
+            this.btnThoatBar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnDangXuatBar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnMenu = new System.Windows.Forms.PictureBox();
             this.btnCaiDat = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnHoaDon = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtPhienBan = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -55,24 +58,21 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.PanelAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.btnMenu = new System.Windows.Forms.PictureBox();
             this.LogoAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.btnDangXuatBar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnThoatBar = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.SideMenu)).BeginInit();
             this.SideMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.header)).BeginInit();
             this.header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.ElipseRadius = 0;
             this.bunifuElipse1.TargetControl = this;
             // 
             // SideMenu
@@ -104,6 +104,96 @@
             this.SideMenu.Name = "SideMenu";
             this.SideMenu.Size = new System.Drawing.Size(244, 577);
             this.SideMenu.TabIndex = 0;
+            // 
+            // btnThoatBar
+            // 
+            this.btnThoatBar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnThoatBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnThoatBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoatBar.BorderRadius = 0;
+            this.btnThoatBar.ButtonText = "";
+            this.btnThoatBar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.btnThoatBar, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnThoatBar, BunifuAnimatorNS.DecorationType.None);
+            this.btnThoatBar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnThoatBar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoatBar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnThoatBar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnThoatBar.Iconimage")));
+            this.btnThoatBar.Iconimage_right = null;
+            this.btnThoatBar.Iconimage_right_Selected = null;
+            this.btnThoatBar.Iconimage_Selected = null;
+            this.btnThoatBar.IconMarginLeft = 22;
+            this.btnThoatBar.IconMarginRight = 0;
+            this.btnThoatBar.IconRightVisible = true;
+            this.btnThoatBar.IconRightZoom = 0D;
+            this.btnThoatBar.IconVisible = true;
+            this.btnThoatBar.IconZoom = 40D;
+            this.btnThoatBar.IsTab = true;
+            this.btnThoatBar.Location = new System.Drawing.Point(0, 484);
+            this.btnThoatBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoatBar.Name = "btnThoatBar";
+            this.btnThoatBar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnThoatBar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnThoatBar.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnThoatBar.selected = false;
+            this.btnThoatBar.Size = new System.Drawing.Size(244, 38);
+            this.btnThoatBar.TabIndex = 17;
+            this.btnThoatBar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoatBar.Textcolor = System.Drawing.Color.Silver;
+            this.btnThoatBar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoatBar.Visible = false;
+            // 
+            // btnDangXuatBar
+            // 
+            this.btnDangXuatBar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnDangXuatBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDangXuatBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDangXuatBar.BorderRadius = 0;
+            this.btnDangXuatBar.ButtonText = "";
+            this.btnDangXuatBar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoAnimator.SetDecoration(this.btnDangXuatBar, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.btnDangXuatBar, BunifuAnimatorNS.DecorationType.None);
+            this.btnDangXuatBar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDangXuatBar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuatBar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDangXuatBar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDangXuatBar.Iconimage")));
+            this.btnDangXuatBar.Iconimage_right = null;
+            this.btnDangXuatBar.Iconimage_right_Selected = null;
+            this.btnDangXuatBar.Iconimage_Selected = null;
+            this.btnDangXuatBar.IconMarginLeft = 18;
+            this.btnDangXuatBar.IconMarginRight = 0;
+            this.btnDangXuatBar.IconRightVisible = true;
+            this.btnDangXuatBar.IconRightZoom = 0D;
+            this.btnDangXuatBar.IconVisible = true;
+            this.btnDangXuatBar.IconZoom = 45D;
+            this.btnDangXuatBar.IsTab = true;
+            this.btnDangXuatBar.Location = new System.Drawing.Point(0, 444);
+            this.btnDangXuatBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDangXuatBar.Name = "btnDangXuatBar";
+            this.btnDangXuatBar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDangXuatBar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDangXuatBar.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnDangXuatBar.selected = false;
+            this.btnDangXuatBar.Size = new System.Drawing.Size(244, 38);
+            this.btnDangXuatBar.TabIndex = 16;
+            this.btnDangXuatBar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuatBar.Textcolor = System.Drawing.Color.Silver;
+            this.btnDangXuatBar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuatBar.Visible = false;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PanelAnimator.SetDecoration(this.btnMenu, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.btnMenu, BunifuAnimatorNS.DecorationType.None);
+            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
+            this.btnMenu.Location = new System.Drawing.Point(212, 7);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(23, 26);
+            this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMenu.TabIndex = 5;
+            this.btnMenu.TabStop = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnCaiDat
             // 
@@ -524,7 +614,7 @@
             // btnHome
             // 
             this.btnHome.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHome.BorderRadius = 0;
             this.btnHome.ButtonText = "        Trang chủ";
@@ -655,133 +745,43 @@
             // 
             this.PanelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.PanelAnimator.Cursor = null;
-            animation33.AnimateOnlyDifferences = true;
-            animation33.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation33.BlindCoeff")));
-            animation33.LeafCoeff = 0F;
-            animation33.MaxTime = 1F;
-            animation33.MinTime = 0F;
-            animation33.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation33.MosaicCoeff")));
-            animation33.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation33.MosaicShift")));
-            animation33.MosaicSize = 1;
-            animation33.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation33.RotateCoeff = 0F;
-            animation33.RotateLimit = 0F;
-            animation33.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation33.ScaleCoeff")));
-            animation33.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation33.SlideCoeff")));
-            animation33.TimeCoeff = 2F;
-            animation33.TransparencyCoeff = 0F;
-            this.PanelAnimator.DefaultAnimation = animation33;
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.PanelAnimator.SetDecoration(this.btnMenu, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.btnMenu, BunifuAnimatorNS.DecorationType.None);
-            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
-            this.btnMenu.Location = new System.Drawing.Point(212, 7);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(23, 26);
-            this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMenu.TabIndex = 5;
-            this.btnMenu.TabStop = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 1;
+            animation2.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 2F;
+            animation2.TransparencyCoeff = 0F;
+            this.PanelAnimator.DefaultAnimation = animation2;
             // 
             // LogoAnimator
             // 
             this.LogoAnimator.AnimationType = BunifuAnimatorNS.AnimationType.ScaleAndRotate;
             this.LogoAnimator.Cursor = null;
-            animation34.AnimateOnlyDifferences = true;
-            animation34.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation34.BlindCoeff")));
-            animation34.LeafCoeff = 0F;
-            animation34.MaxTime = 1F;
-            animation34.MinTime = 0F;
-            animation34.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation34.MosaicCoeff")));
-            animation34.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation34.MosaicShift")));
-            animation34.MosaicSize = 0;
-            animation34.Padding = new System.Windows.Forms.Padding(30);
-            animation34.RotateCoeff = 0.5F;
-            animation34.RotateLimit = 0.2F;
-            animation34.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation34.ScaleCoeff")));
-            animation34.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation34.SlideCoeff")));
-            animation34.TimeCoeff = 0F;
-            animation34.TransparencyCoeff = 0F;
-            this.LogoAnimator.DefaultAnimation = animation34;
-            // 
-            // btnDangXuatBar
-            // 
-            this.btnDangXuatBar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.btnDangXuatBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnDangXuatBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDangXuatBar.BorderRadius = 0;
-            this.btnDangXuatBar.ButtonText = "";
-            this.btnDangXuatBar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogoAnimator.SetDecoration(this.btnDangXuatBar, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.btnDangXuatBar, BunifuAnimatorNS.DecorationType.None);
-            this.btnDangXuatBar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnDangXuatBar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuatBar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnDangXuatBar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDangXuatBar.Iconimage")));
-            this.btnDangXuatBar.Iconimage_right = null;
-            this.btnDangXuatBar.Iconimage_right_Selected = null;
-            this.btnDangXuatBar.Iconimage_Selected = null;
-            this.btnDangXuatBar.IconMarginLeft = 18;
-            this.btnDangXuatBar.IconMarginRight = 0;
-            this.btnDangXuatBar.IconRightVisible = true;
-            this.btnDangXuatBar.IconRightZoom = 0D;
-            this.btnDangXuatBar.IconVisible = true;
-            this.btnDangXuatBar.IconZoom = 45D;
-            this.btnDangXuatBar.IsTab = true;
-            this.btnDangXuatBar.Location = new System.Drawing.Point(0, 444);
-            this.btnDangXuatBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnDangXuatBar.Name = "btnDangXuatBar";
-            this.btnDangXuatBar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnDangXuatBar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnDangXuatBar.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.btnDangXuatBar.selected = false;
-            this.btnDangXuatBar.Size = new System.Drawing.Size(244, 38);
-            this.btnDangXuatBar.TabIndex = 16;
-            this.btnDangXuatBar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuatBar.Textcolor = System.Drawing.Color.Silver;
-            this.btnDangXuatBar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuatBar.Visible = false;
-            // 
-            // btnThoatBar
-            // 
-            this.btnThoatBar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.btnThoatBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnThoatBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThoatBar.BorderRadius = 0;
-            this.btnThoatBar.ButtonText = "";
-            this.btnThoatBar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogoAnimator.SetDecoration(this.btnThoatBar, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.btnThoatBar, BunifuAnimatorNS.DecorationType.None);
-            this.btnThoatBar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnThoatBar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoatBar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnThoatBar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnThoatBar.Iconimage")));
-            this.btnThoatBar.Iconimage_right = null;
-            this.btnThoatBar.Iconimage_right_Selected = null;
-            this.btnThoatBar.Iconimage_Selected = null;
-            this.btnThoatBar.IconMarginLeft = 22;
-            this.btnThoatBar.IconMarginRight = 0;
-            this.btnThoatBar.IconRightVisible = true;
-            this.btnThoatBar.IconRightZoom = 0D;
-            this.btnThoatBar.IconVisible = true;
-            this.btnThoatBar.IconZoom = 40D;
-            this.btnThoatBar.IsTab = true;
-            this.btnThoatBar.Location = new System.Drawing.Point(0, 484);
-            this.btnThoatBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnThoatBar.Name = "btnThoatBar";
-            this.btnThoatBar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnThoatBar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnThoatBar.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.btnThoatBar.selected = false;
-            this.btnThoatBar.Size = new System.Drawing.Size(244, 38);
-            this.btnThoatBar.TabIndex = 17;
-            this.btnThoatBar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoatBar.Textcolor = System.Drawing.Color.Silver;
-            this.btnThoatBar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoatBar.Visible = false;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(30);
+            animation1.RotateCoeff = 0.5F;
+            animation1.RotateLimit = 0.2F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.LogoAnimator.DefaultAnimation = animation1;
             // 
             // DashBoard
             // 
@@ -803,6 +803,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.SideMenu)).EndInit();
             this.SideMenu.ResumeLayout(false);
             this.SideMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.header)).EndInit();
             this.header.ResumeLayout(false);
@@ -810,7 +811,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.ResumeLayout(false);
 
         }

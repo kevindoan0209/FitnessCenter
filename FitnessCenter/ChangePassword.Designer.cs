@@ -186,7 +186,7 @@
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 8;
+            this.bunifuElipse1.ElipseRadius = 0;
             this.bunifuElipse1.TargetControl = this;
             // 
             // cbxHienMatKhai

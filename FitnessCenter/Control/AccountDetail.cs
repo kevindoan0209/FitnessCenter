@@ -117,14 +117,12 @@ namespace FitnessCenter
                                 if (string.IsNullOrEmpty(txtAnh.Text))
                                 {
                                     BLL_Human.UpdateAccountNoImage(id, name, username, password, type);
-                                    this.Close();
-                                    XtraMessageBox.Show("Cập nhật thành công", "Clinience", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();  
                                 }
                                 else
                                 {
                                     BLL_Human.UpdateAccount(id, name, username, password, image, type);
-                                    this.Close();
-                                    XtraMessageBox.Show("Cập nhật thành công", "Clinience", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();                             
                                 }
                             }
                         }
@@ -330,5 +328,7 @@ namespace FitnessCenter
         {
             this.Close();
         }
+
+        
     }
 }

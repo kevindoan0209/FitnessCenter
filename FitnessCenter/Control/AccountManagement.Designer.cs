@@ -87,6 +87,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.panelControl1.Controls.Add(this.groupBox1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
@@ -301,6 +302,7 @@
             // 
             // panelControl2
             // 
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.panelControl2.Controls.Add(this.btnKhoa);
             this.panelControl2.Controls.Add(this.btnXuatFile);
             this.panelControl2.Controls.Add(this.labelControl1);

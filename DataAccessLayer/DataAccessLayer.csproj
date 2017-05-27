@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL_Human.cs" />
+    <Compile Include="DAL_Membership.cs" />
+    <Compile Include="DAL_Payment.cs" />
     <Compile Include="DataFitnessCenter.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

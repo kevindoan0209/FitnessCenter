@@ -46,6 +46,7 @@ namespace FitnessCenter
             peAnh.EditValue = "";
             lbNgayHetHan.Text = "";
             lbNgayNop.Text = "";
+            lbDiaChi.Text = "";
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -94,8 +95,9 @@ namespace FitnessCenter
                     {
                         DataFitnessCenterDataContext dc = new DataFitnessCenterDataContext();
                         var customer = dc.Customers.Where(s => s.Customer_ID == (int)value).SingleOrDefault();
-                        int accountId = Convert.ToInt32(customer.Customer_ID);
-                        if (Id != accountId)
+                        int customerId = Convert.ToInt32(customer.Customer_ID);
+                        BLL_Payment.DeletePayment(customerId);
+                        if (Id != customerId)
                         {
                             if (customer != null)
                             {
@@ -131,6 +133,7 @@ namespace FitnessCenter
             {
                 MemberDetail md = new MemberDetail();
                 md.Id = (int)value;
+                md.isAdd = false;
                 md.ShowDialog();
                 sqlDataSource2.Fill();
             }
@@ -202,6 +205,75 @@ namespace FitnessCenter
             {
                 int Id = (int)value;
                 DataFitnessCenterDataContext db = new DataFitnessCenterDataContext();
+                var customer = db.Customers.Where(i => i.Customer_ID == (int)Id).SingleOrDefault();            
+                if (customer != null)
+                {
+                    lbTen.Text = customer.Customer_Name;
+                    lbGioiTinh.Text = customer.Customer_Sex;
+                    lbSoDienThoai.Text = customer.Customer_Phone;
+                    DateTime age = Convert.ToDateTime(customer.Customer_Age);
+                    int ageInYrs = DateTime.Now.Year - age.Year;
+                    lbTuoi.Text = ageInYrs + " tuổi";
+                    peAnh.EditValue = customer.Customer_Image;
+                    lbDiaChi.Text = customer.Customer_Address;
+                    int type = customer.Membership_ID;
+                    if (type == 1)
+                    {
+                        lbLoaiThe.Text = "Học sinh";
+                    }
+                    else
+                    {
+                        if (type == 2)
+                        {
+                            lbLoaiThe.Text = "Sinh viên";
+                        }
+                        else
+                        {
+                            if (type == 3)
+                            {
+                                lbLoaiThe.Text = "Người đi làm";
+                            }
+                            else
+                            {
+                                lbLoaiThe.Text = "Người lớn tuổi";
+                            }
+                        }
+                    }
+                    lbNgayHetHan.Text = Convert.ToString(customer.Customer_StartDate);
+                    lbNgayNop.Text = Convert.ToString(customer.Customer_EndDate);
+                }
+                else
+                {
+                    XtraMessageBox.Show("Bạn chưa chọn bệnh nhân để xem thông tin chi tiết", "Fitness Center", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void btnHoiVien_Click(object sender, EventArgs e)
+        {
+            Form frm = this.IsExits(typeof(ExpireMember));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                ExpireMember em = new ExpireMember();
+                em.isAdd = true;
+                em.ShowDialog();
+                sqlDataSource2.Fill();
+            }
+        }
+
+        private void grcDanhMuc_Click(object sender, EventArgs e)
+        {
+            int rowIndex = gvDanhMuc.FocusedRowHandle;
+            string colID = "Customer_ID";
+            object value = gvDanhMuc.GetRowCellValue(rowIndex, colID);
+            if (value != null)
+            {
+                int Id = (int)value;
+                DataFitnessCenterDataContext db = new DataFitnessCenterDataContext();
                 var customer = db.Customers.Where(i => i.Customer_ID == (int)Id).SingleOrDefault();
                 if (customer != null)
                 {
@@ -212,7 +284,30 @@ namespace FitnessCenter
                     int ageInYrs = DateTime.Now.Year - age.Year;
                     lbTuoi.Text = ageInYrs + " tuổi";
                     peAnh.EditValue = customer.Customer_Image;
-                   // lbLoaiThe.Text = customer.Membership_ID;
+                    lbDiaChi.Text = customer.Customer_Address;
+                    int type = customer.Membership_ID;
+                    if (type == 1)
+                    {
+                        lbLoaiThe.Text = "Học sinh";
+                    }
+                    else
+                    {
+                        if (type == 2)
+                        {
+                            lbLoaiThe.Text = "Sinh viên";
+                        }
+                        else
+                        {
+                            if (type == 3)
+                            {
+                                lbLoaiThe.Text = "Người đi làm";
+                            }
+                            else
+                            {
+                                lbLoaiThe.Text = "Người lớn tuổi";
+                            }
+                        }
+                    }
                     lbNgayHetHan.Text = Convert.ToString(customer.Customer_StartDate);
                     lbNgayNop.Text = Convert.ToString(customer.Customer_EndDate);
                 }
