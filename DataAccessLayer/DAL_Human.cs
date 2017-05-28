@@ -69,6 +69,8 @@ namespace DataAccessLayer
             return command.ExecuteNonQuery();
         }
 
+
+
         public int UpdateAccountNoImage(int id, string name, string username, string password, int type)
         {
             const String sqlCommand = "Update Account set Account_Name = @Name, Account_UserName = @Username, Account_Password = @Password, Account_Type_ID = @Type Where Account_ID = @Id";
@@ -210,6 +212,17 @@ namespace DataAccessLayer
             command.Parameters.AddWithValue("@StartDate", startDate);
             command.Parameters.AddWithValue("@EndDate", endDate);
             command.Parameters.AddWithValue("@Image", convertImagetoByte(image));
+            return command.ExecuteNonQuery();
+        }
+
+        public int UpdateCustomerExpire(int id,int memberId, DateTime startDate, DateTime endDate)
+        {
+            const String sqlCommand = "Update Customer set Membership_ID = @MemberId, Customer_StartDate = @StartDate, Customer_EndDate = @EndDate Where Customer_ID = @Id";
+            SqlCommand command = new SqlCommand(sqlCommand, connect());
+            command.Parameters.AddWithValue("@Id", id);
+            command.Parameters.AddWithValue("@MemberId", memberId);
+            command.Parameters.AddWithValue("@StartDate", startDate);
+            command.Parameters.AddWithValue("@EndDate", endDate);
             return command.ExecuteNonQuery();
         }
     }

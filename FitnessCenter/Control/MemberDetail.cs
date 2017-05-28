@@ -157,7 +157,7 @@ namespace FitnessCenter
                             }
                             else
                             {
-                                if (lkeLoaiThe.Text == "Chọn thành viên")
+                                if (lkeLoaiThe.Text == "Chọn thẻ")
                                 {
                                     lbTrangThai.Text = "*Vui lòng chọn loại thẻ";
                                     lkeLoaiThe.Focus();
@@ -166,7 +166,7 @@ namespace FitnessCenter
                                 {
                                     if (dtNgayBatDau.DateTime > dtNgayKetThuc.DateTime)
                                     {
-                                        lbTrangThai.Text = "*Vui lòng chọn thời gian";
+                                        lbTrangThai.Text = "*Khoảng thời gian không hợp lệ";
                                         dtNgayKetThuc.Focus();
                                     }
                                     else
@@ -314,7 +314,7 @@ namespace FitnessCenter
         {
             if (txtSDT.Text.Length < 10 || txtSDT.Text.Length > 11)
             {
-                //XtraMessageBox.Show("Tên đăng nhập phải từ 5 đến 20 kí tự", "Clinience", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+               
                 lbTrangThai.Text = "*Số điện thoại phải từ 10 đến 11 số";
                 txtSDT.Focus();
                 e.Cancel = true;

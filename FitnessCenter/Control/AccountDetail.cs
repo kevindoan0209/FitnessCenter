@@ -259,7 +259,7 @@ namespace FitnessCenter
         {
             if (txtMatKhau.Text.Length > 20 || txtMatKhau.Text.Length < 6)
             {
-                //XtraMessageBox.Show("Mật khẩu phải từ 6 đến 20 kí tự", "Clinience", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+              
                 lbTrangThai.Text = "*Mật khẩu phải từ 6 đến 20 kí tự";
                 txtMatKhau.Focus();
                 e.Cancel = true;
@@ -277,7 +277,7 @@ namespace FitnessCenter
         {
             if (txtTenDangNhap.Text.Length > 20 || txtTenDangNhap.Text.Length < 5)
             {
-                //XtraMessageBox.Show("Tên đăng nhập phải từ 5 đến 20 kí tự", "Clinience", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+              
                 lbTrangThai.Text = "*Tên đăng nhập phải từ 5 đến 20 kí tự";
                 txtTenDangNhap.Focus();
                 e.Cancel = true;

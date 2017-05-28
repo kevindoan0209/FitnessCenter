@@ -30,18 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberDetail));
-            DevExpress.DataAccess.Sql.SelectQuery selectQuery4 = new DevExpress.DataAccess.Sql.SelectQuery();
-            DevExpress.DataAccess.Sql.Column column7 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression7 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Table table4 = new DevExpress.DataAccess.Sql.Table();
-            DevExpress.DataAccess.Sql.Column column8 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression8 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column1 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression1 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table1 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column2 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression2 = new DevExpress.DataAccess.Sql.ColumnExpression();
             this.lbTrangThai = new DevExpress.XtraEditors.LabelControl();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnTao = new DevExpress.XtraEditors.SimpleButton();
             this.txtAnh = new DevExpress.XtraEditors.TextEdit();
             this.txtMa = new DevExpress.XtraEditors.TextEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.HeaderMember = new DevExpress.XtraEditors.PanelControl();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -76,11 +77,11 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtSDT = new DevExpress.XtraEditors.TextEdit();
             this.peAnh = new DevExpress.XtraEditors.PictureEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAnh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HeaderMember)).BeginInit();
             this.HeaderMember.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -101,7 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peAnh.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTrangThai
@@ -161,10 +161,18 @@
             this.panelControl1.Controls.Add(this.txtAnh);
             this.panelControl1.Controls.Add(this.txtMa);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 435);
+            this.panelControl1.Location = new System.Drawing.Point(0, 423);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(463, 44);
             this.panelControl1.TabIndex = 8;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(456, 12);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(10, 20);
+            this.textEdit1.TabIndex = 35;
+            this.textEdit1.Visible = false;
             // 
             // HeaderMember
             // 
@@ -309,7 +317,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Membership_Name", "Loại hội viên", 100, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
             this.lkeLoaiThe.Properties.DataSource = this.membershipBindingSource;
             this.lkeLoaiThe.Properties.DisplayMember = "Membership_Name";
-            this.lkeLoaiThe.Properties.NullText = "Chọn thành viên";
+            this.lkeLoaiThe.Properties.NullText = "Chọn thẻ";
             this.lkeLoaiThe.Properties.ValueMember = "Membership_ID";
             this.lkeLoaiThe.Size = new System.Drawing.Size(118, 20);
             this.lkeLoaiThe.TabIndex = 53;
@@ -323,20 +331,20 @@
             // 
             this.sqlDataSource1.ConnectionName = "DESKTOP-M75UEQH\\SQLEXPRESS_FitnessCenter_Connection";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            columnExpression7.ColumnName = "Membership_ID";
-            table4.MetaSerializable = "0|0|125|120";
-            table4.Name = "Membership";
-            columnExpression7.Table = table4;
-            column7.Expression = columnExpression7;
-            columnExpression8.ColumnName = "Membership_Name";
-            columnExpression8.Table = table4;
-            column8.Expression = columnExpression8;
-            selectQuery4.Columns.Add(column7);
-            selectQuery4.Columns.Add(column8);
-            selectQuery4.Name = "Membership";
-            selectQuery4.Tables.Add(table4);
+            columnExpression1.ColumnName = "Membership_ID";
+            table1.MetaSerializable = "0|0|125|120";
+            table1.Name = "Membership";
+            columnExpression1.Table = table1;
+            column1.Expression = columnExpression1;
+            columnExpression2.ColumnName = "Membership_Name";
+            columnExpression2.Table = table1;
+            column2.Expression = columnExpression2;
+            selectQuery1.Columns.Add(column1);
+            selectQuery1.Columns.Add(column2);
+            selectQuery1.Name = "Membership";
+            selectQuery1.Tables.Add(table1);
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            selectQuery4});
+            selectQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // labelControl8
@@ -347,7 +355,6 @@
             this.labelControl8.Size = new System.Drawing.Size(42, 13);
             this.labelControl8.TabIndex = 52;
             this.labelControl8.Text = "Loại thẻ:";
-            this.labelControl8.Visible = false;
             // 
             // rbNu
             // 
@@ -442,7 +449,6 @@
             this.labelControl9.Size = new System.Drawing.Size(69, 13);
             this.labelControl9.TabIndex = 42;
             this.labelControl9.Text = "Ngày hết hạn:";
-            this.labelControl9.Visible = false;
             // 
             // labelControl12
             // 
@@ -452,7 +458,6 @@
             this.labelControl12.Size = new System.Drawing.Size(50, 13);
             this.labelControl12.TabIndex = 40;
             this.labelControl12.Text = "Ngày nộp:";
-            this.labelControl12.Visible = false;
             // 
             // labelControl7
             // 
@@ -528,21 +533,13 @@
             this.peAnh.TabIndex = 0;
             this.peAnh.Click += new System.EventHandler(this.peAnh_Click);
             // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(456, 12);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(10, 20);
-            this.textEdit1.TabIndex = 35;
-            this.textEdit1.Visible = false;
-            // 
             // MemberDetail
             // 
             this.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 479);
+            this.ClientSize = new System.Drawing.Size(463, 467);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.HeaderMember);
@@ -559,6 +556,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HeaderMember)).EndInit();
             this.HeaderMember.ResumeLayout(false);
             this.HeaderMember.PerformLayout();
@@ -581,7 +579,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peAnh.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

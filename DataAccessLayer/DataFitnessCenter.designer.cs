@@ -45,6 +45,9 @@ namespace DataAccessLayer
     partial void InsertItem(Item instance);
     partial void UpdateItem(Item instance);
     partial void DeleteItem(Item instance);
+    partial void InsertItems_Type(Items_Type instance);
+    partial void UpdateItems_Type(Items_Type instance);
+    partial void DeleteItems_Type(Items_Type instance);
     partial void InsertMembership(Membership instance);
     partial void UpdateMembership(Membership instance);
     partial void DeleteMembership(Membership instance);
@@ -135,6 +138,14 @@ namespace DataAccessLayer
 			get
 			{
 				return this.GetTable<Item>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Items_Type> Items_Types
+		{
+			get
+			{
+				return this.GetTable<Items_Type>();
 			}
 		}
 		
@@ -1297,6 +1308,8 @@ namespace DataAccessLayer
 		
 		private int _Items_ID;
 		
+		private int _Items_Type_ID;
+		
 		private string _Items_Name;
 		
 		private System.Data.Linq.Binary _Items_Images;
@@ -1315,12 +1328,16 @@ namespace DataAccessLayer
 		
 		private EntitySet<SaleDetail> _SaleDetails;
 		
+		private EntityRef<Items_Type> _Items_Type;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
     partial void OnItems_IDChanging(int value);
     partial void OnItems_IDChanged();
+    partial void OnItems_Type_IDChanging(int value);
+    partial void OnItems_Type_IDChanged();
     partial void OnItems_NameChanging(string value);
     partial void OnItems_NameChanged();
     partial void OnItems_ImagesChanging(System.Data.Linq.Binary value);
@@ -1341,6 +1358,7 @@ namespace DataAccessLayer
 		{
 			this._PurchaseDetails = new EntitySet<PurchaseDetail>(new Action<PurchaseDetail>(this.attach_PurchaseDetails), new Action<PurchaseDetail>(this.detach_PurchaseDetails));
 			this._SaleDetails = new EntitySet<SaleDetail>(new Action<SaleDetail>(this.attach_SaleDetails), new Action<SaleDetail>(this.detach_SaleDetails));
+			this._Items_Type = default(EntityRef<Items_Type>);
 			OnCreated();
 		}
 		
@@ -1360,6 +1378,30 @@ namespace DataAccessLayer
 					this._Items_ID = value;
 					this.SendPropertyChanged("Items_ID");
 					this.OnItems_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Items_Type_ID", DbType="Int NOT NULL")]
+		public int Items_Type_ID
+		{
+			get
+			{
+				return this._Items_Type_ID;
+			}
+			set
+			{
+				if ((this._Items_Type_ID != value))
+				{
+					if (this._Items_Type.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnItems_Type_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Items_Type_ID = value;
+					this.SendPropertyChanged("Items_Type_ID");
+					this.OnItems_Type_IDChanged();
 				}
 			}
 		}
@@ -1530,6 +1572,40 @@ namespace DataAccessLayer
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Items_Type_Item", Storage="_Items_Type", ThisKey="Items_Type_ID", OtherKey="Items_Type_ID", IsForeignKey=true)]
+		public Items_Type Items_Type
+		{
+			get
+			{
+				return this._Items_Type.Entity;
+			}
+			set
+			{
+				Items_Type previousValue = this._Items_Type.Entity;
+				if (((previousValue != value) 
+							|| (this._Items_Type.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Items_Type.Entity = null;
+						previousValue.Items.Remove(this);
+					}
+					this._Items_Type.Entity = value;
+					if ((value != null))
+					{
+						value.Items.Add(this);
+						this._Items_Type_ID = value.Items_Type_ID;
+					}
+					else
+					{
+						this._Items_Type_ID = default(int);
+					}
+					this.SendPropertyChanged("Items_Type");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1572,6 +1648,144 @@ namespace DataAccessLayer
 		{
 			this.SendPropertyChanging();
 			entity.Item = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Items_Type")]
+	public partial class Items_Type : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Items_Type_ID;
+		
+		private string _Items_Type_Name;
+		
+		private string _Items_Type_Note;
+		
+		private EntitySet<Item> _Items;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnItems_Type_IDChanging(int value);
+    partial void OnItems_Type_IDChanged();
+    partial void OnItems_Type_NameChanging(string value);
+    partial void OnItems_Type_NameChanged();
+    partial void OnItems_Type_NoteChanging(string value);
+    partial void OnItems_Type_NoteChanged();
+    #endregion
+		
+		public Items_Type()
+		{
+			this._Items = new EntitySet<Item>(new Action<Item>(this.attach_Items), new Action<Item>(this.detach_Items));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Items_Type_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Items_Type_ID
+		{
+			get
+			{
+				return this._Items_Type_ID;
+			}
+			set
+			{
+				if ((this._Items_Type_ID != value))
+				{
+					this.OnItems_Type_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Items_Type_ID = value;
+					this.SendPropertyChanged("Items_Type_ID");
+					this.OnItems_Type_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Items_Type_Name", DbType="NVarChar(500) NOT NULL", CanBeNull=false)]
+		public string Items_Type_Name
+		{
+			get
+			{
+				return this._Items_Type_Name;
+			}
+			set
+			{
+				if ((this._Items_Type_Name != value))
+				{
+					this.OnItems_Type_NameChanging(value);
+					this.SendPropertyChanging();
+					this._Items_Type_Name = value;
+					this.SendPropertyChanged("Items_Type_Name");
+					this.OnItems_Type_NameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Items_Type_Note", DbType="NVarChar(500)")]
+		public string Items_Type_Note
+		{
+			get
+			{
+				return this._Items_Type_Note;
+			}
+			set
+			{
+				if ((this._Items_Type_Note != value))
+				{
+					this.OnItems_Type_NoteChanging(value);
+					this.SendPropertyChanging();
+					this._Items_Type_Note = value;
+					this.SendPropertyChanged("Items_Type_Note");
+					this.OnItems_Type_NoteChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Items_Type_Item", Storage="_Items", ThisKey="Items_Type_ID", OtherKey="Items_Type_ID")]
+		public EntitySet<Item> Items
+		{
+			get
+			{
+				return this._Items;
+			}
+			set
+			{
+				this._Items.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Items(Item entity)
+		{
+			this.SendPropertyChanging();
+			entity.Items_Type = this;
+		}
+		
+		private void detach_Items(Item entity)
+		{
+			this.SendPropertyChanging();
+			entity.Items_Type = null;
 		}
 	}
 	

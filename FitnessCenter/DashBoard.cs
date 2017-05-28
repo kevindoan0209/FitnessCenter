@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using DataAccessLayer;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -84,8 +85,18 @@ namespace FitnessCenter
             intro.MdiParent = this;
             intro.Show();
             Login();
-            txtChao.Text = "Xin chào " + UserName +" !";
+            txtChao.Text = "Xin chào " + UserName + " !";
             HandleAuthority();
+            LoadName();
+        }  
+        private void LoadName()
+        {
+            DataFitnessCenterDataContext db = new DataFitnessCenterDataContext();
+            var fitness = db.FitnessCenters.Where(i => i.FitnessCenter_ID == 1).SingleOrDefault();
+            if (fitness != null)
+            {
+                lbTenPhong.Text = fitness.FitnessCenter_Name;
+            }
         }
 
         private void btnMember_Click(object sender, EventArgs e)
@@ -139,8 +150,17 @@ namespace FitnessCenter
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            MessageNotice message = new MessageNotice();
-            message.ShowDialog();
+            Form frm = this.IsExits(typeof(ItemsManagement));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                ItemsManagement im = new ItemsManagement();
+                im.MdiParent = this;
+                im.Show();
+            }
         }
 
         private void btnAbout_Click(object sender, EventArgs e)
@@ -157,8 +177,17 @@ namespace FitnessCenter
 
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
-            MessageNotice message = new MessageNotice();
-            message.ShowDialog();
+            Form frm = this.IsExits(typeof(SettingManagement));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                SettingManagement sm = new SettingManagement();
+                sm.MdiParent = this;
+                sm.Show();
+            }
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -193,6 +222,12 @@ namespace FitnessCenter
                // LogoAnimator.ShowSync(peLogo);
                
             }
+        }
+
+        private void btnStatictis_Click(object sender, EventArgs e)
+        {
+            MessageNotice message = new MessageNotice();
+            message.ShowDialog();
         }
     }
 }

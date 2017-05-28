@@ -83,7 +83,10 @@ namespace BussinessLogicLayer
             return _human.UpdateCustomerNoImage(id, name, age, sex, email, phone, job, address, memberId, note, startDate, endDate);
         }
 
-
+        public static int UpdateCustomerExpire(int id, int memberId, DateTime startDate, DateTime endDate)
+        {
+            return _human.UpdateCustomerExpire(id, memberId, startDate, endDate);
+        }
 
     }
 }

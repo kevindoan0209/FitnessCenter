@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL_Fitness.cs" />
     <Compile Include="DAL_Human.cs" />
+    <Compile Include="DAL_Items.cs" />
     <Compile Include="DAL_Membership.cs" />
     <Compile Include="DAL_Payment.cs" />
     <Compile Include="DataFitnessCenter.designer.cs">

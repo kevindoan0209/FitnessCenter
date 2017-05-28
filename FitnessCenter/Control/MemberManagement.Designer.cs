@@ -155,6 +155,7 @@
             this.btnTiepNhan = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnHoiVien = new DevExpress.XtraEditors.SimpleButton();
+            this.giaHạnThẻToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             groupBox2 = new System.Windows.Forms.GroupBox();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -325,26 +326,26 @@
             // 
             // lbNgayNop
             // 
-            this.lbNgayNop.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgayNop.Location = new System.Drawing.Point(112, 366);
+            this.lbNgayNop.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNgayNop.Location = new System.Drawing.Point(110, 366);
             this.lbNgayNop.Name = "lbNgayNop";
-            this.lbNgayNop.Size = new System.Drawing.Size(0, 18);
+            this.lbNgayNop.Size = new System.Drawing.Size(0, 16);
             this.lbNgayNop.TabIndex = 8;
             // 
             // lbLoaiThe
             // 
-            this.lbLoaiThe.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLoaiThe.Location = new System.Drawing.Point(112, 333);
+            this.lbLoaiThe.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLoaiThe.Location = new System.Drawing.Point(110, 333);
             this.lbLoaiThe.Name = "lbLoaiThe";
-            this.lbLoaiThe.Size = new System.Drawing.Size(0, 18);
+            this.lbLoaiThe.Size = new System.Drawing.Size(0, 16);
             this.lbLoaiThe.TabIndex = 7;
             // 
             // lbNgayHetHan
             // 
-            this.lbNgayHetHan.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgayHetHan.Location = new System.Drawing.Point(113, 401);
+            this.lbNgayHetHan.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNgayHetHan.Location = new System.Drawing.Point(111, 401);
             this.lbNgayHetHan.Name = "lbNgayHetHan";
-            this.lbNgayHetHan.Size = new System.Drawing.Size(0, 18);
+            this.lbNgayHetHan.Size = new System.Drawing.Size(0, 16);
             this.lbNgayHetHan.TabIndex = 6;
             // 
             // lbGioiTinh
@@ -376,11 +377,12 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.csmXoa,
+            this.giaHạnThẻToolStripMenuItem,
+            this.xemThôngTinToolStripMenuItem,
             this.csmCapNhat,
-            this.xemThôngTinToolStripMenuItem});
+            this.csmXoa});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(151, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(151, 92);
             // 
             // csmXoa
             // 
@@ -582,7 +584,7 @@
             this.colCustomer_Name.Name = "colCustomer_Name";
             this.colCustomer_Name.Visible = true;
             this.colCustomer_Name.VisibleIndex = 0;
-            this.colCustomer_Name.Width = 169;
+            this.colCustomer_Name.Width = 148;
             // 
             // colCustomer_Image
             // 
@@ -596,7 +598,7 @@
             this.colCustomer_Age.Name = "colCustomer_Age";
             this.colCustomer_Age.Visible = true;
             this.colCustomer_Age.VisibleIndex = 1;
-            this.colCustomer_Age.Width = 66;
+            this.colCustomer_Age.Width = 63;
             // 
             // colCustomer_Sex
             // 
@@ -605,7 +607,7 @@
             this.colCustomer_Sex.Name = "colCustomer_Sex";
             this.colCustomer_Sex.Visible = true;
             this.colCustomer_Sex.VisibleIndex = 2;
-            this.colCustomer_Sex.Width = 59;
+            this.colCustomer_Sex.Width = 54;
             // 
             // colCustomer_Email
             // 
@@ -634,8 +636,12 @@
             // 
             // colCustomer_StartDate
             // 
+            this.colCustomer_StartDate.Caption = "Ngày nộp";
             this.colCustomer_StartDate.FieldName = "Customer_StartDate";
             this.colCustomer_StartDate.Name = "colCustomer_StartDate";
+            this.colCustomer_StartDate.Visible = true;
+            this.colCustomer_StartDate.VisibleIndex = 3;
+            this.colCustomer_StartDate.Width = 64;
             // 
             // colCustomer_EndDate
             // 
@@ -643,17 +649,15 @@
             this.colCustomer_EndDate.FieldName = "Customer_EndDate";
             this.colCustomer_EndDate.Name = "colCustomer_EndDate";
             this.colCustomer_EndDate.Visible = true;
-            this.colCustomer_EndDate.VisibleIndex = 3;
-            this.colCustomer_EndDate.Width = 95;
+            this.colCustomer_EndDate.VisibleIndex = 4;
+            this.colCustomer_EndDate.Width = 84;
             // 
             // colCustomer_Note
             // 
             this.colCustomer_Note.Caption = "Ghi chú";
             this.colCustomer_Note.FieldName = "Customer_Note";
             this.colCustomer_Note.Name = "colCustomer_Note";
-            this.colCustomer_Note.Visible = true;
-            this.colCustomer_Note.VisibleIndex = 5;
-            this.colCustomer_Note.Width = 110;
+            this.colCustomer_Note.Width = 83;
             // 
             // colMembership_Name
             // 
@@ -661,8 +665,8 @@
             this.colMembership_Name.FieldName = "Membership_Name";
             this.colMembership_Name.Name = "colMembership_Name";
             this.colMembership_Name.Visible = true;
-            this.colMembership_Name.VisibleIndex = 4;
-            this.colMembership_Name.Width = 55;
+            this.colMembership_Name.VisibleIndex = 5;
+            this.colMembership_Name.Width = 58;
             // 
             // colMembership_Price
             // 
@@ -812,6 +816,12 @@
             this.btnHoiVien.Text = "Hội viên hết hạn";
             this.btnHoiVien.Click += new System.EventHandler(this.btnHoiVien_Click);
             // 
+            // giaHạnThẻToolStripMenuItem
+            // 
+            this.giaHạnThẻToolStripMenuItem.Name = "giaHạnThẻToolStripMenuItem";
+            this.giaHạnThẻToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.giaHạnThẻToolStripMenuItem.Text = "Gia hạn thẻ";
+            // 
             // MemberManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -897,5 +907,6 @@
         private DevExpress.XtraEditors.SimpleButton btnHoiVien;
         private System.Windows.Forms.PictureBox pictureBox3;
         private DevExpress.XtraEditors.LabelControl lbDiaChi;
+        private System.Windows.Forms.ToolStripMenuItem giaHạnThẻToolStripMenuItem;
     }
 }

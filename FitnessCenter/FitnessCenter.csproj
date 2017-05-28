@@ -85,6 +85,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\MemberExpire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\MemberExpire.Designer.cs">
+      <DependentUpon>MemberExpire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ItemsManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\ItemsManagement.Designer.cs">
+      <DependentUpon>ItemsManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SettingManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\SettingManagement.Designer.cs">
+      <DependentUpon>SettingManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\ExpireMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +189,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Control\MemberExpire.resx">
+      <DependentUpon>MemberExpire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ItemsManagement.resx">
+      <DependentUpon>ItemsManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SettingManagement.resx">
+      <DependentUpon>SettingManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\ExpireMember.resx">
       <DependentUpon>ExpireMember.cs</DependentUpon>
     </EmbeddedResource>

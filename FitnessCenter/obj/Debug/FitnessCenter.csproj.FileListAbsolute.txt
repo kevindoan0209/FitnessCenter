@@ -290,3 +290,7 @@ C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\bin\Debug\es\DevExpr
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\bin\Debug\ja\DevExpress.XtraVerticalGrid.v16.1.resources.dll
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\bin\Debug\ru\DevExpress.XtraVerticalGrid.v16.1.resources.dll
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.ExpireMember.resources
+C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.MessageError.resources
+C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.SettingManagement.resources
+C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.MemberExpire.resources
+C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.ItemsManagement.resources

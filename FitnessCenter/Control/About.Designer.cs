@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbTenPhong = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.lbTrangThai = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbTieuDe = new System.Windows.Forms.GroupBox();
+            this.lbFacebook = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbEmail = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbSoDienThoai = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbDiaChi = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -47,7 +47,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.lbTieuDe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -71,16 +71,16 @@
             this.btnClose.Zoom = 20;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // bunifuCustomLabel1
+            // lbTenPhong
             // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(221, 43);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(127, 16);
-            this.bunifuCustomLabel1.TabIndex = 6;
-            this.bunifuCustomLabel1.Text = "Gym Nguyễn Khang";
+            this.lbTenPhong.AutoSize = true;
+            this.lbTenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenPhong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbTenPhong.Location = new System.Drawing.Point(221, 43);
+            this.lbTenPhong.Name = "lbTenPhong";
+            this.lbTenPhong.Size = new System.Drawing.Size(127, 16);
+            this.lbTenPhong.TabIndex = 6;
+            this.lbTenPhong.Text = "Gym Nguyễn Khang";
             // 
             // bunifuElipse1
             // 
@@ -97,71 +97,71 @@
             this.lbTrangThai.Size = new System.Drawing.Size(0, 16);
             this.lbTrangThai.TabIndex = 9;
             // 
-            // groupBox1
+            // lbTieuDe
             // 
-            this.groupBox1.Controls.Add(this.bunifuCustomLabel5);
-            this.groupBox1.Controls.Add(this.bunifuCustomLabel4);
-            this.groupBox1.Controls.Add(this.bunifuCustomLabel3);
-            this.groupBox1.Controls.Add(this.bunifuCustomLabel2);
-            this.groupBox1.Controls.Add(this.pictureBox2);
-            this.groupBox1.Controls.Add(this.pictureBox6);
-            this.groupBox1.Controls.Add(this.pictureBox5);
-            this.groupBox1.Controls.Add(this.pictureBox3);
-            this.groupBox1.Controls.Add(this.pictureBox4);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.bunifuCustomLabel1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(28, 36);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(556, 226);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "FITNESS CENTER MANAGEMENT";
+            this.lbTieuDe.Controls.Add(this.lbFacebook);
+            this.lbTieuDe.Controls.Add(this.lbEmail);
+            this.lbTieuDe.Controls.Add(this.lbSoDienThoai);
+            this.lbTieuDe.Controls.Add(this.lbDiaChi);
+            this.lbTieuDe.Controls.Add(this.pictureBox2);
+            this.lbTieuDe.Controls.Add(this.pictureBox6);
+            this.lbTieuDe.Controls.Add(this.pictureBox5);
+            this.lbTieuDe.Controls.Add(this.pictureBox3);
+            this.lbTieuDe.Controls.Add(this.pictureBox4);
+            this.lbTieuDe.Controls.Add(this.pictureBox1);
+            this.lbTieuDe.Controls.Add(this.lbTenPhong);
+            this.lbTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTieuDe.ForeColor = System.Drawing.Color.White;
+            this.lbTieuDe.Location = new System.Drawing.Point(28, 36);
+            this.lbTieuDe.Name = "lbTieuDe";
+            this.lbTieuDe.Size = new System.Drawing.Size(556, 226);
+            this.lbTieuDe.TabIndex = 16;
+            this.lbTieuDe.TabStop = false;
+            this.lbTieuDe.Text = "FITNESS CENTER MANAGEMENT";
             // 
-            // bunifuCustomLabel5
+            // lbFacebook
             // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(224, 173);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(327, 16);
-            this.bunifuCustomLabel5.TabIndex = 37;
-            this.bunifuCustomLabel5.Text = "https://www.facebook.com/CLBGYMNGUYENKHANG";
+            this.lbFacebook.AutoSize = true;
+            this.lbFacebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFacebook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbFacebook.Location = new System.Drawing.Point(224, 173);
+            this.lbFacebook.Name = "lbFacebook";
+            this.lbFacebook.Size = new System.Drawing.Size(327, 16);
+            this.lbFacebook.TabIndex = 37;
+            this.lbFacebook.Text = "https://www.facebook.com/CLBGYMNGUYENKHANG";
             // 
-            // bunifuCustomLabel4
+            // lbEmail
             // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(224, 140);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(191, 16);
-            this.bunifuCustomLabel4.TabIndex = 36;
-            this.bunifuCustomLabel4.Text = "nguyenkhanggym@gmail.com";
+            this.lbEmail.AutoSize = true;
+            this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbEmail.Location = new System.Drawing.Point(224, 140);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(191, 16);
+            this.lbEmail.TabIndex = 36;
+            this.lbEmail.Text = "nguyenkhanggym@gmail.com";
             // 
-            // bunifuCustomLabel3
+            // lbSoDienThoai
             // 
-            this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(224, 106);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(176, 16);
-            this.bunifuCustomLabel3.TabIndex = 35;
-            this.bunifuCustomLabel3.Text = "098 522 58 79 - 090 598 95 45";
+            this.lbSoDienThoai.AutoSize = true;
+            this.lbSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoDienThoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbSoDienThoai.Location = new System.Drawing.Point(224, 106);
+            this.lbSoDienThoai.Name = "lbSoDienThoai";
+            this.lbSoDienThoai.Size = new System.Drawing.Size(176, 16);
+            this.lbSoDienThoai.TabIndex = 35;
+            this.lbSoDienThoai.Text = "098 522 58 79 - 090 598 95 45";
             // 
-            // bunifuCustomLabel2
+            // lbDiaChi
             // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(221, 75);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(251, 16);
-            this.bunifuCustomLabel2.TabIndex = 34;
-            this.bunifuCustomLabel2.Text = "203 Phan Đăng Lưu  -  217 Văn Tiến Dũng";
+            this.lbDiaChi.AutoSize = true;
+            this.lbDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbDiaChi.Location = new System.Drawing.Point(221, 75);
+            this.lbDiaChi.Name = "lbDiaChi";
+            this.lbDiaChi.Size = new System.Drawing.Size(251, 16);
+            this.lbDiaChi.TabIndex = 34;
+            this.lbDiaChi.Text = "203 Phan Đăng Lưu  -  217 Văn Tiến Dũng";
             // 
             // pictureBox2
             // 
@@ -170,6 +170,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(194, 43);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(17, 17);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 33;
             this.pictureBox2.TabStop = false;
             // 
@@ -241,7 +242,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(614, 303);
             this.Controls.Add(this.bunifuCustomLabel6);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.lbTieuDe);
             this.Controls.Add(this.lbTrangThai);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -250,9 +251,10 @@
             this.Name = "About";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.About_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.lbTieuDe.ResumeLayout(false);
+            this.lbTieuDe.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -266,14 +268,14 @@
 
         #endregion
         private Bunifu.Framework.UI.BunifuImageButton btnClose;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbTenPhong;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuCustomLabel lbTrangThai;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private System.Windows.Forms.GroupBox lbTieuDe;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbFacebook;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbEmail;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbSoDienThoai;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbDiaChi;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;

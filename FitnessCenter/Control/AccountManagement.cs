@@ -130,13 +130,12 @@ namespace FitnessCenter
                             {
                                 dc.Accounts.DeleteOnSubmit(account);
                                 dc.SubmitChanges();
-                                sqlDataSource1.Fill();
-                                XtraMessageBox.Show("Đã xóa thành công", "Fitness Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                sqlDataSource1.Fill();            
                             }
                         }
                         else
                         {
-                            XtraMessageBox.Show("Không được phép xóa tài khoản sử dụng hiện tại", "Clinience", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            XtraMessageBox.Show("Không được phép xóa tài khoản sử dụng hiện tại", "Fitness Center", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else
@@ -147,7 +146,7 @@ namespace FitnessCenter
             }
             catch (Exception)
             {
-                XtraMessageBox.Show("Không được phép xóa đối tượng này, đối tượng đã được thêm ở một danh mục khác", "Clinience", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("Không được phép xóa đối tượng này, đối tượng đã được thêm ở một danh mục khác", "Fitness Center", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

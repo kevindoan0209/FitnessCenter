@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation9 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
+            BunifuAnimatorNS.Animation animation10 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.SideMenu = new DevExpress.XtraEditors.PanelControl();
             this.btnThoatBar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -54,7 +54,7 @@
             this.header = new DevExpress.XtraEditors.PanelControl();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbTenPhong = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.PanelAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
@@ -102,7 +102,7 @@
             this.SideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.SideMenu.Location = new System.Drawing.Point(0, 40);
             this.SideMenu.Name = "SideMenu";
-            this.SideMenu.Size = new System.Drawing.Size(244, 577);
+            this.SideMenu.Size = new System.Drawing.Size(244, 579);
             this.SideMenu.TabIndex = 0;
             // 
             // btnThoatBar
@@ -187,7 +187,7 @@
             this.PanelAnimator.SetDecoration(this.btnMenu, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimator.SetDecoration(this.btnMenu, BunifuAnimatorNS.DecorationType.None);
             this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
-            this.btnMenu.Location = new System.Drawing.Point(212, 7);
+            this.btnMenu.Location = new System.Drawing.Point(212, 8);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(23, 26);
             this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -281,7 +281,7 @@
             this.LogoAnimator.SetDecoration(this.txtPhienBan, BunifuAnimatorNS.DecorationType.None);
             this.txtPhienBan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhienBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtPhienBan.Location = new System.Drawing.Point(7, 511);
+            this.txtPhienBan.Location = new System.Drawing.Point(7, 513);
             this.txtPhienBan.Name = "txtPhienBan";
             this.txtPhienBan.Size = new System.Drawing.Size(176, 32);
             this.txtPhienBan.TabIndex = 13;
@@ -401,7 +401,7 @@
             this.btnThoat.IconVisible = true;
             this.btnThoat.IconZoom = 40D;
             this.btnThoat.IsTab = true;
-            this.btnThoat.Location = new System.Drawing.Point(7, 544);
+            this.btnThoat.Location = new System.Drawing.Point(7, 546);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -441,7 +441,7 @@
             this.btnDangXuat.IconVisible = true;
             this.btnDangXuat.IconZoom = 40D;
             this.btnDangXuat.IsTab = true;
-            this.btnDangXuat.Location = new System.Drawing.Point(138, 544);
+            this.btnDangXuat.Location = new System.Drawing.Point(138, 546);
             this.btnDangXuat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -532,6 +532,7 @@
             this.btnStatictis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStatictis.Textcolor = System.Drawing.Color.Silver;
             this.btnStatictis.TextFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatictis.Click += new System.EventHandler(this.btnStatictis_Click);
             // 
             // btnMember
             // 
@@ -669,13 +670,13 @@
             this.header.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.header.Controls.Add(this.pictureBox6);
             this.header.Controls.Add(this.btnClose);
-            this.header.Controls.Add(this.bunifuCustomLabel1);
+            this.header.Controls.Add(this.lbTenPhong);
             this.LogoAnimator.SetDecoration(this.header, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.header, BunifuAnimatorNS.DecorationType.None);
             this.header.Dock = System.Windows.Forms.DockStyle.Top;
             this.header.Location = new System.Drawing.Point(0, 0);
             this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(1051, 40);
+            this.header.Size = new System.Drawing.Size(1085, 40);
             this.header.TabIndex = 1;
             // 
             // pictureBox6
@@ -698,7 +699,7 @@
             this.PanelAnimator.SetDecoration(this.btnClose, BunifuAnimatorNS.DecorationType.None);
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageActive = null;
-            this.btnClose.Location = new System.Drawing.Point(1021, 10);
+            this.btnClose.Location = new System.Drawing.Point(1055, 10);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(18, 18);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -707,19 +708,20 @@
             this.btnClose.Zoom = 20;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // bunifuCustomLabel1
+            // lbTenPhong
             // 
-            this.bunifuCustomLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.PanelAnimator.SetDecoration(this.bunifuCustomLabel1, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimator.SetDecoration(this.bunifuCustomLabel1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(255)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(430, 9);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(203, 19);
-            this.bunifuCustomLabel1.TabIndex = 2;
-            this.bunifuCustomLabel1.Text = "Fitness Center Management";
+            this.lbTenPhong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTenPhong.AutoSize = true;
+            this.PanelAnimator.SetDecoration(this.lbTenPhong, BunifuAnimatorNS.DecorationType.None);
+            this.LogoAnimator.SetDecoration(this.lbTenPhong, BunifuAnimatorNS.DecorationType.None);
+            this.lbTenPhong.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenPhong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(255)))));
+            this.lbTenPhong.Location = new System.Drawing.Point(441, 9);
+            this.lbTenPhong.Name = "lbTenPhong";
+            this.lbTenPhong.Size = new System.Drawing.Size(203, 19);
+            this.lbTenPhong.TabIndex = 2;
+            this.lbTenPhong.Text = "Fitness Center Management";
+            this.lbTenPhong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuDragControl1
             // 
@@ -745,50 +747,50 @@
             // 
             this.PanelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.PanelAnimator.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 1;
-            animation2.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 2F;
-            animation2.TransparencyCoeff = 0F;
-            this.PanelAnimator.DefaultAnimation = animation2;
+            animation9.AnimateOnlyDifferences = true;
+            animation9.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.BlindCoeff")));
+            animation9.LeafCoeff = 0F;
+            animation9.MaxTime = 1F;
+            animation9.MinTime = 0F;
+            animation9.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicCoeff")));
+            animation9.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicShift")));
+            animation9.MosaicSize = 1;
+            animation9.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation9.RotateCoeff = 0F;
+            animation9.RotateLimit = 0F;
+            animation9.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.ScaleCoeff")));
+            animation9.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.SlideCoeff")));
+            animation9.TimeCoeff = 2F;
+            animation9.TransparencyCoeff = 0F;
+            this.PanelAnimator.DefaultAnimation = animation9;
             // 
             // LogoAnimator
             // 
             this.LogoAnimator.AnimationType = BunifuAnimatorNS.AnimationType.ScaleAndRotate;
             this.LogoAnimator.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(30);
-            animation1.RotateCoeff = 0.5F;
-            animation1.RotateLimit = 0.2F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.LogoAnimator.DefaultAnimation = animation1;
+            animation10.AnimateOnlyDifferences = true;
+            animation10.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.BlindCoeff")));
+            animation10.LeafCoeff = 0F;
+            animation10.MaxTime = 1F;
+            animation10.MinTime = 0F;
+            animation10.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicCoeff")));
+            animation10.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicShift")));
+            animation10.MosaicSize = 0;
+            animation10.Padding = new System.Windows.Forms.Padding(30);
+            animation10.RotateCoeff = 0.5F;
+            animation10.RotateLimit = 0.2F;
+            animation10.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.ScaleCoeff")));
+            animation10.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.SlideCoeff")));
+            animation10.TimeCoeff = 0F;
+            animation10.TransparencyCoeff = 0F;
+            this.LogoAnimator.DefaultAnimation = animation10;
             // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1051, 617);
+            this.ClientSize = new System.Drawing.Size(1085, 619);
             this.Controls.Add(this.SideMenu);
             this.Controls.Add(this.header);
             this.PanelAnimator.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
@@ -822,7 +824,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnHome;
         private System.Windows.Forms.PictureBox peLogo;
         private DevExpress.XtraEditors.PanelControl header;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbTenPhong;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuImageButton btnClose;
         private Bunifu.Framework.UI.BunifuFlatButton btnAbout;

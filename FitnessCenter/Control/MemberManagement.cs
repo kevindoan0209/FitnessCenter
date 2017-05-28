@@ -104,7 +104,7 @@ namespace FitnessCenter
                                 dc.Customers.DeleteOnSubmit(customer);
                                 dc.SubmitChanges();
                                 sqlDataSource2.Fill();
-                                XtraMessageBox.Show("Đã xóa thành công", "Fitness Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                              
                             }
                         }
                         else
