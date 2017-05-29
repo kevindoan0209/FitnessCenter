@@ -51,6 +51,7 @@ namespace FitnessCenter
                         {
                             DataRow dr = dt.Rows[0];
                             string name = dr["Account_Name"].ToString();
+                            string username = dr["Account_Name"].ToString();
                             int id = Convert.ToInt32(dr["Account_ID"]);
                             int type = Convert.ToInt32(dr["Account_Type_ID"]);
                             string status = Convert.ToString(dr["Account_Status"]);
@@ -78,7 +79,10 @@ namespace FitnessCenter
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    String info = ex.Message;
+                    MessageError error = new MessageError();
+                    error.message = info;
+                    error.ShowDialog();
                 }
             }
         }

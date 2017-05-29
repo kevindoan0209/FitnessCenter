@@ -76,7 +76,6 @@ namespace FitnessCenter
                 lbSoDienThoai.Text = fitness.FitnessCenter_Tel;
                 lbEmail.Text = fitness.FitnessCenter_Email;
                 lbFacebook.Text = fitness.FitnessCenter_Facebook;
-
             }
         }
 
@@ -112,7 +111,10 @@ namespace FitnessCenter
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi" + ex.Message);
+                String info = ex.Message;
+                MessageError error = new MessageError();
+                error.message = info; 
+                error.ShowDialog();
             }
         }
 
@@ -153,7 +155,10 @@ namespace FitnessCenter
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi" + ex.Message);
+                String info = ex.Message;
+                MessageError error = new MessageError();
+                error.message = info;
+                error.ShowDialog();
             }
         }
 
@@ -255,7 +260,10 @@ namespace FitnessCenter
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi" + ex.Message);
+                String info = ex.Message;
+                MessageError error = new MessageError();
+                error.message = info;
+                error.ShowDialog();
             }
         }
 

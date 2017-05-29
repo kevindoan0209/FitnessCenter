@@ -12,7 +12,7 @@ namespace FitnessCenter
 {
     public partial class MessageError : Form
     {
-        public static int Id;
+        public string message;
         public MessageError()
         {
             InitializeComponent();
@@ -35,10 +35,7 @@ namespace FitnessCenter
 
         private void MessageError_Load(object sender, EventArgs e)
         {
-
-            lbThongBao.Text = "Đã thêm thành công";
-            lbThongBao.Text = "Cập nhật thành công";
-            lbThongBao.Text = "Đã xóa thành công";
+             
         }
     }
 }

@@ -83,12 +83,15 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lbTenPhong = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.searchControl2 = new DevExpress.XtraEditors.SearchControl();
             this.grcDanhMuc = new DevExpress.XtraGrid.GridControl();
             this.gvDanhMuc = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMembership_ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMembership_Name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMembership_Price = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMembership_Note = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -113,6 +116,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcDanhMuc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhMuc)).BeginInit();
             this.SuspendLayout();
@@ -195,7 +201,7 @@
             this.groupBox1.Size = new System.Drawing.Size(294, 194);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin thẻ";
+            this.groupBox1.Text = "Thông tin thẻ hội viên";
             // 
             // labelControl3
             // 
@@ -208,7 +214,7 @@
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(162, 88);
+            this.labelControl2.Location = new System.Drawing.Point(148, 88);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(25, 14);
             this.labelControl2.TabIndex = 46;
@@ -236,7 +242,7 @@
             0,
             0,
             0});
-            this.txtGiaTien.Size = new System.Drawing.Size(137, 20);
+            this.txtGiaTien.Size = new System.Drawing.Size(123, 20);
             this.txtGiaTien.TabIndex = 45;
             // 
             // txtGhiChu
@@ -420,6 +426,9 @@
             // 
             // lbTieuDe
             // 
+            this.lbTieuDe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTieuDe.Controls.Add(this.lbFacebook);
             this.lbTieuDe.Controls.Add(this.lbEmail);
             this.lbTieuDe.Controls.Add(this.lbSoDienThoai);
@@ -567,6 +576,33 @@
             selectQuery1});
             this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
             // 
+            // panelControl4
+            // 
+            this.panelControl4.Controls.Add(this.searchControl2);
+            this.panelControl4.Controls.Add(this.labelControl11);
+            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl4.Location = new System.Drawing.Point(0, 0);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(460, 32);
+            this.panelControl4.TabIndex = 4;
+            // 
+            // searchControl2
+            // 
+            this.searchControl2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.searchControl2.Client = this.grcDanhMuc;
+            this.searchControl2.Location = new System.Drawing.Point(256, 5);
+            this.searchControl2.Name = "searchControl2";
+            this.searchControl2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchControl2.Properties.Appearance.Options.UseFont = true;
+            this.searchControl2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.searchControl2.Properties.Client = this.grcDanhMuc;
+            this.searchControl2.Properties.NullValuePrompt = "Nhập vào thông tin tìm kiếm...";
+            this.searchControl2.Size = new System.Drawing.Size(192, 22);
+            this.searchControl2.TabIndex = 65;
+            this.searchControl2.ToolTip = "Nhập vào thông tin tìm kiếm";
+            // 
             // grcDanhMuc
             // 
             this.grcDanhMuc.ContextMenuStrip = this.contextMenuStrip1;
@@ -579,11 +615,11 @@
             this.grcDanhMuc.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
             this.grcDanhMuc.EmbeddedNavigator.Buttons.Remove.Visible = false;
             this.grcDanhMuc.EmbeddedNavigator.TextStringFormat = "Trang {0} / {1}";
-            this.grcDanhMuc.Location = new System.Drawing.Point(0, 0);
+            this.grcDanhMuc.Location = new System.Drawing.Point(0, 32);
             this.grcDanhMuc.MainView = this.gvDanhMuc;
             this.grcDanhMuc.Name = "grcDanhMuc";
-            this.grcDanhMuc.Size = new System.Drawing.Size(460, 256);
-            this.grcDanhMuc.TabIndex = 5;
+            this.grcDanhMuc.Size = new System.Drawing.Size(460, 224);
+            this.grcDanhMuc.TabIndex = 6;
             this.grcDanhMuc.UseEmbeddedNavigator = true;
             this.grcDanhMuc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhMuc});
@@ -599,6 +635,7 @@
             this.colMembership_Note});
             this.gvDanhMuc.GridControl = this.grcDanhMuc;
             this.gvDanhMuc.Name = "gvDanhMuc";
+            this.gvDanhMuc.OptionsBehavior.Editable = false;
             this.gvDanhMuc.OptionsView.EnableAppearanceEvenRow = true;
             this.gvDanhMuc.OptionsView.ShowGroupPanel = false;
             // 
@@ -631,6 +668,15 @@
             this.colMembership_Note.Visible = true;
             this.colMembership_Note.VisibleIndex = 2;
             // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl11.Location = new System.Drawing.Point(14, 7);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(74, 14);
+            this.labelControl11.TabIndex = 64;
+            this.labelControl11.Text = "Thẻ hội viên";
+            // 
             // SettingManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -638,6 +684,7 @@
             this.ClientSize = new System.Drawing.Size(796, 556);
             this.ControlBox = false;
             this.Controls.Add(this.grcDanhMuc);
+            this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -672,6 +719,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
+            this.panelControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcDanhMuc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhMuc)).EndInit();
             this.ResumeLayout(false);
@@ -720,13 +771,16 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Bunifu.Framework.UI.BunifuCustomLabel lbTenPhong;
+        private DevExpress.XtraEditors.LabelControl lbTrangThai;
+        private DevExpress.XtraEditors.TextEdit txtMa;
+        private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraGrid.GridControl grcDanhMuc;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhMuc;
         private DevExpress.XtraGrid.Columns.GridColumn colMembership_ID;
         private DevExpress.XtraGrid.Columns.GridColumn colMembership_Name;
         private DevExpress.XtraGrid.Columns.GridColumn colMembership_Price;
         private DevExpress.XtraGrid.Columns.GridColumn colMembership_Note;
-        private DevExpress.XtraEditors.LabelControl lbTrangThai;
-        private DevExpress.XtraEditors.TextEdit txtMa;
+        private DevExpress.XtraEditors.SearchControl searchControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
     }
 }

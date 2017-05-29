@@ -323,6 +323,7 @@
             this.peAnh.Location = new System.Drawing.Point(19, 46);
             this.peAnh.Name = "peAnh";
             this.peAnh.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.peAnh.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.peAnh.Properties.ZoomAccelerationFactor = 1D;
             this.peAnh.Size = new System.Drawing.Size(140, 140);
             this.peAnh.TabIndex = 49;

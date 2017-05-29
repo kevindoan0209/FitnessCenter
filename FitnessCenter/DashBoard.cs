@@ -88,6 +88,7 @@ namespace FitnessCenter
             txtChao.Text = "Xin chào " + UserName + " !";
             HandleAuthority();
             LoadName();
+            btnHome.selected = true;
         }  
         private void LoadName()
         {
@@ -194,6 +195,7 @@ namespace FitnessCenter
         {
             if (SideMenu.Width == 55)
             {
+                peLogoAnimation.Visible = false;
                 peLogo.Visible = true;
                 txtPhienBan.Visible = true;
                 btnDangXuat.Visible = true;
@@ -204,10 +206,11 @@ namespace FitnessCenter
                 SideMenu.Visible = false;
                 SideMenu.Width = 244;
                 PanelAnimator.ShowSync(SideMenu);
-               // LogoAnimator.ShowSync(peLogo);
+                // LogoAnimator.ShowSync(peLogo);
             }
             else
             {
+                peLogoAnimation.Visible = true;
                 peLogo.Visible = false;
                 txtPhienBan.Visible = false;
                 btnDangXuat.Visible = false;
@@ -228,6 +231,13 @@ namespace FitnessCenter
         {
             MessageNotice message = new MessageNotice();
             message.ShowDialog();
+        }
+
+        private void btnKhoa_Click(object sender, EventArgs e)
+        {
+            LockAccess lockaccess = new LockAccess();
+            lockaccess.Id = Id;
+            lockaccess.ShowDialog();
         }
     }
 }

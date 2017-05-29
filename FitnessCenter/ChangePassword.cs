@@ -62,7 +62,7 @@ namespace FitnessCenter
         {
             if (txtMatKhau.Text.Length > 20 || txtMatKhau.Text.Length < 6)
             {
-                //XtraMessageBox.Show("Mật khẩu phải từ 6 đến 20 kí tự", "Clinience", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+               
                 lbTrangThai.Text = "*Mật khẩu phải từ 6 đến 20 kí tự";
                 txtMatKhau.Focus();
                 e.Cancel = true;
@@ -80,7 +80,7 @@ namespace FitnessCenter
         {
             if (txtMatKhau2.Text.Length > 20 || txtMatKhau2.Text.Length < 6)
             {
-                //XtraMessageBox.Show("Mật khẩu phải từ 6 đến 20 kí tự", "Clinience", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+               
                 lbTrangThai.Text = "*Mật khẩu phải từ 6 đến 20 kí tự";
                 txtMatKhau2.Focus();
                 e.Cancel = true;
@@ -98,7 +98,7 @@ namespace FitnessCenter
         {
             if (txtMaKhauCu.Text.Length > 20 || txtMaKhauCu.Text.Length < 6)
             {
-                //XtraMessageBox.Show("Mật khẩu phải từ 6 đến 20 kí tự", "Clinience", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+               
                 lbTrangThai.Text = "*Mật khẩu phải từ 6 đến 20 kí tự";
                 txtMaKhauCu.Focus();
                 e.Cancel = true;
@@ -190,7 +190,10 @@ namespace FitnessCenter
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi" + ex.Message);
+                String info = ex.Message;
+                MessageError error = new MessageError();
+                error.message = info;
+                error.ShowDialog();
             }
         }
 

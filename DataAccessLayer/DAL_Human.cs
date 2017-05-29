@@ -23,6 +23,18 @@ namespace DataAccessLayer
             return dt;
         }
 
+        public DataTable LockAccess(int Id, string password)
+        {
+            const String sqlCommand = "select * from Account where Account_Password = @PassWord and Account_Id = @Id";
+            SqlCommand command = new SqlCommand(sqlCommand, connect());
+            command.Parameters.AddWithValue("@Id", Id);
+            command.Parameters.AddWithValue("@PassWord", password);
+            SqlDataAdapter data = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            data.Fill(dt);
+            return dt;
+        }
+
         public DataTable Select_Username(string username)
         {
             const String sqlCommand = "Select * from Account where Account_UserName = @Username";

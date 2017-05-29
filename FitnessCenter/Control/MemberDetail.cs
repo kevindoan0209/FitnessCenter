@@ -99,20 +99,20 @@ namespace FitnessCenter
                                     int id = Convert.ToInt32(txtMa.Text);
                                     if (string.IsNullOrEmpty(txtAnh.Text))
                                     {
-                                        BLL_Human.UpdateCustomerNoImage(id,name, age, sex, email, phone, job, address, memberId, note, beginDate, endDate);
+                                        BLL_Human.UpdateCustomerNoImage(id, name, age, sex, email, phone, job, address, memberId, note, beginDate, endDate);
                                         int lastID = BLL_Human.GetLastIdCustomer();
                                         int lastIdPayment = BLL_Payment.GetLastIdPayment();
-                                        BLL_Payment.UpdatePayment(lastIdPayment,lastID, beginDate, endDate, totalAmount, notePayment);
-                                       
+                                        BLL_Payment.UpdatePayment(lastIdPayment, lastID, beginDate, endDate, totalAmount, notePayment);
+
                                         this.Close();
                                     }
                                     else
                                     {
-                                        BLL_Human.UpdateCustomerImage(id,name, age, sex, email, phone, job, address, memberId, note, beginDate, endDate, image);
+                                        BLL_Human.UpdateCustomerImage(id, name, age, sex, email, phone, job, address, memberId, note, beginDate, endDate, image);
                                         int lastID = BLL_Human.GetLastIdCustomer();
                                         int lastIdPayment = BLL_Payment.GetLastIdPayment();
-                                        BLL_Payment.UpdatePayment(lastIdPayment,lastID, beginDate, endDate, totalAmount, notePayment);
-                                      
+                                        BLL_Payment.UpdatePayment(lastIdPayment, lastID, beginDate, endDate, totalAmount, notePayment);
+
                                         this.Close();
                                     }
                                 }
@@ -124,7 +124,10 @@ namespace FitnessCenter
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi:" + ex.Message);
+                String info = ex.Message;
+                MessageError error = new MessageError();
+                error.message = info;
+                error.ShowDialog();
             }
         }
         private void btnTao_Click(object sender, EventArgs e)
@@ -199,7 +202,7 @@ namespace FitnessCenter
                                             BLL_Human.InsertCustomerNoImage(name, age, sex, email, phone, job, address, memberId, note, beginDate, endDate);
                                             int lastID = BLL_Human.GetLastIdCustomer();
                                             BLL_Payment.InsertPayment(lastID, beginDate, endDate, totalAmount, notePayment);
-                                           
+
                                             this.Close();
                                         }
                                         else
@@ -207,7 +210,7 @@ namespace FitnessCenter
                                             BLL_Human.InsertCustomerImage(name, age, sex, email, phone, job, address, memberId, note, beginDate, endDate, image);
                                             int lastID = BLL_Human.GetLastIdCustomer();
                                             BLL_Payment.InsertPayment(lastID, beginDate, endDate, totalAmount, notePayment);
-                                           
+
                                             this.Close();
                                         }
                                     }
@@ -220,7 +223,10 @@ namespace FitnessCenter
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi:" + ex.Message);
+                String info = ex.Message;
+                MessageError error = new MessageError();
+                error.message = info;
+                error.ShowDialog();
             }
         }
 
@@ -228,7 +234,7 @@ namespace FitnessCenter
         {
             try
             {
-                XtraMessageBox.Show("Kích thước ảnh đề nghị (120 * 120)", "Fitness Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 OpenFileDialog openFileDialog = new OpenFileDialog();
                 openFileDialog.Filter = ("Image Files |*.png; *.bmp; *.jpg;*.jpeg; *.gif;");
                 openFileDialog.FilterIndex = 4;
@@ -314,7 +320,7 @@ namespace FitnessCenter
         {
             if (txtSDT.Text.Length < 10 || txtSDT.Text.Length > 11)
             {
-               
+
                 lbTrangThai.Text = "*Số điện thoại phải từ 10 đến 11 số";
                 txtSDT.Focus();
                 e.Cancel = true;

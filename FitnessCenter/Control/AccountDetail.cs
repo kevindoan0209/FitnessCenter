@@ -28,7 +28,7 @@ namespace FitnessCenter
         {
             try
             {
-                XtraMessageBox.Show("Kích thước ảnh đề nghị (130 * 130)", "Clinience", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              
                 OpenFileDialog openFileDialog = new OpenFileDialog();
                 openFileDialog.Filter = ("Image Files |*.png; *.bmp; *.jpg;*.jpeg; *.gif;");
                 openFileDialog.FilterIndex = 4;
@@ -131,7 +131,10 @@ namespace FitnessCenter
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi" + ex.Message);
+                String info = ex.Message;
+                MessageError error = new MessageError();
+                error.message = info;
+                error.ShowDialog();
             }
         }
 
@@ -232,7 +235,10 @@ namespace FitnessCenter
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi :" + ex.Message);
+                String info = ex.Message;
+                MessageError error = new MessageError();
+                error.message = info;
+                error.ShowDialog();
             }
         }
 

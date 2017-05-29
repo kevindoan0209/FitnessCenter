@@ -16,6 +16,11 @@ namespace BussinessLogicLayer
             return _human.Login(userName, passWord);
         }
 
+        public static DataTable LockAccess(int id, string passWord)
+        {
+            return _human.LockAccess(id, passWord);
+        }
+
         public static int InsertAccount(string name, string username, string password, string image, int type)
         {
             return _human.InsertAccount(name, username, password, image, type);

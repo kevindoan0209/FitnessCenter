@@ -294,3 +294,4 @@ C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCen
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.SettingManagement.resources
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.MemberExpire.resources
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.ItemsManagement.resources
+C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.LockAccess.resources

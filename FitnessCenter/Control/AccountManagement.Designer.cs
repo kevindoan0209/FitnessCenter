@@ -97,7 +97,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.searchControl2);
             this.groupBox1.Location = new System.Drawing.Point(169, 5);
             this.groupBox1.Name = "groupBox1";

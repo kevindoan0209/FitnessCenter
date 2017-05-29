@@ -125,9 +125,10 @@
             this.lbTen = new DevExpress.XtraEditors.LabelControl();
             this.peAnh = new DevExpress.XtraEditors.PictureEdit();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.csmXoa = new System.Windows.Forms.ToolStripMenuItem();
-            this.csmCapNhat = new System.Windows.Forms.ToolStripMenuItem();
+            this.giaHạnThẻToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xemThôngTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.csmCapNhat = new System.Windows.Forms.ToolStripMenuItem();
+            this.csmXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.searchControl2 = new DevExpress.XtraEditors.SearchControl();
@@ -155,7 +156,6 @@
             this.btnTiepNhan = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnHoiVien = new DevExpress.XtraEditors.SimpleButton();
-            this.giaHạnThẻToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             groupBox2 = new System.Windows.Forms.GroupBox();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -370,6 +370,7 @@
             this.peAnh.Location = new System.Drawing.Point(72, 14);
             this.peAnh.Name = "peAnh";
             this.peAnh.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.peAnh.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.peAnh.Properties.ZoomAccelerationFactor = 1D;
             this.peAnh.Size = new System.Drawing.Size(120, 120);
             this.peAnh.TabIndex = 3;
@@ -384,12 +385,18 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(151, 92);
             // 
-            // csmXoa
+            // giaHạnThẻToolStripMenuItem
             // 
-            this.csmXoa.Name = "csmXoa";
-            this.csmXoa.Size = new System.Drawing.Size(150, 22);
-            this.csmXoa.Text = "Xóa";
-            this.csmXoa.Click += new System.EventHandler(this.csmXoa_Click);
+            this.giaHạnThẻToolStripMenuItem.Name = "giaHạnThẻToolStripMenuItem";
+            this.giaHạnThẻToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.giaHạnThẻToolStripMenuItem.Text = "Gia hạn thẻ";
+            // 
+            // xemThôngTinToolStripMenuItem
+            // 
+            this.xemThôngTinToolStripMenuItem.Name = "xemThôngTinToolStripMenuItem";
+            this.xemThôngTinToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.xemThôngTinToolStripMenuItem.Text = "Xem thông tin";
+            this.xemThôngTinToolStripMenuItem.Click += new System.EventHandler(this.xemThôngTinToolStripMenuItem_Click);
             // 
             // csmCapNhat
             // 
@@ -398,12 +405,12 @@
             this.csmCapNhat.Text = "Cập nhật";
             this.csmCapNhat.Click += new System.EventHandler(this.csmCapNhat_Click);
             // 
-            // xemThôngTinToolStripMenuItem
+            // csmXoa
             // 
-            this.xemThôngTinToolStripMenuItem.Name = "xemThôngTinToolStripMenuItem";
-            this.xemThôngTinToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.xemThôngTinToolStripMenuItem.Text = "Xem thông tin";
-            this.xemThôngTinToolStripMenuItem.Click += new System.EventHandler(this.xemThôngTinToolStripMenuItem_Click);
+            this.csmXoa.Name = "csmXoa";
+            this.csmXoa.Size = new System.Drawing.Size(150, 22);
+            this.csmXoa.Text = "Xóa";
+            this.csmXoa.Click += new System.EventHandler(this.csmXoa_Click);
             // 
             // panelControl1
             // 
@@ -815,12 +822,6 @@
             this.btnHoiVien.TabIndex = 6;
             this.btnHoiVien.Text = "Hội viên hết hạn";
             this.btnHoiVien.Click += new System.EventHandler(this.btnHoiVien_Click);
-            // 
-            // giaHạnThẻToolStripMenuItem
-            // 
-            this.giaHạnThẻToolStripMenuItem.Name = "giaHạnThẻToolStripMenuItem";
-            this.giaHạnThẻToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.giaHạnThẻToolStripMenuItem.Text = "Gia hạn thẻ";
             // 
             // MemberManagement
             // 

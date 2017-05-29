@@ -34,7 +34,9 @@
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.lbThongBao = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCo
@@ -94,16 +96,27 @@
             this.lbThongBao.AutoSize = true;
             this.lbThongBao.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThongBao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lbThongBao.Location = new System.Drawing.Point(200, 50);
+            this.lbThongBao.Location = new System.Drawing.Point(42, 49);
             this.lbThongBao.Name = "lbThongBao";
-            this.lbThongBao.Size = new System.Drawing.Size(0, 19);
+            this.lbThongBao.Size = new System.Drawing.Size(341, 19);
             this.lbThongBao.TabIndex = 12;
+            this.lbThongBao.Text = "Lỗi ! Có một vài vấn đề đã xảy ra không hợp lệ";
             this.lbThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 0;
             this.bunifuElipse1.TargetControl = this;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(17, 46);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(23, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
             // 
             // MessageError
             // 
@@ -112,6 +125,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(406, 142);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.lbThongBao);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnCo);
@@ -123,6 +137,7 @@
             this.Text = "Message";
             this.Load += new System.EventHandler(this.MessageError_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,5 +148,6 @@
         private Bunifu.Framework.UI.BunifuImageButton btnClose;
         private Bunifu.Framework.UI.BunifuCustomLabel lbThongBao;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

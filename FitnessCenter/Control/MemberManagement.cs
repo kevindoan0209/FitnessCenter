@@ -38,7 +38,7 @@ namespace FitnessCenter
 
         private void ResetFillData()
         {
-            lbTen.Text = "";        
+            lbTen.Text = "";
             lbGioiTinh.Text = "";
             lbSoDienThoai.Text = "";
             lbLoaiThe.Text = "";
@@ -104,7 +104,7 @@ namespace FitnessCenter
                                 dc.Customers.DeleteOnSubmit(customer);
                                 dc.SubmitChanges();
                                 sqlDataSource2.Fill();
-                              
+
                             }
                         }
                         else
@@ -205,7 +205,7 @@ namespace FitnessCenter
             {
                 int Id = (int)value;
                 DataFitnessCenterDataContext db = new DataFitnessCenterDataContext();
-                var customer = db.Customers.Where(i => i.Customer_ID == (int)Id).SingleOrDefault();            
+                var customer = db.Customers.Where(i => i.Customer_ID == (int)Id).SingleOrDefault();
                 if (customer != null)
                 {
                     lbTen.Text = customer.Customer_Name;

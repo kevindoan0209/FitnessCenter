@@ -67,7 +67,10 @@ namespace FitnessCenter
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi:" + ex.Message);
+                String info = ex.Message;
+                MessageError error = new MessageError();
+                error.message = info;
+                error.ShowDialog();
             }
         }
 
