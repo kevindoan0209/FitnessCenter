@@ -336,6 +336,8 @@ namespace FitnessCenter
                 XtraMessageBox.Show("Bạn chưa chọn đối tượng để cập nhật", "Fitness Center", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+       
     }
 
 }

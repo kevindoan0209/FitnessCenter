@@ -42,7 +42,7 @@ namespace FitnessCenter
             object value = gvDanhMuc.GetRowCellValue(rowIndex, colID);
             if (value != null)
             {
-                MemberExpire me = new MemberExpire();
+                ExpireMemberDetail me = new ExpireMemberDetail();
                 me.Id = (int)value;
                 me.ShowDialog();
                 sqlDataSource1.Fill();

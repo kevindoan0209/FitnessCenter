@@ -41,6 +41,8 @@ namespace BussinessLogicLayer
             return _human.UpdateAccountNoImage(id, name, username, password, type);
         }
 
+
+
         public static int UpdateAccountPassword(int id, string name, string password)
         {
             return _human.UpdateAccountPassword(id, name, password);
@@ -91,6 +93,21 @@ namespace BussinessLogicLayer
         public static int UpdateCustomerExpire(int id, int memberId, DateTime startDate, DateTime endDate)
         {
             return _human.UpdateCustomerExpire(id, memberId, startDate, endDate);
+        }
+
+        public static int UpdateCustomerImageNoDate(int id, string name, DateTime age, string sex, string email, string phone, string job, string address, int memberId, string note, string image)
+        {
+            return _human.UpdateCustomerImageNoDate(id, name, age, sex, email, phone, job, address, memberId, note, image);
+        }
+
+        public static int UpdateCustomerNoImageNoDate(int id, string name, DateTime age, string sex, string email, string phone, string job, string address, int memberId, string note)
+        {
+            return _human.UpdateCustomerNoImageNoDate(id, name, age, sex, email, phone, job, address, memberId, note);
+        }
+
+        public static DataTable ExpireMember(DateTime endDate)
+        {
+            return _human.ExpireMember(endDate);
         }
 
     }

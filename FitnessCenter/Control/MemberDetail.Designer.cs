@@ -66,8 +66,8 @@
             this.txtTen = new DevExpress.XtraEditors.TextEdit();
             this.txtGhiChu = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.lbNgayHetHan = new DevExpress.XtraEditors.LabelControl();
+            this.lbNgayNop = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtDiaChi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -264,8 +264,8 @@
             this.groupBox1.Controls.Add(this.txtTen);
             this.groupBox1.Controls.Add(this.txtGhiChu);
             this.groupBox1.Controls.Add(this.labelControl10);
-            this.groupBox1.Controls.Add(this.labelControl9);
-            this.groupBox1.Controls.Add(this.labelControl12);
+            this.groupBox1.Controls.Add(this.lbNgayHetHan);
+            this.groupBox1.Controls.Add(this.lbNgayNop);
             this.groupBox1.Controls.Add(this.labelControl7);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.labelControl6);
@@ -441,23 +441,23 @@
             this.labelControl10.TabIndex = 43;
             this.labelControl10.Text = "Ghi chú:";
             // 
-            // labelControl9
+            // lbNgayHetHan
             // 
-            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.labelControl9.Location = new System.Drawing.Point(143, 155);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(69, 13);
-            this.labelControl9.TabIndex = 42;
-            this.labelControl9.Text = "Ngày hết hạn:";
+            this.lbNgayHetHan.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.lbNgayHetHan.Location = new System.Drawing.Point(143, 155);
+            this.lbNgayHetHan.Name = "lbNgayHetHan";
+            this.lbNgayHetHan.Size = new System.Drawing.Size(69, 13);
+            this.lbNgayHetHan.TabIndex = 42;
+            this.lbNgayHetHan.Text = "Ngày hết hạn:";
             // 
-            // labelControl12
+            // lbNgayNop
             // 
-            this.labelControl12.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.labelControl12.Location = new System.Drawing.Point(23, 155);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(50, 13);
-            this.labelControl12.TabIndex = 40;
-            this.labelControl12.Text = "Ngày nộp:";
+            this.lbNgayNop.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.lbNgayNop.Location = new System.Drawing.Point(23, 155);
+            this.lbNgayNop.Name = "lbNgayNop";
+            this.lbNgayNop.Size = new System.Drawing.Size(50, 13);
+            this.lbNgayNop.TabIndex = 40;
+            this.lbNgayNop.Text = "Ngày nộp:";
             // 
             // labelControl7
             // 
@@ -609,8 +609,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtSDT;
         private DevExpress.XtraEditors.PictureEdit peAnh;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.LabelControl lbNgayHetHan;
+        private DevExpress.XtraEditors.LabelControl lbNgayNop;
         private DevExpress.XtraEditors.MemoEdit txtGhiChu;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl8;

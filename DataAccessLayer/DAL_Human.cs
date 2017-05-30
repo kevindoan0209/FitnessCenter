@@ -237,5 +237,50 @@ namespace DataAccessLayer
             command.Parameters.AddWithValue("@EndDate", endDate);
             return command.ExecuteNonQuery();
         }
+
+        public int UpdateCustomerNoImageNoDate(int id, string name, DateTime age, string sex, string email, string phone, string job, string address, int memberId, string note)
+        {
+            const String sqlCommand = "Update Customer set Customer_Name = @Name,Customer_Age = @Age,Customer_Sex = @Sex, Customer_Email = @Email,Customer_Phone = @Phone,Customer_Job = @Job,Customer_Address = @Address,Membership_ID = @MemberId,Customer_Note = @Note Where Customer_ID = @Id";
+            SqlCommand command = new SqlCommand(sqlCommand, connect());
+            command.Parameters.AddWithValue("@Id", id);
+            command.Parameters.AddWithValue("@Name", name);
+            command.Parameters.AddWithValue("@Age", age);
+            command.Parameters.AddWithValue("@Sex", sex);
+            command.Parameters.AddWithValue("@Email", email);
+            command.Parameters.AddWithValue("@Phone", phone);
+            command.Parameters.AddWithValue("@Job", job);
+            command.Parameters.AddWithValue("@Address", address);
+            command.Parameters.AddWithValue("@MemberId", memberId);
+            command.Parameters.AddWithValue("@Note", note);
+            return command.ExecuteNonQuery();
+        }
+        public int UpdateCustomerImageNoDate(int id, string name, DateTime age, string sex, string email, string phone, string job, string address, int memberId, string note, string image)
+        {
+            const String sqlCommand = "Update Customer set Customer_Name = @Name,Customer_Age = @Age,Customer_Sex = @Sex, Customer_Email = @Email,Customer_Phone = @Phone,Customer_Job = @Job,Customer_Address = @Address,Membership_ID = @MemberId,Customer_Note = @Note,Customer_Image = @Image Where Customer_ID = @Id";
+            SqlCommand command = new SqlCommand(sqlCommand, connect());
+            command.Parameters.AddWithValue("@Id", id);
+            command.Parameters.AddWithValue("@Name", name);
+            command.Parameters.AddWithValue("@Age", age);
+            command.Parameters.AddWithValue("@Sex", sex);
+            command.Parameters.AddWithValue("@Email", email);
+            command.Parameters.AddWithValue("@Phone", phone);
+            command.Parameters.AddWithValue("@Job", job);
+            command.Parameters.AddWithValue("@Address", address);
+            command.Parameters.AddWithValue("@MemberId", memberId);
+            command.Parameters.AddWithValue("@Note", note);
+            command.Parameters.AddWithValue("@Image", convertImagetoByte(image));
+            return command.ExecuteNonQuery();
+        }
+
+        public DataTable ExpireMember(DateTime endDate)
+        {
+            const String sqlCommand = "Select * from Customer where Customer_EndDate <= '@EndDate'";
+            SqlCommand command = new SqlCommand(sqlCommand, connect());
+            command.Parameters.AddWithValue("@EndDate", endDate);
+            SqlDataAdapter data = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            data.Fill(dt);
+            return dt;
+        }
     }
 }

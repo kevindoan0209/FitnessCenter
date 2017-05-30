@@ -228,7 +228,7 @@
             this.lbTrangThai.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.lbTrangThai.LineLocation = DevExpress.XtraEditors.LineLocation.Bottom;
             this.lbTrangThai.LineStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.lbTrangThai.Location = new System.Drawing.Point(21, 509);
+            this.lbTrangThai.Location = new System.Drawing.Point(21, 519);
             this.lbTrangThai.Name = "lbTrangThai";
             this.lbTrangThai.Size = new System.Drawing.Size(0, 15);
             this.lbTrangThai.TabIndex = 49;

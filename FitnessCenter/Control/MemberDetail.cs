@@ -66,55 +66,35 @@ namespace FitnessCenter
                             }
                             else
                             {
-                                if (dtNgayBatDau.DateTime > dtNgayKetThuc.DateTime)
+                                string name = txtTen.Text;
+                                string image = txtAnh.Text;
+                                string sex;
+                                if (rbNam.Checked == true)
                                 {
-                                    lbTrangThai.Text = "*Vui lòng chọn thời gian";
-                                    dtNgayKetThuc.Focus();
+                                    sex = "Nam";
                                 }
                                 else
                                 {
-                                    string name = txtTen.Text;
-                                    string image = txtAnh.Text;
-                                    string sex;
-                                    if (rbNam.Checked == true)
-                                    {
-                                        sex = "Nam";
-                                    }
-                                    else
-                                    {
-                                        sex = "Nữ";
-                                    }
-                                    string phone = txtSDT.Text;
-                                    string email = txtEmail.Text;
-                                    string job = txtNgheNghiep.Text;
-                                    string address = txtDiaChi.Text;
-                                    DateTime age = dtNamSinh.DateTime;
-                                    string note = txtGhiChu.Text;
-                                    string group = lkeLoaiThe.GetColumnValue("Membership_ID").ToString();
-                                    int memberId = Convert.ToInt32(group);
-                                    DateTime beginDate = dtNgayBatDau.DateTime;
-                                    DateTime endDate = dtNgayKetThuc.DateTime;
-                                    int totalAmount = 0;
-                                    string notePayment = "";
-                                    int id = Convert.ToInt32(txtMa.Text);
-                                    if (string.IsNullOrEmpty(txtAnh.Text))
-                                    {
-                                        BLL_Human.UpdateCustomerNoImage(id, name, age, sex, email, phone, job, address, memberId, note, beginDate, endDate);
-                                        int lastID = BLL_Human.GetLastIdCustomer();
-                                        int lastIdPayment = BLL_Payment.GetLastIdPayment();
-                                        BLL_Payment.UpdatePayment(lastIdPayment, lastID, beginDate, endDate, totalAmount, notePayment);
-
-                                        this.Close();
-                                    }
-                                    else
-                                    {
-                                        BLL_Human.UpdateCustomerImage(id, name, age, sex, email, phone, job, address, memberId, note, beginDate, endDate, image);
-                                        int lastID = BLL_Human.GetLastIdCustomer();
-                                        int lastIdPayment = BLL_Payment.GetLastIdPayment();
-                                        BLL_Payment.UpdatePayment(lastIdPayment, lastID, beginDate, endDate, totalAmount, notePayment);
-
-                                        this.Close();
-                                    }
+                                    sex = "Nữ";
+                                }
+                                string phone = txtSDT.Text;
+                                string email = txtEmail.Text;
+                                string job = txtNgheNghiep.Text;
+                                string address = txtDiaChi.Text;
+                                DateTime age = dtNamSinh.DateTime;
+                                string note = txtGhiChu.Text;
+                                string group = lkeLoaiThe.GetColumnValue("Membership_ID").ToString();
+                                int memberId = Convert.ToInt32(group);
+                                int id = Convert.ToInt32(txtMa.Text);
+                                if (string.IsNullOrEmpty(txtAnh.Text))
+                                {
+                                    BLL_Human.UpdateCustomerNoImageNoDate(id, name, age, sex, email, phone, job, address, memberId, note);
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    BLL_Human.UpdateCustomerImageNoDate(id, name, age, sex, email, phone, job, address, memberId, note, image);
+                                    this.Close();
                                 }
                             }
                         }
@@ -279,6 +259,11 @@ namespace FitnessCenter
                     }
                     peAnh.EditValue = customer.Customer_Image;
                     txtMa.ReadOnly = true;
+                    dtNgayBatDau.Enabled = false;
+                    dtNgayKetThuc.Enabled = false;
+                    lbNgayNop.Enabled = false;
+                    lbNgayHetHan.Enabled = false;
+
                 }
             }
         }

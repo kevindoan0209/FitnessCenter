@@ -317,5 +317,23 @@ namespace FitnessCenter
                 }
             }
         }
+
+        private void csmGiaHanThe_Click(object sender, EventArgs e)
+        {
+            int rowIndex = gvDanhMuc.FocusedRowHandle;
+            string colID = "Customer_ID";
+            object value = gvDanhMuc.GetRowCellValue(rowIndex, colID);
+            if (value != null)
+            {
+                ExpireMemberDetail me = new ExpireMemberDetail();
+                me.Id = (int)value;
+                me.ShowDialog();
+                sqlDataSource2.Fill();
+            }
+            else
+            {
+                XtraMessageBox.Show("Bạn chưa chọn đối tượng để cập nhật", "Fitness Center", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
