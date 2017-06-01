@@ -694,9 +694,9 @@
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Location = new System.Drawing.Point(11, 7);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(76, 14);
+            this.labelControl8.Size = new System.Drawing.Size(119, 14);
             this.labelControl8.TabIndex = 61;
-            this.labelControl8.Text = "Dụng cụ tập";
+            this.labelControl8.Text = "Dụng cụ hỗ trợ tập";
             // 
             // panelControl3
             // 

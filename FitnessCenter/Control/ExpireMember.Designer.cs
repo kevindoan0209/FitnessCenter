@@ -30,27 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpireMember));
-            DevExpress.DataAccess.Sql.SelectQuery selectQuery2 = new DevExpress.DataAccess.Sql.SelectQuery();
-            DevExpress.DataAccess.Sql.Column column9 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression9 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Table table3 = new DevExpress.DataAccess.Sql.Table();
-            DevExpress.DataAccess.Sql.Column column10 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression10 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Column column11 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression11 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Column column12 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression12 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Column column13 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression13 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Table table4 = new DevExpress.DataAccess.Sql.Table();
-            DevExpress.DataAccess.Sql.Column column14 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression14 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Column column15 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression15 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Column column16 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression16 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Join join2 = new DevExpress.DataAccess.Sql.Join();
-            DevExpress.DataAccess.Sql.RelationColumnInfo relationColumnInfo2 = new DevExpress.DataAccess.Sql.RelationColumnInfo();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.AllColumns allColumns1 = new DevExpress.DataAccess.Sql.AllColumns();
+            DevExpress.DataAccess.Sql.Table table1 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.AllColumns allColumns2 = new DevExpress.DataAccess.Sql.AllColumns();
+            DevExpress.DataAccess.Sql.Table table2 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.Join join1 = new DevExpress.DataAccess.Sql.Join();
+            DevExpress.DataAccess.Sql.RelationColumnInfo relationColumnInfo1 = new DevExpress.DataAccess.Sql.RelationColumnInfo();
             this.lbTrangThai = new DevExpress.XtraEditors.LabelControl();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnGiaHan = new DevExpress.XtraEditors.SimpleButton();
@@ -63,16 +50,27 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.grcDanhMuc = new DevExpress.XtraGrid.GridControl();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.csmGiaHan = new System.Windows.Forms.ToolStripMenuItem();
+            this.sqlDataSource5 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.gvDanhMuc = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colCustomer_ID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCustomer_Name = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCustomer_Age = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCustomer_Sex = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMembership_Name = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMembership_Price = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCustomer_StartDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCustomer_EndDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomer_ID2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomer_Name2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomer_Image1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomer_Age2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomer_Sex2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomer_Email1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomer_Phone1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomer_Job1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomer_Address1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMembership_ID1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomer_StartDate2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomer_EndDate2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomer_Note1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMembership_Membership_ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMembership_Name1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMembership_Price1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMembership_Note = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HeaderExpire)).BeginInit();
@@ -80,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcDanhMuc)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhMuc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,6 +124,7 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(567, 44);
             this.panelControl1.TabIndex = 8;
+         
             // 
             // HeaderExpire
             // 
@@ -203,8 +203,9 @@
             // 
             // grcDanhMuc
             // 
+            this.grcDanhMuc.ContextMenuStrip = this.contextMenuStrip1;
             this.grcDanhMuc.DataMember = "Customer";
-            this.grcDanhMuc.DataSource = this.sqlDataSource1;
+            this.grcDanhMuc.DataSource = this.sqlDataSource5;
             this.grcDanhMuc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grcDanhMuc.EmbeddedNavigator.Buttons.Append.Visible = false;
             this.grcDanhMuc.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
@@ -216,152 +217,191 @@
             this.grcDanhMuc.MainView = this.gvDanhMuc;
             this.grcDanhMuc.Name = "grcDanhMuc";
             this.grcDanhMuc.Size = new System.Drawing.Size(567, 233);
-            this.grcDanhMuc.TabIndex = 11;
+            this.grcDanhMuc.TabIndex = 13;
             this.grcDanhMuc.UseEmbeddedNavigator = true;
             this.grcDanhMuc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhMuc});
             // 
-            // sqlDataSource1
+            // contextMenuStrip1
             // 
-            this.sqlDataSource1.ConnectionName = "DESKTOP-M75UEQH\\SQLEXPRESS_FitnessCenter_Connection";
-            this.sqlDataSource1.Name = "sqlDataSource1";
-            columnExpression9.ColumnName = "Customer_ID";
-            table3.MetaSerializable = "0|0|125|300";
-            table3.Name = "Customer";
-            columnExpression9.Table = table3;
-            column9.Expression = columnExpression9;
-            columnExpression10.ColumnName = "Customer_Name";
-            columnExpression10.Table = table3;
-            column10.Expression = columnExpression10;
-            columnExpression11.ColumnName = "Customer_Age";
-            columnExpression11.Table = table3;
-            column11.Expression = columnExpression11;
-            columnExpression12.ColumnName = "Customer_Sex";
-            columnExpression12.Table = table3;
-            column12.Expression = columnExpression12;
-            columnExpression13.ColumnName = "Membership_Name";
-            table4.MetaSerializable = "0|0|125|120";
-            table4.Name = "Membership";
-            columnExpression13.Table = table4;
-            column13.Expression = columnExpression13;
-            columnExpression14.ColumnName = "Membership_Price";
-            columnExpression14.Table = table4;
-            column14.Expression = columnExpression14;
-            columnExpression15.ColumnName = "Customer_StartDate";
-            columnExpression15.Table = table3;
-            column15.Expression = columnExpression15;
-            columnExpression16.ColumnName = "Customer_EndDate";
-            columnExpression16.Table = table3;
-            column16.Expression = columnExpression16;
-            selectQuery2.Columns.Add(column9);
-            selectQuery2.Columns.Add(column10);
-            selectQuery2.Columns.Add(column11);
-            selectQuery2.Columns.Add(column12);
-            selectQuery2.Columns.Add(column13);
-            selectQuery2.Columns.Add(column14);
-            selectQuery2.Columns.Add(column15);
-            selectQuery2.Columns.Add(column16);
-            selectQuery2.Name = "Customer";
-            relationColumnInfo2.NestedKeyColumn = "Membership_ID";
-            relationColumnInfo2.ParentKeyColumn = "Membership_ID";
-            join2.KeyColumns.Add(relationColumnInfo2);
-            join2.Nested = table4;
-            join2.Parent = table3;
-            selectQuery2.Relations.Add(join2);
-            selectQuery2.Tables.Add(table3);
-            selectQuery2.Tables.Add(table4);
-            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            selectQuery2});
-            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.csmGiaHan});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(115, 26);
+            // 
+            // csmGiaHan
+            // 
+            this.csmGiaHan.Name = "csmGiaHan";
+            this.csmGiaHan.Size = new System.Drawing.Size(114, 22);
+            this.csmGiaHan.Text = "Gia hạn";
+            this.csmGiaHan.Click += new System.EventHandler(this.csmGiaHan_Click);
+            // 
+            // sqlDataSource5
+            // 
+            this.sqlDataSource5.ConnectionName = "DESKTOP-M75UEQH\\SQLEXPRESS_FitnessCenter_Connection";
+            this.sqlDataSource5.Name = "sqlDataSource5";
+            table1.MetaSerializable = "0|0|125|300";
+            table1.Name = "Customer";
+            allColumns1.Table = table1;
+            table2.MetaSerializable = "0|0|125|120";
+            table2.Name = "Membership";
+            allColumns2.Table = table2;
+            selectQuery1.Columns.Add(allColumns1);
+            selectQuery1.Columns.Add(allColumns2);
+            selectQuery1.FilterString = "[Customer.Customer_EndDate] <= ?Parameter2";
+            selectQuery1.Name = "Customer";
+            queryParameter1.Name = "Parameter2";
+            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("LOCALDATETIMENOW()", typeof(System.DateTime));
+            selectQuery1.Parameters.Add(queryParameter1);
+            relationColumnInfo1.NestedKeyColumn = "Membership_ID";
+            relationColumnInfo1.ParentKeyColumn = "Membership_ID";
+            join1.KeyColumns.Add(relationColumnInfo1);
+            join1.Nested = table2;
+            join1.Parent = table1;
+            selectQuery1.Relations.Add(join1);
+            selectQuery1.Tables.Add(table1);
+            selectQuery1.Tables.Add(table2);
+            this.sqlDataSource5.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            selectQuery1});
+            this.sqlDataSource5.ResultSchemaSerializable = resources.GetString("sqlDataSource5.ResultSchemaSerializable");
             // 
             // gvDanhMuc
             // 
-            this.gvDanhMuc.Appearance.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gvDanhMuc.Appearance.HeaderPanel.BorderColor = System.Drawing.Color.Lime;
             this.gvDanhMuc.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gvDanhMuc.Appearance.HeaderPanel.Options.UseBackColor = true;
-            this.gvDanhMuc.Appearance.HeaderPanel.Options.UseBorderColor = true;
             this.gvDanhMuc.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gvDanhMuc.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gvDanhMuc.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colCustomer_ID,
-            this.colCustomer_Name,
-            this.colCustomer_Age,
-            this.colCustomer_Sex,
-            this.colMembership_Name,
-            this.colMembership_Price,
-            this.colCustomer_StartDate,
-            this.colCustomer_EndDate});
+            this.colCustomer_ID2,
+            this.colCustomer_Name2,
+            this.colCustomer_Image1,
+            this.colCustomer_Age2,
+            this.colCustomer_Sex2,
+            this.colCustomer_Email1,
+            this.colCustomer_Phone1,
+            this.colCustomer_Job1,
+            this.colCustomer_Address1,
+            this.colMembership_ID1,
+            this.colCustomer_StartDate2,
+            this.colCustomer_EndDate2,
+            this.colCustomer_Note1,
+            this.colMembership_Membership_ID,
+            this.colMembership_Name1,
+            this.colMembership_Price1,
+            this.colMembership_Note});
             this.gvDanhMuc.GridControl = this.grcDanhMuc;
             this.gvDanhMuc.Name = "gvDanhMuc";
             this.gvDanhMuc.OptionsBehavior.Editable = false;
-            this.gvDanhMuc.OptionsFind.AllowFindPanel = false;
             this.gvDanhMuc.OptionsView.EnableAppearanceEvenRow = true;
             this.gvDanhMuc.OptionsView.ShowGroupPanel = false;
             // 
-            // colCustomer_ID
+            // colCustomer_ID2
             // 
-            this.colCustomer_ID.FieldName = "Customer_ID";
-            this.colCustomer_ID.Name = "colCustomer_ID";
+            this.colCustomer_ID2.FieldName = "Customer_ID";
+            this.colCustomer_ID2.Name = "colCustomer_ID2";
             // 
-            // colCustomer_Name
+            // colCustomer_Name2
             // 
-            this.colCustomer_Name.Caption = "Tên hội viên";
-            this.colCustomer_Name.FieldName = "Customer_Name";
-            this.colCustomer_Name.Name = "colCustomer_Name";
-            this.colCustomer_Name.Visible = true;
-            this.colCustomer_Name.VisibleIndex = 0;
-            this.colCustomer_Name.Width = 163;
+            this.colCustomer_Name2.Caption = "Tên hội viên";
+            this.colCustomer_Name2.FieldName = "Customer_Name";
+            this.colCustomer_Name2.Name = "colCustomer_Name2";
+            this.colCustomer_Name2.Visible = true;
+            this.colCustomer_Name2.VisibleIndex = 0;
+            this.colCustomer_Name2.Width = 188;
             // 
-            // colCustomer_Age
+            // colCustomer_Image1
             // 
-            this.colCustomer_Age.Caption = "Tuổi";
-            this.colCustomer_Age.FieldName = "Customer_Age";
-            this.colCustomer_Age.Name = "colCustomer_Age";
-            this.colCustomer_Age.Visible = true;
-            this.colCustomer_Age.VisibleIndex = 1;
-            this.colCustomer_Age.Width = 72;
+            this.colCustomer_Image1.FieldName = "Customer_Image";
+            this.colCustomer_Image1.Name = "colCustomer_Image1";
             // 
-            // colCustomer_Sex
+            // colCustomer_Age2
             // 
-            this.colCustomer_Sex.Caption = "Giới tính";
-            this.colCustomer_Sex.FieldName = "Customer_Sex";
-            this.colCustomer_Sex.Name = "colCustomer_Sex";
-            this.colCustomer_Sex.Visible = true;
-            this.colCustomer_Sex.VisibleIndex = 2;
-            this.colCustomer_Sex.Width = 60;
+            this.colCustomer_Age2.Caption = "Ngày sinh";
+            this.colCustomer_Age2.FieldName = "Customer_Age";
+            this.colCustomer_Age2.Name = "colCustomer_Age2";
+            this.colCustomer_Age2.Visible = true;
+            this.colCustomer_Age2.VisibleIndex = 1;
+            this.colCustomer_Age2.Width = 81;
             // 
-            // colMembership_Name
+            // colCustomer_Sex2
             // 
-            this.colMembership_Name.Caption = "Loại thẻ";
-            this.colMembership_Name.FieldName = "Membership_Name";
-            this.colMembership_Name.Name = "colMembership_Name";
-            this.colMembership_Name.Visible = true;
-            this.colMembership_Name.VisibleIndex = 4;
-            this.colMembership_Name.Width = 56;
+            this.colCustomer_Sex2.Caption = "Giới tính";
+            this.colCustomer_Sex2.FieldName = "Customer_Sex";
+            this.colCustomer_Sex2.Name = "colCustomer_Sex2";
+            this.colCustomer_Sex2.Visible = true;
+            this.colCustomer_Sex2.VisibleIndex = 2;
+            this.colCustomer_Sex2.Width = 55;
             // 
-            // colMembership_Price
+            // colCustomer_Email1
             // 
-            this.colMembership_Price.Caption = "Đơn giá";
-            this.colMembership_Price.FieldName = "Membership_Price";
-            this.colMembership_Price.Name = "colMembership_Price";
-            this.colMembership_Price.Visible = true;
-            this.colMembership_Price.VisibleIndex = 5;
-            this.colMembership_Price.Width = 81;
+            this.colCustomer_Email1.FieldName = "Customer_Email";
+            this.colCustomer_Email1.Name = "colCustomer_Email1";
             // 
-            // colCustomer_StartDate
+            // colCustomer_Phone1
             // 
-            this.colCustomer_StartDate.FieldName = "Customer_StartDate";
-            this.colCustomer_StartDate.Name = "colCustomer_StartDate";
+            this.colCustomer_Phone1.FieldName = "Customer_Phone";
+            this.colCustomer_Phone1.Name = "colCustomer_Phone1";
             // 
-            // colCustomer_EndDate
+            // colCustomer_Job1
             // 
-            this.colCustomer_EndDate.Caption = "Ngày hết hạn";
-            this.colCustomer_EndDate.FieldName = "Customer_EndDate";
-            this.colCustomer_EndDate.Name = "colCustomer_EndDate";
-            this.colCustomer_EndDate.Visible = true;
-            this.colCustomer_EndDate.VisibleIndex = 3;
-            this.colCustomer_EndDate.Width = 93;
+            this.colCustomer_Job1.FieldName = "Customer_Job";
+            this.colCustomer_Job1.Name = "colCustomer_Job1";
+            // 
+            // colCustomer_Address1
+            // 
+            this.colCustomer_Address1.FieldName = "Customer_Address";
+            this.colCustomer_Address1.Name = "colCustomer_Address1";
+            // 
+            // colMembership_ID1
+            // 
+            this.colMembership_ID1.FieldName = "Membership_ID";
+            this.colMembership_ID1.Name = "colMembership_ID1";
+            // 
+            // colCustomer_StartDate2
+            // 
+            this.colCustomer_StartDate2.FieldName = "Customer_StartDate";
+            this.colCustomer_StartDate2.Name = "colCustomer_StartDate2";
+            // 
+            // colCustomer_EndDate2
+            // 
+            this.colCustomer_EndDate2.Caption = "Ngày hết hạn";
+            this.colCustomer_EndDate2.FieldName = "Customer_EndDate";
+            this.colCustomer_EndDate2.Name = "colCustomer_EndDate2";
+            this.colCustomer_EndDate2.Visible = true;
+            this.colCustomer_EndDate2.VisibleIndex = 3;
+            this.colCustomer_EndDate2.Width = 92;
+            // 
+            // colCustomer_Note1
+            // 
+            this.colCustomer_Note1.FieldName = "Customer_Note";
+            this.colCustomer_Note1.Name = "colCustomer_Note1";
+            // 
+            // colMembership_Membership_ID
+            // 
+            this.colMembership_Membership_ID.FieldName = "Membership_Membership_ID";
+            this.colMembership_Membership_ID.Name = "colMembership_Membership_ID";
+            // 
+            // colMembership_Name1
+            // 
+            this.colMembership_Name1.Caption = "Loại thẻ";
+            this.colMembership_Name1.FieldName = "Membership_Name";
+            this.colMembership_Name1.Name = "colMembership_Name1";
+            this.colMembership_Name1.Visible = true;
+            this.colMembership_Name1.VisibleIndex = 4;
+            this.colMembership_Name1.Width = 77;
+            // 
+            // colMembership_Price1
+            // 
+            this.colMembership_Price1.Caption = "Đơn giá";
+            this.colMembership_Price1.FieldName = "Membership_Price";
+            this.colMembership_Price1.Name = "colMembership_Price1";
+            this.colMembership_Price1.Visible = true;
+            this.colMembership_Price1.VisibleIndex = 5;
+            this.colMembership_Price1.Width = 56;
+            // 
+            // colMembership_Note
+            // 
+            this.colMembership_Note.FieldName = "Membership_Note";
+            this.colMembership_Note.Name = "colMembership_Note";
             // 
             // ExpireMember
             // 
@@ -389,6 +429,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcDanhMuc)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhMuc)).EndInit();
             this.ResumeLayout(false);
 
@@ -408,15 +449,26 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private DevExpress.XtraGrid.GridControl grcDanhMuc;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource5;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhMuc;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
-        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_ID;
-        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_Name;
-        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_Age;
-        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_Sex;
-        private DevExpress.XtraGrid.Columns.GridColumn colMembership_Name;
-        private DevExpress.XtraGrid.Columns.GridColumn colMembership_Price;
-        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_StartDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_EndDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_ID2;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_Name2;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_Image1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_Age2;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_Sex2;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_Email1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_Phone1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_Job1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_Address1;
+        private DevExpress.XtraGrid.Columns.GridColumn colMembership_ID1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_StartDate2;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_EndDate2;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomer_Note1;
+        private DevExpress.XtraGrid.Columns.GridColumn colMembership_Membership_ID;
+        private DevExpress.XtraGrid.Columns.GridColumn colMembership_Name1;
+        private DevExpress.XtraGrid.Columns.GridColumn colMembership_Price1;
+        private DevExpress.XtraGrid.Columns.GridColumn colMembership_Note;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem csmGiaHan;
     }
 }

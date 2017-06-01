@@ -58,6 +58,7 @@ namespace FitnessCenter
                             if (status == "Đang hoạt động")
                             {
                                 DashBoard.UserName = name;
+                                AccountManagement.Id = id;
                                 DashBoard.Id = id;
                                 DashBoard.Id = id;
                                 DashBoard.Type = type;
@@ -70,7 +71,7 @@ namespace FitnessCenter
                         }
                         else
                         {
-                            lbTrangThai.Text = "*Tên đăng nhập hoặc mật khẩu không hợp lệ";
+                            lbTrangThai.Text = "*Tên đăng nhập hoặc mật khẩu không đúng";
                             txtTenDangNhap.Text = "";
                             txtMatKhau.Text = "";
                             txtTenDangNhap.Focus();

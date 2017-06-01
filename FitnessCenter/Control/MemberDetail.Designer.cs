@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberDetail));
-            DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
-            DevExpress.DataAccess.Sql.Column column1 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression1 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Table table1 = new DevExpress.DataAccess.Sql.Table();
-            DevExpress.DataAccess.Sql.Column column2 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression2 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery2 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column3 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression3 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table2 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column4 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression4 = new DevExpress.DataAccess.Sql.ColumnExpression();
             this.lbTrangThai = new DevExpress.XtraEditors.LabelControl();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnTao = new DevExpress.XtraEditors.SimpleButton();
@@ -59,7 +59,6 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.rbNu = new System.Windows.Forms.RadioButton();
             this.rbNam = new System.Windows.Forms.RadioButton();
-            this.dtNamSinh = new DevExpress.XtraEditors.DateEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -77,6 +76,7 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtSDT = new DevExpress.XtraEditors.TextEdit();
             this.peAnh = new DevExpress.XtraEditors.PictureEdit();
+            this.dtNamSinh = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAnh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -93,8 +93,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayKetThuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkeLoaiThe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.membershipBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtNamSinh.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtNamSinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGhiChu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
@@ -102,6 +100,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peAnh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNamSinh.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNamSinh.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTrangThai
@@ -251,13 +251,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtNamSinh);
             this.groupBox1.Controls.Add(this.dtNgayBatDau);
             this.groupBox1.Controls.Add(this.dtNgayKetThuc);
             this.groupBox1.Controls.Add(this.lkeLoaiThe);
             this.groupBox1.Controls.Add(this.labelControl8);
             this.groupBox1.Controls.Add(this.rbNu);
             this.groupBox1.Controls.Add(this.rbNam);
-            this.groupBox1.Controls.Add(this.dtNamSinh);
             this.groupBox1.Controls.Add(this.labelControl3);
             this.groupBox1.Controls.Add(this.labelControl2);
             this.groupBox1.Controls.Add(this.labelControl1);
@@ -331,20 +331,20 @@
             // 
             this.sqlDataSource1.ConnectionName = "DESKTOP-M75UEQH\\SQLEXPRESS_FitnessCenter_Connection";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            columnExpression1.ColumnName = "Membership_ID";
-            table1.MetaSerializable = "0|0|125|120";
-            table1.Name = "Membership";
-            columnExpression1.Table = table1;
-            column1.Expression = columnExpression1;
-            columnExpression2.ColumnName = "Membership_Name";
-            columnExpression2.Table = table1;
-            column2.Expression = columnExpression2;
-            selectQuery1.Columns.Add(column1);
-            selectQuery1.Columns.Add(column2);
-            selectQuery1.Name = "Membership";
-            selectQuery1.Tables.Add(table1);
+            columnExpression3.ColumnName = "Membership_ID";
+            table2.MetaSerializable = "0|0|125|120";
+            table2.Name = "Membership";
+            columnExpression3.Table = table2;
+            column3.Expression = columnExpression3;
+            columnExpression4.ColumnName = "Membership_Name";
+            columnExpression4.Table = table2;
+            column4.Expression = columnExpression4;
+            selectQuery2.Columns.Add(column3);
+            selectQuery2.Columns.Add(column4);
+            selectQuery2.Name = "Membership";
+            selectQuery2.Tables.Add(table2);
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            selectQuery1});
+            selectQuery2});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // labelControl8
@@ -377,20 +377,6 @@
             this.rbNam.TabStop = true;
             this.rbNam.Text = "Nam";
             this.rbNam.UseVisualStyleBackColor = true;
-            // 
-            // dtNamSinh
-            // 
-            this.dtNamSinh.EditValue = new System.DateTime(1990, 4, 10, 23, 59, 0, 0);
-            this.dtNamSinh.Location = new System.Drawing.Point(183, 83);
-            this.dtNamSinh.Name = "dtNamSinh";
-            this.dtNamSinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtNamSinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtNamSinh.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
-            this.dtNamSinh.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dtNamSinh.Size = new System.Drawing.Size(200, 20);
-            this.dtNamSinh.TabIndex = 49;
             // 
             // labelControl3
             // 
@@ -534,6 +520,20 @@
             this.peAnh.TabIndex = 0;
             this.peAnh.Click += new System.EventHandler(this.peAnh_Click);
             // 
+            // dtNamSinh
+            // 
+            this.dtNamSinh.EditValue = null;
+            this.dtNamSinh.Location = new System.Drawing.Point(183, 84);
+            this.dtNamSinh.Name = "dtNamSinh";
+            this.dtNamSinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtNamSinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtNamSinh.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
+            this.dtNamSinh.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.dtNamSinh.Size = new System.Drawing.Size(200, 20);
+            this.dtNamSinh.TabIndex = 56;
+            // 
             // MemberDetail
             // 
             this.Appearance.BackColor = System.Drawing.SystemColors.Control;
@@ -571,8 +571,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayKetThuc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkeLoaiThe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.membershipBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtNamSinh.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtNamSinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGhiChu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
@@ -580,6 +578,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peAnh.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNamSinh.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNamSinh.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -616,7 +616,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private System.Windows.Forms.RadioButton rbNu;
         private System.Windows.Forms.RadioButton rbNam;
-        private DevExpress.XtraEditors.DateEdit dtNamSinh;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
@@ -627,5 +626,6 @@
         private DevExpress.XtraEditors.DateEdit dtNgayKetThuc;
         private DevExpress.XtraEditors.DateEdit dtNgayBatDau;
         private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.DateEdit dtNamSinh;
     }
 }

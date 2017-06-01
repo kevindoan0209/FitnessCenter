@@ -105,6 +105,7 @@ namespace FitnessCenter
                         Reset();
                         sqlDataSource2.Fill();
                         lbTrangThai.Text = "";
+                        isAdd = true;
                     }
                 }
 

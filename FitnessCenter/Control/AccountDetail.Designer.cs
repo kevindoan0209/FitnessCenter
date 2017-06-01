@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountDetail));
-            DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
-            DevExpress.DataAccess.Sql.Column column1 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression1 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Table table1 = new DevExpress.DataAccess.Sql.Table();
-            DevExpress.DataAccess.Sql.Column column2 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression2 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.SelectQuery selectQuery2 = new DevExpress.DataAccess.Sql.SelectQuery();
-            DevExpress.DataAccess.Sql.Column column3 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression3 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Table table2 = new DevExpress.DataAccess.Sql.Table();
-            DevExpress.DataAccess.Sql.Column column4 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression4 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery3 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column5 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression5 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table3 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column6 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression6 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery4 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column7 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression7 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table4 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column8 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression8 = new DevExpress.DataAccess.Sql.ColumnExpression();
             this.lbTrangThai = new DevExpress.XtraEditors.LabelControl();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnTao = new DevExpress.XtraEditors.SimpleButton();
@@ -139,20 +139,20 @@
             // 
             this.sqlDataSource2.ConnectionName = "DESKTOP-M75UEQH\\SQLEXPRESS_FitnessCenter_Connection";
             this.sqlDataSource2.Name = "sqlDataSource2";
-            columnExpression1.ColumnName = "Account_Type_ID";
-            table1.MetaSerializable = "0|0|125|100";
-            table1.Name = "Account_Type";
-            columnExpression1.Table = table1;
-            column1.Expression = columnExpression1;
-            columnExpression2.ColumnName = "Account_Type_Authority";
-            columnExpression2.Table = table1;
-            column2.Expression = columnExpression2;
-            selectQuery1.Columns.Add(column1);
-            selectQuery1.Columns.Add(column2);
-            selectQuery1.Name = "Account_Type";
-            selectQuery1.Tables.Add(table1);
+            columnExpression5.ColumnName = "Account_Type_ID";
+            table3.MetaSerializable = "0|0|125|100";
+            table3.Name = "Account_Type";
+            columnExpression5.Table = table3;
+            column5.Expression = columnExpression5;
+            columnExpression6.ColumnName = "Account_Type_Authority";
+            columnExpression6.Table = table3;
+            column6.Expression = columnExpression6;
+            selectQuery3.Columns.Add(column5);
+            selectQuery3.Columns.Add(column6);
+            selectQuery3.Name = "Account_Type";
+            selectQuery3.Tables.Add(table3);
             this.sqlDataSource2.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            selectQuery1});
+            selectQuery3});
             this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
             // 
             // txtMa
@@ -181,19 +181,19 @@
             // 
             this.sqlDataSource1.ConnectionName = "DESKTOP-M75UEQH\\SQLEXPRESS_ClinienceSystemManagement_Connection";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            columnExpression3.ColumnName = "Paraclinical_Group_ID";
-            table2.Name = "Paraclinical_Group";
-            columnExpression3.Table = table2;
-            column3.Expression = columnExpression3;
-            columnExpression4.ColumnName = "Paraclinical_Group_Name";
-            columnExpression4.Table = table2;
-            column4.Expression = columnExpression4;
-            selectQuery2.Columns.Add(column3);
-            selectQuery2.Columns.Add(column4);
-            selectQuery2.Name = "Paraclinical_Group";
-            selectQuery2.Tables.Add(table2);
+            columnExpression7.ColumnName = "Paraclinical_Group_ID";
+            table4.Name = "Paraclinical_Group";
+            columnExpression7.Table = table4;
+            column7.Expression = columnExpression7;
+            columnExpression8.ColumnName = "Paraclinical_Group_Name";
+            columnExpression8.Table = table4;
+            column8.Expression = columnExpression8;
+            selectQuery4.Columns.Add(column7);
+            selectQuery4.Columns.Add(column8);
+            selectQuery4.Name = "Paraclinical_Group";
+            selectQuery4.Tables.Add(table4);
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            selectQuery2});
+            selectQuery4});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // HeaderAccount
@@ -316,6 +316,7 @@
             this.cbxHienMatKhau.Properties.Caption = "Hiện mật khẩu";
             this.cbxHienMatKhau.Size = new System.Drawing.Size(91, 19);
             this.cbxHienMatKhau.TabIndex = 50;
+            this.cbxHienMatKhau.CheckedChanged += new System.EventHandler(this.cbxHienMatKhau_CheckedChanged_1);
             // 
             // peAnh
             // 
@@ -327,6 +328,7 @@
             this.peAnh.Properties.ZoomAccelerationFactor = 1D;
             this.peAnh.Size = new System.Drawing.Size(140, 140);
             this.peAnh.TabIndex = 49;
+            this.peAnh.Click += new System.EventHandler(this.peAnh_Click_1);
             // 
             // labelControl7
             // 

@@ -104,6 +104,7 @@ namespace FitnessCenter
                                 dc.Customers.DeleteOnSubmit(customer);
                                 dc.SubmitChanges();
                                 sqlDataSource2.Fill();
+                                ResetFillData();
 
                             }
                         }
@@ -216,29 +217,8 @@ namespace FitnessCenter
                     lbTuoi.Text = ageInYrs + " tuổi";
                     peAnh.EditValue = customer.Customer_Image;
                     lbDiaChi.Text = customer.Customer_Address;
-                    int type = customer.Membership_ID;
-                    if (type == 1)
-                    {
-                        lbLoaiThe.Text = "Học sinh";
-                    }
-                    else
-                    {
-                        if (type == 2)
-                        {
-                            lbLoaiThe.Text = "Sinh viên";
-                        }
-                        else
-                        {
-                            if (type == 3)
-                            {
-                                lbLoaiThe.Text = "Người đi làm";
-                            }
-                            else
-                            {
-                                lbLoaiThe.Text = "Người lớn tuổi";
-                            }
-                        }
-                    }
+                    //int type = customer.Membership_ID;
+                    lbLoaiThe.Text = Convert.ToString(customer.Membership_ID);
                     lbNgayHetHan.Text = Convert.ToString(customer.Customer_StartDate);
                     lbNgayNop.Text = Convert.ToString(customer.Customer_EndDate);
                 }

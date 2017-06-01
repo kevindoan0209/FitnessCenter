@@ -47,26 +47,33 @@ namespace FitnessCenter
             object value = gvDanhMuc.GetRowCellValue(rowIndex, colID);
             if (value != null)
             {
-                int Id = (int)value;
-                if (Id != 0)
+                int accountId = (int)value;
+                if (accountId != 0)
                 {
                     DataFitnessCenterDataContext db = new DataFitnessCenterDataContext();
-                    var account = db.Accounts.Where(i => i.Account_ID == (int)Id).SingleOrDefault();
+                    var account = db.Accounts.Where(i => i.Account_ID == (int)accountId).SingleOrDefault();
                     if (account != null)
                     {
-                        String status = Convert.ToString(account.Account_Status);
-                        if (status != "Đang hoạt động")
+                        if (Id != accountId)
                         {
-                            status = "Đang hoạt động";
-                            BLL_Human.UpdateAccountStatus(Id, status);
-                            XtraMessageBox.Show("Đã mở hoạt động tài khoản này", "Fitness Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            String status = Convert.ToString(account.Account_Status);
+                            if (status != "Đang hoạt động")
+                            {
+                                status = "Đang hoạt động";
+                                BLL_Human.UpdateAccountStatus(accountId, status);
+                                XtraMessageBox.Show("Đã mở hoạt động tài khoản này", "Fitness Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                            }
+                            else
+                            {
+                                status = "Đã bị khóa";
+                                BLL_Human.UpdateAccountStatus(accountId, status);
+                                XtraMessageBox.Show("Đã khóa tài khoản này", "Fitness Center", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
                         }
                         else
                         {
-                            status = "Đã bị khóa";
-                            BLL_Human.UpdateAccountStatus(Id, status);
-                            XtraMessageBox.Show("Đã khóa tài khoản này", "Fitness Center", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            XtraMessageBox.Show("Không được phép khóa tài khoản sử dụng hiện tại", "Fitness Center", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         sqlDataSource1.Fill();
                     }
@@ -130,7 +137,7 @@ namespace FitnessCenter
                             {
                                 dc.Accounts.DeleteOnSubmit(account);
                                 dc.SubmitChanges();
-                                sqlDataSource1.Fill();            
+                                sqlDataSource1.Fill();
                             }
                         }
                         else

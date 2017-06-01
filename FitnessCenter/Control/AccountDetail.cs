@@ -28,7 +28,7 @@ namespace FitnessCenter
         {
             try
             {
-              
+
                 OpenFileDialog openFileDialog = new OpenFileDialog();
                 openFileDialog.Filter = ("Image Files |*.png; *.bmp; *.jpg;*.jpeg; *.gif;");
                 openFileDialog.FilterIndex = 4;
@@ -117,12 +117,12 @@ namespace FitnessCenter
                                 if (string.IsNullOrEmpty(txtAnh.Text))
                                 {
                                     BLL_Human.UpdateAccountNoImage(id, name, username, password, type);
-                                    this.Close();  
+                                    this.Close();
                                 }
                                 else
                                 {
                                     BLL_Human.UpdateAccount(id, name, username, password, image, type);
-                                    this.Close();                             
+                                    this.Close();
                                 }
                             }
                         }
@@ -186,45 +186,52 @@ namespace FitnessCenter
                                     }
                                     else
                                     {
-                                        if (txtMatKhau.Text != txtMatKhau2.Text)
+                                        if (txtMatKhau.Text.Length > 12 || txtMatKhau.Text.Length < 6)
                                         {
-                                            lbTrangThai.Text = "*Mật khẩu không trùng khớp";
-                                            txtMatKhau2.Focus();
+                                            lbTrangThai.Text = "*Mật khẩu phải từ 6 đến 12 kí tự";
+                                            txtMatKhau.Focus();
                                         }
                                         else
                                         {
-                                            string name = txtTen.Text;
-                                            string username = txtTenDangNhap.Text;
-                                            string password = txtMatKhau.Text;
-                                            string image = txtAnh.Text;
-                                            string group = lkePhanQuyen.GetColumnValue("Account_Type_ID").ToString();
-                                            int type = Int32.Parse(group);
-                                            int count = BLL_Human.Select_Username(username).Rows.Count;
-                                            if (count > 0)
+                                            if (txtMatKhau.Text != txtMatKhau2.Text)
                                             {
-                                                lbTrangThai.Text = "*Tên đăng nhập này đã tồn tại";
-                                                txtTenDangNhap.Focus();
+                                                lbTrangThai.Text = "*Mật khẩu không trùng khớp";
+                                                txtMatKhau2.Focus();
                                             }
                                             else
                                             {
-                                                if (string.IsNullOrEmpty(txtAnh.Text))
+                                                string name = txtTen.Text;
+                                                string username = txtTenDangNhap.Text;
+                                                string password = txtMatKhau.Text;
+                                                string image = txtAnh.Text;
+                                                string group = lkePhanQuyen.GetColumnValue("Account_Type_ID").ToString();
+                                                int type = Int32.Parse(group);
+                                                int count = BLL_Human.Select_Username(username).Rows.Count;
+                                                if (count > 0)
                                                 {
-                                                    BLL_Human.InsertAccountNoImage(name, username, password, type);
-                                                    String status = "Đang hoạt động";
-                                                    int humanId = BLL_Human.GetLastIdAccount();
-                                                    BLL_Human.UpdateAccountStatus(humanId, status);
-                                                    this.Close();
+                                                    lbTrangThai.Text = "*Tên đăng nhập này đã tồn tại";
+                                                    txtTenDangNhap.Focus();
                                                 }
                                                 else
                                                 {
-                                                    BLL_Human.InsertAccount(name, username, password, image, type);
-                                                    String status = "Đang hoạt động";
-                                                    int humanId = BLL_Human.GetLastIdAccount();
-                                                    BLL_Human.UpdateAccountStatus(humanId, status);
-                                                    this.Close();
+                                                    if (string.IsNullOrEmpty(txtAnh.Text))
+                                                    {
+                                                        BLL_Human.InsertAccountNoImage(name, username, password, type);
+                                                        String status = "Đang hoạt động";
+                                                        int humanId = BLL_Human.GetLastIdAccount();
+                                                        BLL_Human.UpdateAccountStatus(humanId, status);
+                                                        this.Close();
+                                                    }
+                                                    else
+                                                    {
+                                                        BLL_Human.InsertAccount(name, username, password, image, type);
+                                                        String status = "Đang hoạt động";
+                                                        int humanId = BLL_Human.GetLastIdAccount();
+                                                        BLL_Human.UpdateAccountStatus(humanId, status);
+                                                        this.Close();
+                                                    }
                                                 }
                                             }
-
                                         }
                                     }
                                 }
@@ -265,7 +272,7 @@ namespace FitnessCenter
         {
             if (txtMatKhau.Text.Length > 20 || txtMatKhau.Text.Length < 6)
             {
-              
+
                 lbTrangThai.Text = "*Mật khẩu phải từ 6 đến 20 kí tự";
                 txtMatKhau.Focus();
                 e.Cancel = true;
@@ -283,7 +290,7 @@ namespace FitnessCenter
         {
             if (txtTenDangNhap.Text.Length > 20 || txtTenDangNhap.Text.Length < 5)
             {
-              
+
                 lbTrangThai.Text = "*Tên đăng nhập phải từ 5 đến 20 kí tự";
                 txtTenDangNhap.Focus();
                 e.Cancel = true;
@@ -335,6 +342,38 @@ namespace FitnessCenter
             this.Close();
         }
 
-        
+        private void peAnh_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = ("Image Files |*.png; *.bmp; *.jpg;*.jpeg; *.gif;");
+                openFileDialog.FilterIndex = 4;
+                openFileDialog.RestoreDirectory = true;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    txtAnh.Text = openFileDialog.FileName;
+                    peAnh.Image = Image.FromFile(openFileDialog.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Không thể tải được ảnh", ex.Message);
+            }
+        }
+
+        private void cbxHienMatKhau_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (cbxHienMatKhau.Checked)
+            {
+                this.txtMatKhau.Properties.UseSystemPasswordChar = false;
+                this.txtMatKhau2.Properties.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                this.txtMatKhau.Properties.UseSystemPasswordChar = true;
+                this.txtMatKhau2.Properties.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

@@ -45,7 +45,7 @@ namespace FitnessCenter
                     }
                     else
                     {
-                        lbTrangThai.Text = "*Mật khẩu không hợp lệ";
+                        lbTrangThai.Text = "*Mật khẩu vừa nhập không đúng";
                         txtMatKhau.Text = "";
                     }
                 }

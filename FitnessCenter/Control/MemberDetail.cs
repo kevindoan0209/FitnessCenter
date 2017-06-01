@@ -130,7 +130,7 @@ namespace FitnessCenter
                         if (string.IsNullOrEmpty(dtNamSinh.Text))
                         {
                             lbTrangThai.Text = "*Vui chọn ngày /tháng /năm sinh";
-                            txtTen.Focus();
+                            dtNamSinh.Focus();
                         }
                         else
                         {
@@ -147,7 +147,7 @@ namespace FitnessCenter
                                 }
                                 else
                                 {
-                                    if (dtNgayBatDau.DateTime > dtNgayKetThuc.DateTime)
+                                    if (dtNgayBatDau.DateTime >= dtNgayKetThuc.DateTime)
                                     {
                                         lbTrangThai.Text = "*Khoảng thời gian không hợp lệ";
                                         dtNgayKetThuc.Focus();
@@ -177,20 +177,19 @@ namespace FitnessCenter
                                         DateTime endDate = dtNgayKetThuc.DateTime;
                                         int totalAmount = 0;
                                         string notePayment = "";
+                                        DateTime expireDate = DateTime.Now;
                                         if (string.IsNullOrEmpty(txtAnh.Text))
                                         {
                                             BLL_Human.InsertCustomerNoImage(name, age, sex, email, phone, job, address, memberId, note, beginDate, endDate);
                                             int lastID = BLL_Human.GetLastIdCustomer();
-                                            BLL_Payment.InsertPayment(lastID, beginDate, endDate, totalAmount, notePayment);
-
+                                            BLL_Payment.InsertPayment(lastID, beginDate, endDate, totalAmount, notePayment, expireDate);
                                             this.Close();
                                         }
                                         else
                                         {
                                             BLL_Human.InsertCustomerImage(name, age, sex, email, phone, job, address, memberId, note, beginDate, endDate, image);
                                             int lastID = BLL_Human.GetLastIdCustomer();
-                                            BLL_Payment.InsertPayment(lastID, beginDate, endDate, totalAmount, notePayment);
-
+                                            BLL_Payment.InsertPayment(lastID, beginDate, endDate, totalAmount, notePayment, expireDate);
                                             this.Close();
                                         }
                                     }
@@ -272,7 +271,7 @@ namespace FitnessCenter
         {
             txtMa.ReadOnly = true;
             dtNgayBatDau.EditValue = DateTime.Now;
-            dtNgayKetThuc.EditValue = DateTime.Now;
+            dtNgayKetThuc.EditValue = dtNgayBatDau.DateTime.AddDays(30);
             FillDataUpdate();
         }
 

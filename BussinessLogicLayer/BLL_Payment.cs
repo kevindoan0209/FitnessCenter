@@ -10,14 +10,14 @@ namespace BussinessLogicLayer
     public class BLL_Payment
     {
         private static readonly DAL_Payment _payment = new DAL_Payment();
-        public static int InsertPayment(int cusId, DateTime startDate, DateTime endDate, int totalAmount, string note)
+        public static int InsertPayment(int cusId, DateTime startDate, DateTime endDate, int totalAmount, string note, DateTime expireDate)
         {
-            return _payment.InsertPayment(cusId, startDate, endDate, totalAmount, note);
+            return _payment.InsertPayment(cusId, startDate, endDate, totalAmount, note, expireDate);
         }
 
-        public static int UpdatePayment(int id, int cusId, DateTime startDate, DateTime endDate, int totalAmount, string note)
+        public static int UpdatePayment(int id, int cusId, DateTime startDate, DateTime endDate, int totalAmount, string note, DateTime expireDate)
         {
-            return _payment.UpdatePayment(id, cusId, startDate, endDate, totalAmount, note);
+            return _payment.UpdatePayment(id, cusId, startDate, endDate, totalAmount, note, expireDate);
         }
 
         public static int GetLastIdPayment()
@@ -28,6 +28,11 @@ namespace BussinessLogicLayer
         public static int DeletePayment(int cusId)
         {
             return _payment.DeletePayment(cusId);
+        }
+
+        public static int GetTotalMoney(int memberTypeId)
+        {
+            return _payment.GetTotalMoney(memberTypeId);
         }
     }
 }

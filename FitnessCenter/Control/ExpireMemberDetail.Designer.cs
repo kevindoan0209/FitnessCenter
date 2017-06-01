@@ -30,12 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpireMemberDetail));
-            DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
-            DevExpress.DataAccess.Sql.Column column1 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression1 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Table table1 = new DevExpress.DataAccess.Sql.Table();
-            DevExpress.DataAccess.Sql.Column column2 = new DevExpress.DataAccess.Sql.Column();
-            DevExpress.DataAccess.Sql.ColumnExpression columnExpression2 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery3 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column7 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression7 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table3 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column8 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression8 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery4 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column9 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression9 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table4 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column10 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression10 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column11 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression11 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column12 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression12 = new DevExpress.DataAccess.Sql.ColumnExpression();
             this.lbTrangThai = new DevExpress.XtraEditors.LabelControl();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnTao = new DevExpress.XtraEditors.SimpleButton();
@@ -51,11 +61,11 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtNgayKetThuc = new DevExpress.XtraEditors.DateEdit();
             this.lbGioiTinh = new DevExpress.XtraEditors.LabelControl();
             this.lbNgaySinh = new DevExpress.XtraEditors.LabelControl();
             this.lbHoTen = new DevExpress.XtraEditors.LabelControl();
             this.dtNgayBatDau = new DevExpress.XtraEditors.DateEdit();
-            this.dtNgayKetThuc = new DevExpress.XtraEditors.DateEdit();
             this.lkeLoaiThe = new DevExpress.XtraEditors.LookUpEdit();
             this.membershipBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
@@ -64,7 +74,9 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.lbNgayBatDau = new DevExpress.XtraEditors.LabelControl();
+            this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.membershipBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtAnh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -75,12 +87,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtNgayBatDau.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtNgayBatDau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayKetThuc.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayKetThuc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayBatDau.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayBatDau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkeLoaiThe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.membershipBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.membershipBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTrangThai
@@ -230,18 +243,18 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtNgayKetThuc);
             this.groupBox1.Controls.Add(this.lbGioiTinh);
             this.groupBox1.Controls.Add(this.lbNgaySinh);
             this.groupBox1.Controls.Add(this.lbHoTen);
             this.groupBox1.Controls.Add(this.dtNgayBatDau);
-            this.groupBox1.Controls.Add(this.dtNgayKetThuc);
             this.groupBox1.Controls.Add(this.lkeLoaiThe);
             this.groupBox1.Controls.Add(this.labelControl8);
             this.groupBox1.Controls.Add(this.labelControl3);
             this.groupBox1.Controls.Add(this.labelControl2);
             this.groupBox1.Controls.Add(this.labelControl1);
             this.groupBox1.Controls.Add(this.labelControl9);
-            this.groupBox1.Controls.Add(this.labelControl12);
+            this.groupBox1.Controls.Add(this.lbNgayBatDau);
             this.groupBox1.Location = new System.Drawing.Point(16, 49);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(407, 162);
@@ -249,10 +262,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hội viên";
             // 
+            // dtNgayKetThuc
+            // 
+            this.dtNgayKetThuc.EditValue = null;
+            this.dtNgayKetThuc.Location = new System.Drawing.Point(143, 126);
+            this.dtNgayKetThuc.Name = "dtNgayKetThuc";
+            this.dtNgayKetThuc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtNgayKetThuc.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtNgayKetThuc.Size = new System.Drawing.Size(100, 20);
+            this.dtNgayKetThuc.TabIndex = 59;
+            // 
             // lbGioiTinh
             // 
             this.lbGioiTinh.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGioiTinh.Location = new System.Drawing.Point(98, 78);
+            this.lbGioiTinh.Location = new System.Drawing.Point(98, 79);
             this.lbGioiTinh.Name = "lbGioiTinh";
             this.lbGioiTinh.Size = new System.Drawing.Size(0, 16);
             this.lbGioiTinh.TabIndex = 58;
@@ -260,7 +285,7 @@
             // lbNgaySinh
             // 
             this.lbNgaySinh.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgaySinh.Location = new System.Drawing.Point(98, 48);
+            this.lbNgaySinh.Location = new System.Drawing.Point(98, 49);
             this.lbNgaySinh.Name = "lbNgaySinh";
             this.lbNgaySinh.Size = new System.Drawing.Size(0, 16);
             this.lbNgaySinh.TabIndex = 57;
@@ -268,7 +293,7 @@
             // lbHoTen
             // 
             this.lbHoTen.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHoTen.Location = new System.Drawing.Point(98, 20);
+            this.lbHoTen.Location = new System.Drawing.Point(98, 21);
             this.lbHoTen.Name = "lbHoTen";
             this.lbHoTen.Size = new System.Drawing.Size(0, 16);
             this.lbHoTen.TabIndex = 56;
@@ -276,7 +301,7 @@
             // dtNgayBatDau
             // 
             this.dtNgayBatDau.EditValue = new System.DateTime(2017, 5, 26, 22, 46, 13, 770);
-            this.dtNgayBatDau.Location = new System.Drawing.Point(23, 125);
+            this.dtNgayBatDau.Location = new System.Drawing.Point(23, 126);
             this.dtNgayBatDau.Name = "dtNgayBatDau";
             this.dtNgayBatDau.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -285,28 +310,18 @@
             this.dtNgayBatDau.Size = new System.Drawing.Size(107, 20);
             this.dtNgayBatDau.TabIndex = 55;
             // 
-            // dtNgayKetThuc
-            // 
-            this.dtNgayKetThuc.EditValue = new System.DateTime(2017, 5, 26, 22, 46, 13, 770);
-            this.dtNgayKetThuc.Location = new System.Drawing.Point(143, 125);
-            this.dtNgayKetThuc.Name = "dtNgayKetThuc";
-            this.dtNgayKetThuc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtNgayKetThuc.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtNgayKetThuc.Size = new System.Drawing.Size(107, 20);
-            this.dtNgayKetThuc.TabIndex = 54;
-            // 
             // lkeLoaiThe
             // 
-            this.lkeLoaiThe.Location = new System.Drawing.Point(265, 125);
+            this.lkeLoaiThe.Location = new System.Drawing.Point(265, 126);
             this.lkeLoaiThe.Name = "lkeLoaiThe";
             this.lkeLoaiThe.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkeLoaiThe.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Membership_ID", "Membership_ID", 97, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Far),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Membership_Name", "Loại hội viên", 100, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.lkeLoaiThe.Properties.DataSource = this.membershipBindingSource;
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Membership_Name", "Loại thẻ", 100, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Membership_Price", "Membership_Price", 96, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Far),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Membership_Note", "Membership_Note", 96, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near)});
+            this.lkeLoaiThe.Properties.DataSource = this.membershipBindingSource1;
             this.lkeLoaiThe.Properties.DisplayMember = "Membership_Name";
             this.lkeLoaiThe.Properties.NullText = "Chọn thẻ";
             this.lkeLoaiThe.Properties.ValueMember = "Membership_ID";
@@ -322,27 +337,27 @@
             // 
             this.sqlDataSource1.ConnectionName = "DESKTOP-M75UEQH\\SQLEXPRESS_FitnessCenter_Connection";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            columnExpression1.ColumnName = "Membership_ID";
-            table1.MetaSerializable = "0|0|125|120";
-            table1.Name = "Membership";
-            columnExpression1.Table = table1;
-            column1.Expression = columnExpression1;
-            columnExpression2.ColumnName = "Membership_Name";
-            columnExpression2.Table = table1;
-            column2.Expression = columnExpression2;
-            selectQuery1.Columns.Add(column1);
-            selectQuery1.Columns.Add(column2);
-            selectQuery1.Name = "Membership";
-            selectQuery1.Tables.Add(table1);
+            columnExpression7.ColumnName = "Membership_ID";
+            table3.MetaSerializable = "0|0|125|120";
+            table3.Name = "Membership";
+            columnExpression7.Table = table3;
+            column7.Expression = columnExpression7;
+            columnExpression8.ColumnName = "Membership_Name";
+            columnExpression8.Table = table3;
+            column8.Expression = columnExpression8;
+            selectQuery3.Columns.Add(column7);
+            selectQuery3.Columns.Add(column8);
+            selectQuery3.Name = "Membership";
+            selectQuery3.Tables.Add(table3);
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            selectQuery1});
+            selectQuery3});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.labelControl8.Location = new System.Drawing.Point(265, 106);
+            this.labelControl8.Location = new System.Drawing.Point(265, 107);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(50, 16);
             this.labelControl8.TabIndex = 52;
@@ -352,7 +367,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.labelControl3.Location = new System.Drawing.Point(23, 78);
+            this.labelControl3.Location = new System.Drawing.Point(23, 79);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(51, 16);
             this.labelControl3.TabIndex = 48;
@@ -362,7 +377,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.labelControl2.Location = new System.Drawing.Point(23, 48);
+            this.labelControl2.Location = new System.Drawing.Point(23, 49);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(60, 16);
             this.labelControl2.TabIndex = 47;
@@ -372,7 +387,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.labelControl1.Location = new System.Drawing.Point(23, 20);
+            this.labelControl1.Location = new System.Drawing.Point(23, 21);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(59, 16);
             this.labelControl1.TabIndex = 46;
@@ -382,23 +397,56 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.labelControl9.Location = new System.Drawing.Point(143, 106);
+            this.labelControl9.Location = new System.Drawing.Point(143, 107);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(80, 16);
             this.labelControl9.TabIndex = 42;
             this.labelControl9.Text = "Ngày hết hạn:";
             // 
-            // labelControl12
+            // lbNgayBatDau
             // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl12.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.labelControl12.Location = new System.Drawing.Point(23, 106);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(58, 16);
-            this.labelControl12.TabIndex = 40;
-            this.labelControl12.Text = "Ngày nộp:";
+            this.lbNgayBatDau.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNgayBatDau.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.lbNgayBatDau.Location = new System.Drawing.Point(23, 107);
+            this.lbNgayBatDau.Name = "lbNgayBatDau";
+            this.lbNgayBatDau.Size = new System.Drawing.Size(58, 16);
+            this.lbNgayBatDau.TabIndex = 40;
+            this.lbNgayBatDau.Text = "Ngày nộp:";
             // 
-            // MemberExpire
+            // sqlDataSource2
+            // 
+            this.sqlDataSource2.ConnectionName = "DESKTOP-M75UEQH\\SQLEXPRESS_FitnessCenter_Connection";
+            this.sqlDataSource2.Name = "sqlDataSource2";
+            columnExpression9.ColumnName = "Membership_ID";
+            table4.MetaSerializable = "0|0|125|120";
+            table4.Name = "Membership";
+            columnExpression9.Table = table4;
+            column9.Expression = columnExpression9;
+            columnExpression10.ColumnName = "Membership_Name";
+            columnExpression10.Table = table4;
+            column10.Expression = columnExpression10;
+            columnExpression11.ColumnName = "Membership_Price";
+            columnExpression11.Table = table4;
+            column11.Expression = columnExpression11;
+            columnExpression12.ColumnName = "Membership_Note";
+            columnExpression12.Table = table4;
+            column12.Expression = columnExpression12;
+            selectQuery4.Columns.Add(column9);
+            selectQuery4.Columns.Add(column10);
+            selectQuery4.Columns.Add(column11);
+            selectQuery4.Columns.Add(column12);
+            selectQuery4.Name = "Membership";
+            selectQuery4.Tables.Add(table4);
+            this.sqlDataSource2.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            selectQuery4});
+            this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
+            // 
+            // membershipBindingSource1
+            // 
+            this.membershipBindingSource1.DataMember = "Membership";
+            this.membershipBindingSource1.DataSource = this.sqlDataSource2;
+            // 
+            // ExpireMemberDetail
             // 
             this.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.Appearance.Options.UseBackColor = true;
@@ -412,7 +460,7 @@
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "MemberExpire";
+            this.Name = "ExpireMemberDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tài khoản";
             this.Load += new System.EventHandler(this.MemberExpire_Load);
@@ -429,12 +477,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtNgayBatDau.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtNgayBatDau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayKetThuc.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayKetThuc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayBatDau.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayBatDau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkeLoaiThe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.membershipBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.membershipBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -456,7 +505,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.LabelControl lbNgayBatDau;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
@@ -464,11 +513,13 @@
         private DevExpress.XtraEditors.LookUpEdit lkeLoaiThe;
         private System.Windows.Forms.BindingSource membershipBindingSource;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
-        private DevExpress.XtraEditors.DateEdit dtNgayKetThuc;
         private DevExpress.XtraEditors.DateEdit dtNgayBatDau;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.LabelControl lbHoTen;
         private DevExpress.XtraEditors.LabelControl lbGioiTinh;
         private DevExpress.XtraEditors.LabelControl lbNgaySinh;
+        private DevExpress.XtraEditors.DateEdit dtNgayKetThuc;
+        private System.Windows.Forms.BindingSource membershipBindingSource1;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource2;
     }
 }

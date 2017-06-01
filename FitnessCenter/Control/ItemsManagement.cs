@@ -47,7 +47,7 @@ namespace FitnessCenter
             txtTenHang.Text = "";
             txtTrangThai.Text = "";
             peAnh.EditValue = "";
-            lkeLoaiThe.EditValue = "";
+            lkeLoaiThe.Text = "Chọn loại hàng";
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -120,6 +120,7 @@ namespace FitnessCenter
                                 sqlDataSource2.Fill();
                                 sqlDataSource3.Fill();
                                 lbTrangThai.Text = "";
+                                isAdd = true;
                             }
                             else
                             {
@@ -129,6 +130,7 @@ namespace FitnessCenter
                                 sqlDataSource2.Fill();
                                 sqlDataSource3.Fill();
                                 lbTrangThai.Text = "";
+                                isAdd = true;
                             }
                         }
                     }

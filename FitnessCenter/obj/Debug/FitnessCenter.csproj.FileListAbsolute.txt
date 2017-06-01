@@ -292,6 +292,6 @@ C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\bin\Debug\ru\DevExpr
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.ExpireMember.resources
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.MessageError.resources
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.SettingManagement.resources
-C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.MemberExpire.resources
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.ItemsManagement.resources
 C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.LockAccess.resources
+C:\Users\Admin\Documents\GitHub\FitnessCenter\FitnessCenter\obj\Debug\FitnessCenter.ExpireMemberDetail.resources

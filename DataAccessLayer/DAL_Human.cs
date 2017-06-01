@@ -53,6 +53,7 @@ namespace DataAccessLayer
             command.Parameters.AddWithValue("@Name", name);
             command.Parameters.AddWithValue("@Username", username);
             command.Parameters.AddWithValue("@Password", password);
+            command.Parameters.AddWithValue("@Image", convertImagetoByte(image));
             command.Parameters.AddWithValue("@Type", type);
             return command.ExecuteNonQuery();
         }
